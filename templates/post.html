@@ -1,0 +1,33 @@
+<html>
+
+	<head>
+
+		<meta http-equiv="Cache-control" content="no-cache">
+
+		<link rel="stylesheet" content="text/css" href="../styles/post.css">
+
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
+	</head>
+
+	<body>
+
+		<form class="container" action="../functions/post.php" method="POST">
+
+			<input class="message" type="text" placeholder="Enter your message here..." name="message" autofocus="autofocus" focus />
+
+			<input class="send" type="submit" value="" />
+
+			<input class="nickname" type="text" placeholder="Nickname" name="nickname" value="<?php print($_POST["nickname"]); ?>" />
+
+			<a href="../attachments/" target="main-frame">
+
+				<input class="history" type="button" value="" />
+
+			</a>
+
+		</form>
+
+	</body>
+
+</html>

@@ -1,0 +1,9 @@
+[
+    {
+        "time": "12:31:38 07.10.2021",
+        "filename": "test-file.txt",
+        "filetype": "text\/plain",
+        "filesize": 16,
+        "filebody": "data:text\/plain;base64,T2gsIGhlbGxvIHRoZXJlIQ=="
+    }
+]

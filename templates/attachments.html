@@ -1,0 +1,59 @@
+<html>
+
+	<head>
+
+		<link rel="stylesheet" content="text/css" href="../styles/attachments.css">
+
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
+		<meta http-equiv="Cache-control" content="no-cache">
+
+		<title>
+
+			Webchat | Attachments
+
+		</title>
+
+	</head>
+
+	<body>
+
+		<table class="sendFileSection">
+
+			<tr>
+
+				<td class="sendFileSection">
+
+					<form class="sendFileSection" enctype="multipart/form-data" action="../functions/upload.php" method="POST">
+
+						<a href="../main/" target="main-frame">
+
+							<input class="goBack" type="button" value="" />
+
+						</a>
+
+						<a href="../attachments/" target="main-frame">
+
+							<input class="doUpdate" type="button" value="" />
+
+						</a>
+
+						<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+
+						<input class="chooseFileButton" name="userfile" type="file" />
+
+						<input class="sendFileButton" type="submit" value="" />
+
+					</form>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<br>
+
+	</body>
+
+</html>
