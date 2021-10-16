@@ -21,6 +21,6 @@ Very good client security
 
 Databases "encryption"
 
-It have pretty good capability with old browsers
+It have pretty good compability with old browsers
 
 A detailed description will come later
