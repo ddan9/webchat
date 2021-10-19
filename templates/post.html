@@ -14,9 +14,9 @@
 
 		<form class="container" action="../functions/post.php" method="POST">
 
-			<input class="message" type="text" placeholder="Enter your message here..." name="message" autofocus="autofocus" focus />
+			<textarea class="message" type="text" placeholder="Enter your message here..." name="message" accesskey="m" autofocus="autofocus" autofocus focus></textarea>
 
-			<input class="send" type="submit" value="" />
+			<input class="send" type="submit" value="" accesskey="s" />
 
 			<input class="nickname" type="text" placeholder="Nickname" name="nickname" value="<?php print($_POST["nickname"]); ?>" />
 
