@@ -27,3 +27,17 @@ A detailed description will come later
 
 Keywords:
 webchat chat messenger chatroom anonim
+
+#### TODO
+
+- исправить косяк с автофокусом, js
+- чото там просили уменьшить сообщения, css
+- расширение блока сообщений из-за большого текста до заданного лимита, css/js(maybe)
+- textarea обработчик табов для вставки, js
+- textarea обработчик shift+enter для переноса, js
+- textarea обработчик enter для отправки, js
+- да пошёл нахер, этот ваш js, js
+- мооожет быть сделать длину сообщения, html
+- наделать комнаты (fullstack)
+- что ещё хз
+- описание
