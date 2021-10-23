@@ -47,3 +47,4 @@ webchat chat messenger chatroom anonim
 - полный экран, hz
 - исправить косяки с масштабированием на больших экранах, css
 - хоткеи accesskey, html
+- расширить валидацию, js/php
