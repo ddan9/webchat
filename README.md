@@ -46,3 +46,4 @@ webchat chat messenger chatroom anonim
 - исправить косяки с масштабированием на больших экранах, css
 - хоткеи accesskey, html
 - расширить валидацию, js/php
+- убрать кнопку "выбрать файл", hz
