@@ -47,3 +47,4 @@ webchat chat messenger chatroom anonim
 - хоткеи accesskey, html
 - расширить валидацию, js/php
 - убрать кнопку "выбрать файл", hz
+- добавить "системные" уведомления в центральный чат, fullstack 
