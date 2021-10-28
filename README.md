@@ -30,7 +30,6 @@ webchat chat messenger chatroom anonim
 
 #### TODO
 
-- расширение блока сообщений из-за большого текста до заданного лимита, css/js(maybe)
 - мооожет быть сделать ограничение длины сообщения, html
 - наделать комнаты, fullstack
 - описание, markdown
