@@ -44,9 +44,11 @@ div.myMessageWhole
 
 	min-width: 200px;
 
-	width: 200px;
+	width: fit-content;
 
-	max-width: 600px;
+	width: -moz-fit-content;
+
+	max-width: 45%;
 
 	border-radius: 10px;
 
@@ -150,9 +152,11 @@ div.messageWhole
 
 	min-width: 200px;
 
-	width: 200px;
+	width: fit-content;
 
-	max-width: 600px;
+	width: -moz-fit-content;
+
+	max-width: 45%;
 
 	border-radius: 10px;
 
@@ -262,6 +266,12 @@ div.messageInfoUser
 	display: inline;
 
 	color: blue;
+
+}
+
+div.messageBody
+
+{
 
 }
 
