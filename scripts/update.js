@@ -188,7 +188,7 @@ function main()
 
 				+ "</div>" 
 
-				+ "<p>" 
+				+ "<div class='messageBody'>" 
 
 					+ "<xmp class='messageBody'>" 
 
@@ -196,7 +196,7 @@ function main()
 
 					+ "</xmp>" 
 
-				+ "</p>" 
+				+ "</div>" 
 
 			+ "</div>" 
 
