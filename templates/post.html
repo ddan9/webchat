@@ -12,11 +12,11 @@
 
 	<body>
 
-		<form class="container" action="../functions/post.php" method="POST">
+		<form class="container" id="formContainer" action="../functions/post.php" method="POST">
 
-			<textarea class="message" type="text" placeholder="Enter your message here..." name="message" accesskey="m" autofocus="autofocus" autofocus focus></textarea>
+			<textarea class="message" id="inputMessage" type="text" placeholder="Enter your message here..." name="message" accesskey="m" autofocus="autofocus" autofocus focus></textarea>
 
-			<input class="send" type="submit" value="" accesskey="s" />
+			<input class="send" type="submit" id="submitMessage" value="" accesskey="s" />
 
 			<input class="nickname" type="text" placeholder="Nickname" name="nickname" value="<?php print($_POST["nickname"]); ?>" />
 
@@ -27,6 +27,10 @@
 			</a>
 
 		</form>
+
+		<script type="text/javascript" src="../scripts/post.js">
+
+		</script>
 
 	</body>
 
