@@ -6,11 +6,11 @@ form.container
 
 	margin-right: auto;
 
-	min-width: 60%;
+	min-width: 200px;
 
-	width: 60%;
+	width: auto;
 
-	max-width: 60%;
+	max-width: 700px;
 
 }
 
