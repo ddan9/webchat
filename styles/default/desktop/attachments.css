@@ -64,15 +64,17 @@ label.chooseFileButton
 
 	overflow: hidden;
 
-	white-space: nowrap;
-
-	word-wrap: normal;
+	overflow: -moz-scrollbars-none;
 
 	overflow-x: auto;
 
 	scrollbar-width: none;
 
 	-ms-overflow-style: none;
+
+	white-space: nowrap;
+
+	word-wrap: normal;
 
 	display: inline-block;
 
