@@ -40,7 +40,13 @@
 
 						<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
 
-						<input class="chooseFileButton" name="userfile" type="file" />
+						<input class="chooseFileButton" id="chooseFileButton" name="userfile" type="file" onchange="uploadFile(this)" hidden />
+
+						<label class="chooseFileButton" id="chooseFileButtonLabel" for="chooseFileButton">
+
+							Choose file...
+
+						</label>
 
 						<input class="sendFileButton" type="submit" value="" />
 
@@ -53,6 +59,10 @@
 		</table>
 
 		<br>
+
+		<script type="text/javascript" src="../scripts/attachments.js">
+
+		</script>
 
 	</body>
 
