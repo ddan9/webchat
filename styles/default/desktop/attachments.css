@@ -42,6 +42,40 @@ input.chooseFileButton
 
 {
 
+	display: none;
+
+	opacity: 0;
+
+	visibility: hidden;
+
+}
+
+label.chooseFileButton::-webkit-scrollbar
+
+{
+
+	display: none;
+
+}
+
+label.chooseFileButton
+
+{
+
+	overflow: hidden;
+
+	white-space: nowrap;
+
+	word-wrap: normal;
+
+	overflow-x: auto;
+
+	scrollbar-width: none;
+
+	-ms-overflow-style: none;
+
+	display: inline-block;
+
 	position: relative;
 
 	background-color: white;
@@ -50,11 +84,11 @@ input.chooseFileButton
 
 	height: 40px;
 
+	line-height: 40px;
+
 	margin-left: auto;
 
 	margin-right: auto;
-
-	overflow: hidden;
 
 	vertical-align: middle;
 
@@ -63,6 +97,12 @@ input.chooseFileButton
 	width: 50%;
 
 	max-width: 50%;
+
+	text-align: left;
+
+	padding-left: 10px;
+
+	padding-right: 10px;
 
 	border: none;
 
@@ -76,7 +116,7 @@ input.chooseFileButton
 
 }
 
-input.chooseFileButton:hover
+label.chooseFileButton:hover
 
 {
 
@@ -86,7 +126,7 @@ input.chooseFileButton:hover
 
 }
 
-input.choosedFileButton:focus
+label.choosedFileButton:focus
 
 {
 
