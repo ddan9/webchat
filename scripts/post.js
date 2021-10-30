@@ -48,11 +48,13 @@ function main()
 
 	{
 
-		if (insert.key == "Enter")
+		if (insert.key == "Enter" && !insert.shiftKey)
 
 		{
 
-			document.getElementById("submitMessage").focus();
+			insert.preventDefault();
+
+			document.getElementById("submitMessage").click();
 
 			document.getElementById("formContainer").submit();
 
