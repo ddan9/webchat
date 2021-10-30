@@ -1,34 +1,28 @@
 # webchat
-webchat
 
-dependencies: php, webserver (apache2/nginx)
+#### Install:
 
-do: "chmod 777" or "chown www-data:www-data" to databases/files.json and databases/messages.json
+- dependencies: php, webserver (apache2/nginx)
+- do: "chmod 777" or "chown www-data:www-data" to databases/files.json and databases/messages.json
+- you need to synchronize max_upload_file size variable in PHP and templates/attachments.html
 
-you need to synchronize max_upload_file size variable in PHP and templates/attachments.html
+#### Specials:
 
-Stack: js, html, css, php, json
+- Stack: js, html, css, php, json
+- It uses json as portable databases
+- You don't need to register to use it
+- You can share files with it
+- Pretty good style
+- Very good client security
+- Databases "encryption"
+- It have pretty good compability with old browsers
+- A detailed description will come later
 
-It uses json as portable databases
+#### Keywords:
 
-You don't need to register to use it
+- webchat chat messenger chatroom anonim
 
-You can share files with it
-
-Pretty good style
-
-Very good client security
-
-Databases "encryption"
-
-It have pretty good compability with old browsers
-
-A detailed description will come later
-
-Keywords:
-webchat chat messenger chatroom anonim
-
-#### TODO
+#### TODO:
 
 - наделать комнаты, fullstack
 - описание, markdown
