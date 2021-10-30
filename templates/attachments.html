@@ -26,29 +26,29 @@
 
 					<form class="sendFileSection" enctype="multipart/form-data" action="../functions/upload.php" method="POST">
 
-						<a href="../main/" target="main-frame">
+						<a href="../main/" accesskey="b" target="main-frame">
 
-							<input class="goBack" type="button" value="" />
+							<input class="goBack" type="button" accesskey="b" value="" />
 
 						</a>
 
-						<a href="../attachments/" target="main-frame">
+						<a href="../attachments/" accesskey="u" target="main-frame">
 
-							<input class="doUpdate" type="button" value="" />
+							<input class="doUpdate" type="button" accesskey="u" value="" />
 
 						</a>
 
 						<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
 
-						<input class="chooseFileButton" id="chooseFileButton" name="userfile" type="file" onchange="uploadFile(this)" hidden />
+						<input class="chooseFileButton" id="chooseFileButton" name="userfile" type="file" accesskey="c" onchange="uploadFile(this)" hidden />
 
-						<label class="chooseFileButton" id="chooseFileButtonLabel" for="chooseFileButton">
+						<label class="chooseFileButton" id="chooseFileButtonLabel" for="chooseFileButton" accesskey="c">
 
 							Choose file...
 
 						</label>
 
-						<input class="sendFileButton" type="submit" value="" />
+						<input class="sendFileButton" type="submit" accesskey="s" value="" />
 
 					</form>
 
