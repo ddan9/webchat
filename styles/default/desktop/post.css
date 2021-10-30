@@ -147,7 +147,7 @@ input.nickname
 
 	width: auto;
 
-	max-width: 150px;
+	max-width: 30%;
 
 	height: 35px;
 
@@ -271,6 +271,58 @@ input.fullscreen:hover
 }
 
 input.fullscreen:focus
+
+{
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.3s linear;
+
+}
+
+input.help
+
+{
+
+	background: url(../../../images/help.svg) no-repeat;
+
+	background-size: 50%;
+
+	background-position: center;
+
+	background-color: #EEEEEE;
+
+	border: none;
+
+	float: right;
+
+	border-radius: 50%;
+
+	width: 35px;
+
+	height: 35px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	outline: none;
+
+	cursor: pointer;
+
+	margin-right: 15px;
+
+}
+
+input.help:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.3s linear;
+
+}
+
+input.help:focus
 
 {
 
