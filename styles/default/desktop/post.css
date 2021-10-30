@@ -174,7 +174,7 @@ input.nickname:focus
 
 }
 
-input.history
+input.attachments
 
 {
 
@@ -204,7 +204,7 @@ input.history
 
 }
 
-input.history:hover
+input.attachments:hover
 
 {
 
@@ -214,7 +214,7 @@ input.history:hover
 
 }
 
-input.history:focus
+input.attachments:focus
 
 {
 
