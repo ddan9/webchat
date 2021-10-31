@@ -6,7 +6,7 @@
 - do: "chmod 777" or "chown www-data:www-data" to databases/files.json and databases/messages.json
 - you need to synchronize max_upload_file size variable in PHP and templates/attachments.html
 
-#### Specials:
+#### Features:
 
 - This project is in active development
 - Stack: js, html, css, php, json
