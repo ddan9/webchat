@@ -8,6 +8,7 @@
 
 #### Specials:
 
+- This project is in active development
 - Stack: js, html, css, php, json
 - It uses json as portable databases
 - Fully manual code (no frameworks)
