@@ -2,6 +2,10 @@
 
 	include("../functions/presets.php");
 
+	$GUESS_WHO = "1";
+
+	include("../functions/post.php");
+
 	$chat_database_files = json_decode(file_get_contents("../databases/files.json"), true);
 
 	$total_files = count($chat_database_files);
@@ -22,7 +26,7 @@
 
 	$time =  date("H:i:s d.m.Y");
 
-	if ($time != "" && $time != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null)
+	if ($time != "" && $time != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
 
 	{
 
@@ -35,6 +39,8 @@
 		$chat_database_files[$total_files][filesize] = $filesize;
 
 		$chat_database_files[$total_files][filebody] = $filebody;
+
+		$chat_database_files[$total_files][address] = $address;
 
 	};
 
