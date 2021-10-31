@@ -10,6 +10,8 @@
 
 - Stack: js, html, css, php, json
 - It uses json as portable databases
+- Fully manual code (no frameworks)
+- Fully open-source
 - You don't need to register to use it
 - You can share files with it
 - Pretty good style
