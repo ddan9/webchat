@@ -9,6 +9,7 @@
 #### Features:
 
 - This project is in active development
+- Basically ready to use
 - Stack: js, html, css, php, json
 - It uses json as portable databases
 - Fully manual code (no frameworks)
