@@ -40,7 +40,7 @@
 
 		$validated_filetype = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_filetype);
 
-		$date = "<br>" . "Added: " . "<br>" . $validated_date;
+		$date = "<strong> Added: </strong>" . "<br>" . $validated_date;
 
 		$header = "<xmp>" . $validated_name . "</xmp>";
 
