@@ -14,7 +14,7 @@
 
 	include("../functions/presets.php");
 
-	$chat_database_files = json_decode(file_get_contents("../databases/files.json"), true);
+	$chat_database_files = json_decode(base64_decode(file_get_contents("../databases/files.json"), true), true);
 
 	$total_files = count($chat_database_files);
 
@@ -24,13 +24,27 @@
 
 	{
 
-		$validated_name = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $chat_database_files[$i][filename]);
+		$decoded_date = base64_decode($chat_database_files[$i][time]);
 
-		$date = "<br>" . "Added: " . "<br>" . $chat_database_files[$i][time];
+		$decoded_name = base64_decode($chat_database_files[$i][filename]);
+
+		$decoded_filesize = base64_decode($chat_database_files[$i][filesize]);
+
+		$decoded_filetype = base64_decode($chat_database_files[$i][filetype]);
+
+		$validated_date = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_date);
+
+		$validated_name = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_name);
+
+		$validated_filesize = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_filesize);
+
+		$validated_filetype = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_filetype);
+
+		$date = "<br>" . "Added: " . "<br>" . $validated_date;
 
 		$header = "<xmp>" . $validated_name . "</xmp>";
 
-		$theme = "<strong> Filesize: </strong>" . readableBytes($chat_database_files[$i][filesize]) . " <br> " . " <strong> Filetype: </strong>" . $chat_database_files[$i][filetype];
+		$theme = "<strong> Filesize: </strong>" . readableBytes($validated_filesize) . " <br> " . " <strong> Filetype: </strong>" . $validated_filetype;
 
 		$link = "../functions/download.php?id=$i";
 

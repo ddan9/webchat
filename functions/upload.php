@@ -6,7 +6,7 @@
 
 	include("../functions/post.php");
 
-	$chat_database_files = json_decode(file_get_contents("../databases/files.json"), true);
+	$chat_database_files = json_decode(base64_decode(file_get_contents("../databases/files.json"), true), true);
 
 	$total_files = count($chat_database_files);
 
@@ -30,21 +30,21 @@
 
 	{
 
-		$chat_database_files[$total_files][time] = $time;
+		$chat_database_files[$total_files][time] = base64_encode($time);
 
-		$chat_database_files[$total_files][filename] = $filename;
+		$chat_database_files[$total_files][filename] = base64_encode($filename);
 
-		$chat_database_files[$total_files][filetype] = $filetype;
+		$chat_database_files[$total_files][filetype] = base64_encode($filetype);
 
-		$chat_database_files[$total_files][filesize] = $filesize;
+		$chat_database_files[$total_files][filesize] = base64_encode($filesize);
 
-		$chat_database_files[$total_files][filebody] = $filebody;
+		$chat_database_files[$total_files][filebody] = base64_encode($filebody);
 
-		$chat_database_files[$total_files][address] = $address;
+		$chat_database_files[$total_files][address] = base64_encode($address);
 
 	};
 
-	file_put_contents("../databases/files.json", json_encode($chat_database_files, JSON_PRETTY_PRINT));
+	file_put_contents("../databases/files.json", base64_encode(json_encode($chat_database_files, JSON_PRETTY_PRINT)));
 
 	header("Location: ../attachments/");
 

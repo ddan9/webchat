@@ -4,13 +4,13 @@
 
 	$GETFILEID = $_GET["id"];
 
-	$chat_database_files = json_decode(file_get_contents("../databases/files.json"), true);
+	$chat_database_files = json_decode(base64_decode(file_get_contents("../databases/files.json"), true), true);
 
-	$filebody = $chat_database_files[$GETFILEID][filebody];
+	$filebody = base64_decode($chat_database_files[$GETFILEID][filebody]);
 
-	$filesize = $chat_database_files[$GETFILEID][filesize];
+	$filesize = base64_decode($chat_database_files[$GETFILEID][filesize]);
 
-	$filename = $chat_database_files[$GETFILEID][filename];
+	$filename = base64_decode($chat_database_files[$GETFILEID][filename]);
 
 	header('Content-Description: File Transfer');
 
