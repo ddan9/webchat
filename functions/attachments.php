@@ -42,7 +42,7 @@
 
 		$date = "<strong> Added: </strong>" . "<br>" . $validated_date;
 
-		$header = "<xmp>" . $validated_name . "</xmp>";
+		$header = "<strong>" . $validated_name . "</strong>";
 
 		$theme = "<strong> Filesize: </strong>" . readableBytes($validated_filesize) . " <br> " . " <strong> Filetype: </strong>" . $validated_filetype;
 
