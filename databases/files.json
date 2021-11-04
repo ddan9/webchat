@@ -1,10 +1,1 @@
-[
-    {
-        "time": "21:53:46 31.10.2021",
-        "filename": "test-file.txt",
-        "filetype": "text\/plain",
-        "filesize": 16,
-        "filebody": "data:text\/plain;base64,T2gsIGhlbGxvIHRoZXJlIQ==",
-        "address": "f528764d624db129b32c21fbca0cb8d6"
-    }
-]
+WwogICAgewogICAgICAgICJ0aW1lIjogIk1URTZNRFU2TkRnZ01EUXVNVEV1TWpBeU1RPT0iLAogICAgICAgICJmaWxlbmFtZSI6ICJkR1Z6ZEMxbWFXeGxMblI0ZEE9PSIsCiAgICAgICAgImZpbGV0eXBlIjogImRHVjRkQzl3YkdGcGJnPT0iLAogICAgICAgICJmaWxlc2l6ZSI6ICJNVFk9IiwKICAgICAgICAiZmlsZWJvZHkiOiAiWkdGMFlUcDBaWGgwTDNCc1lXbHVPMkpoYzJVMk5DeFVNbWR6U1Vkb2JHSkhlSFpKU0ZKdldsaEtiRWxSUFQwPSIsCiAgICAgICAgImFkZHJlc3MiOiAiWmpVeU9EYzJOR1EyTWpSa1lqRXlPV0l6TW1NeU1XWmlZMkV3WTJJNFpEWT0iCiAgICB9Cl0=
