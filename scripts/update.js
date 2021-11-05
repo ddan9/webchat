@@ -140,25 +140,31 @@ function main()
 
 	};
 
+	function checkForMessageSender()
+
+	{
+
+		switch (validatedAddress)
+
+		{
+
+			case myIPaddress:
+				messageClass = "myMessageWhole";
+				break;
+
+			default:
+				messageClass = "messageWhole";
+				break;
+
+		};
+
+	};
+
 	function dataTemplate()
 
 	{
 
-		if (validatedAddress == myIPaddress)
-
-		{
-
-			messageClass = "myMessageWhole";
-
-		}
-
-		else
-
-		{
-
-			messageClass = "messageWhole";
-
-		};
+		checkForMessageSender();
 
 		chatOutput.insertAdjacentHTML("beforeend", 
 
