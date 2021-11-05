@@ -32,6 +32,8 @@
 
 		$decoded_filetype = base64_decode($chat_database_files[$i][filetype]);
 
+		$decoded_address = base64_decode($chat_database_files[$i][address]);
+
 		$validated_date = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_date);
 
 		$validated_name = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_name);
@@ -40,15 +42,23 @@
 
 		$validated_filetype = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_filetype);
 
-		$date = "<strong> Added: </strong>" . "<br>" . $validated_date;
+		$validated_address = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_address);
 
-		$header = "<strong>" . $validated_name . "</strong>";
+		if ($validated_date != "" && $validated_date != null && $validated_name != "" && $validated_name != null && $validated_filesize != "" && $validated_filesize != null && $validated_filetype != "" && $validated_filetype != null && $validated_address != "" && $validated_address != null)
 
-		$theme = "<strong> Filesize: </strong>" . readableBytes($validated_filesize) . " <br> " . " <strong> Filetype: </strong>" . $validated_filetype;
+		{
 
-		$link = "../functions/download.php?id=$i";
+			$date = "<strong> Added: </strong>" . "<br>" . $validated_date;
 
-		include("../templates/attachments_list.html");
+			$header = "<strong>" . $validated_name . "</strong>";
+
+			$theme = "<strong> Filesize: </strong>" . readableBytes($validated_filesize) . " <br> " . " <strong> Filetype: </strong>" . $validated_filetype;
+
+			$link = "../functions/download.php?id=$i";
+
+			include("../templates/attachments_list.html");
+
+		};
 
 	};
 
