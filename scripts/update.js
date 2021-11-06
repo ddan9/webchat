@@ -152,6 +152,10 @@ function main()
 				messageClass = "myMessageWhole";
 				break;
 
+			case "Notify":
+				messageClass = "messageNotify";
+				break;
+
 			default:
 				messageClass = "messageWhole";
 				break;
