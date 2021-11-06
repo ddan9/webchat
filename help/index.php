@@ -1,7 +1,7 @@
 <?php
 
-	echo "This will be help";
+	include("../functions/presets.php");
 
-	header("Location: ../");
+	include("../templates/help.html");
 
 ?>
