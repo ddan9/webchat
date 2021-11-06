@@ -1,5 +1,39 @@
 <?php
 
+	function SendNotifyMessage()
+
+	{
+
+		$chat_database = json_decode(base64_decode(file_get_contents("../databases/messages.json"), true));
+
+		$total_messages = count($chat_database);
+
+		$time = date("H:i:s");
+
+		$nickname = "System";
+
+		$message = "New file has been added!";
+
+		$address = "Notify";
+
+		if ($time != "" && $time != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
+
+		{
+
+			$chat_database[$total_messages][time] = base64_encode($time);
+
+			$chat_database[$total_messages][nickname] = base64_encode($nickname);
+
+			$chat_database[$total_messages][message] = base64_encode($message);
+
+			$chat_database[$total_messages][address] = base64_encode($address);
+
+		};
+
+		file_put_contents("../databases/messages.json", base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)));
+
+	};
+
 	include("../functions/presets.php");
 
 	$GUESS_WHO = "1";
@@ -41,6 +75,8 @@
 		$chat_database_files[$total_files][filebody] = base64_encode($filebody);
 
 		$chat_database_files[$total_files][address] = base64_encode($address);
+
+		SendNotifyMessage();
 
 	};
 
