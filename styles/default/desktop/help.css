@@ -1,0 +1,99 @@
+div.textField
+
+{
+
+	word-wrap: break-word;
+
+	margin-top: 40px;
+
+	margin-bottom: 40px;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+	min-width: 200px;
+
+	width: 600px;
+
+	max-width: 80%;
+
+	background-color: #EEEEEE;
+
+	padding: 20px;
+
+	border-radius: 10px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+}
+
+div.textField:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.3s linear;
+
+}
+
+input.goBack
+
+{
+
+	position: fixed;
+
+	left: 0px;
+
+	bottom: 0px;
+
+	background: url(../../../images/back.svg) no-repeat;
+
+	background-size: 50%;
+
+	background-position: center;
+
+	background-color: lightgray;
+
+	margin-left: 20px;
+
+	margin-bottom: 20px;
+
+	border: none;
+
+	float: left;
+
+	border-radius: 50%;
+
+	width: 50px;
+
+	height: 50px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	outline: none;
+
+	cursor: pointer;
+
+}
+
+input.goBack:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.3s linear;
+
+}
+
+input.goBack:focus
+
+{
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.3s linear;
+
+}
