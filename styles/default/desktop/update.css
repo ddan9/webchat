@@ -267,6 +267,120 @@ div.messageWhole:hover
 
 }
 
+div.messageNotify
+
+{
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+	min-width: 200px;
+
+	width: 200px;
+
+	max-width: 200px;
+
+	opacity: 100%;
+
+	animation-name: show-added-notify;
+
+	-webkit-animation-name: show-added-notify;  
+
+	animation-duration: 0.5s;
+
+	-webkit-animation-duration: 0.5s;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+}
+
+@keyframes show-added-notify
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+	}
+
+	70%
+
+	{
+
+		opacity: 0%;
+
+	}
+
+	100% 
+
+	{
+
+		opacity: 100%;
+
+	}       
+
+}
+ 
+@-webkit-keyframes show-added-notify
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+	}
+
+	70%
+
+	{
+
+		opacity: 0%;
+
+	}  
+
+	100%
+
+	{
+
+		opacity: 100%;
+
+	}
+
+}
+
+div.messageNotify > div.messageInfo
+
+{
+
+	display: none;
+
+	opacity: none;
+
+	visibility: hidden;
+
+}
+
+div.messageNotify > div.messageBody > xmp.messageBody
+
+{
+
+	white-space: pre-wrap;
+
+	word-wrap: break-word;
+
+	color: gray;
+
+}
+
 div.messageInfo
 
 {
