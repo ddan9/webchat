@@ -18,6 +18,8 @@
 
 	$total_files = count($chat_database_files);
 
+	$upload_max_filesize = ini_get("upload_max_filesize")*1048576;
+
 	include("../templates/attachments.html");
 
 	for ($i = $total_files-1; $i >= 0; $i--)
