@@ -38,7 +38,7 @@
 
 						</a>
 
-						<input type="hidden" name="MAX_FILE_SIZE" value="2000000" />
+						<input type="hidden" name="MAX_FILE_SIZE" value="<?php print($upload_max_filesize); ?>" />
 
 						<input class="chooseFileButton" id="chooseFileButton" name="userfile" type="file" accesskey="c" onchange="uploadFile(this)" hidden />
 
