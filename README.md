@@ -5,7 +5,6 @@
 - dependencies: php, webserver (apache2/nginx), js-compatible browser
 - download project archive into your web directory and unpack it
 - do: "chmod 777" or "chown www-data:www-data" to databases/files.json and databases/messages.json
-- you need to synchronize max_upload_file size variable in PHP and templates/attachments.html
 
 #### Features:
 
@@ -34,4 +33,3 @@
 - расширить валидацию (клиентскую безопасность), js/php
 - сделать адаптацию для мобильных устройств, js/css
 - добавить инфу о сообщениях в окне (время, отправитель, текст, подпись и т.д.), js/css
-- автоматическое получение значений окружения, php
