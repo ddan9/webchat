@@ -116,6 +116,8 @@ label.chooseFileButton
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
 
+	transition: box-shadow 0.2s linear;
+
 }
 
 label.chooseFileButton:hover
@@ -124,7 +126,7 @@ label.chooseFileButton:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -134,7 +136,7 @@ label.chooseFileButton:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -164,11 +166,13 @@ input.sendFileButton
 
 	height: 40px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	vertical-align: middle;
 
 	margin-right: 15px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -178,7 +182,7 @@ input.sendFileButton:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -188,7 +192,7 @@ input.sendFileButton:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -216,11 +220,13 @@ input.goBack
 
 	height: 35px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -230,7 +236,7 @@ input.goBack:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -240,7 +246,7 @@ input.goBack:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -268,11 +274,13 @@ input.doUpdate
 
 	height: 35px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -282,7 +290,7 @@ input.doUpdate:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -292,6 +300,6 @@ input.doUpdate:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }

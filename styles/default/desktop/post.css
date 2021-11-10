@@ -54,6 +54,8 @@ textarea.message
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
 
+	transition: box-shadow 0.2s linear;
+
 }
 
 textarea.message:hover
@@ -62,7 +64,7 @@ textarea.message:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -72,7 +74,7 @@ textarea.message:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -100,11 +102,13 @@ input.send
 
 	height: 35px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -115,7 +119,7 @@ input.send:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -125,7 +129,7 @@ input.send:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -155,6 +159,8 @@ input.nickname
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
 
+	transition: box-shadow 0.2s linear;
+
 }
 
 
@@ -164,7 +170,7 @@ input.nickname:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -174,7 +180,7 @@ input.nickname:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -200,11 +206,13 @@ input.attachments
 
 	height: 35px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -214,7 +222,7 @@ input.attachments:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -224,7 +232,7 @@ input.attachments:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -250,13 +258,15 @@ input.fullscreen
 
 	height: 35px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
 
 	margin-right: 15px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -266,7 +276,7 @@ input.fullscreen:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -276,7 +286,7 @@ input.fullscreen:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -302,13 +312,15 @@ input.help
 
 	height: 35px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
 
 	margin-right: 15px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -318,7 +330,7 @@ input.help:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -328,6 +340,6 @@ input.help:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }

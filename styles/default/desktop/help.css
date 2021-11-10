@@ -26,6 +26,8 @@ div.textField
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
 
+	transition: box-shadow 0.2s linear;
+
 }
 
 div.textField:hover
@@ -34,7 +36,7 @@ div.textField:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -70,11 +72,13 @@ input.goBack
 
 	height: 50px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -84,7 +88,7 @@ input.goBack:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -94,6 +98,6 @@ input.goBack:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }

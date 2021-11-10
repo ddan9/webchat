@@ -52,8 +52,6 @@ div.myMessageWhole
 
 	border-radius: 10px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1), 8px 0 8px -10px lightskyblue;
-
 	opacity: 100%;
 
 	animation-name: show-my-added-message;
@@ -68,6 +66,10 @@ div.myMessageWhole
 
 	-webkit-animation-timing-function: ease;
 
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1), 8px 0 8px -10px lightskyblue;
+
+	transition: box-shadow 0.2s linear;
+
 }
 
 div.myMessageWhole:hover
@@ -76,7 +78,7 @@ div.myMessageWhole:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -171,8 +173,6 @@ div.messageWhole
 
 	border-radius: 10px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1), -8px 0 10px -10px lightskyblue;
-
 	opacity: 100%;
 
 	animation-name: show-added-message;
@@ -187,6 +187,10 @@ div.messageWhole
 
 	-webkit-animation-timing-function: ease;
 
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1), -8px 0 10px -10px lightskyblue;
+
+	transition: box-shadow 0.2s linear;
+
 }
 
 div.messageWhole:hover
@@ -195,7 +199,7 @@ div.messageWhole:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -497,8 +501,6 @@ button.buttonToDown
 
 	cursor: pointer;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	display: none;
 
 	opacity: 100%;
@@ -515,6 +517,10 @@ button.buttonToDown
 
 	-webkit-animation-timing-function: ease;
 
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
 }
 
 button.buttonToDown:hover
@@ -523,7 +529,7 @@ button.buttonToDown:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -533,7 +539,7 @@ button.buttonToDown:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
