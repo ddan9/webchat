@@ -72,7 +72,27 @@ td.list:nth-child(3)
 
 	background-color: #EEEEEE;
 
-	width: 100px;
+	width: 10px;
+
+	text-align: center;
+
+	vertical-align: middle;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+}
+
+td.list:nth-child(4)
+
+{
+
+	border-radius: 20px;
+
+	background-color: #EEEEEE;
+
+	width: 80px;
 
 	text-align: center;
 
