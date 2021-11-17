@@ -8,7 +8,7 @@
 
 		$sizes = array("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB");
 
-		return sprintf("%.02F", $bytes / pow(1024, $i)) * 1 . ' ' . $sizes[$i];
+		return sprintf("%.02F", $bytes / pow(1024, $i)) * 1 . " " . $sizes[$i];
 
 	};
 
