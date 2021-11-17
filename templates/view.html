@@ -1,0 +1,61 @@
+<html>
+
+	<head>
+
+		<link rel="stylesheet" content="text/css" href="../styles/<?php print($style . '/' . $device); ?>/view.css">
+
+		<meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+
+		<meta http-equiv="Cache-control" content="no-cache">
+
+		<title>
+
+			Webchat | View
+
+		</title>
+
+	</head>
+
+	<body>
+
+		<table class="viewFileSection">
+
+			<tr>
+
+				<td class="viewFileSection">
+
+					<form class="viewFileSection">
+
+						<a href="../attachments/" accesskey="b" target="main-frame">
+
+							<input class="goBack" type="button" accesskey="b" value="" />
+
+						</a>
+
+						<input class="fileStatsField" type="button" value="<?php print($filename); ?>" />
+
+						<input class="fileStatsField" type="button" value="<?php print($filetype); ?>" />
+
+						<input class="fileStatsField" type="button" value="<?php print($filesize_readable); ?>" />
+
+						<input class="fileStatsField" type="button" value="<?php print($date); ?>" />
+
+						<a href="../functions/download.php?id=<?php print($GETFILEID); ?>" accesskey="g" target="main-frame">
+
+							<input class="downloadFileButton" type="button" accesskey="g" value="" />
+
+						</a>
+
+					</form>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<br>
+
+	</body>
+
+</html>
