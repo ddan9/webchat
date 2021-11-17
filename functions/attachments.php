@@ -20,6 +20,8 @@
 
 	$upload_max_filesize = ini_get("upload_max_filesize")*1048576;
 
+	$readable_max_file_size = ini_get("upload_max_filesize");
+
 	include("../templates/attachments.html");
 
 	for ($i = $total_files-1; $i >= 0; $i--)
