@@ -58,6 +58,8 @@
 
 			$theme = "<strong> Filesize: </strong>" . readableBytes($validated_filesize) . " <br> " . " <strong> Filetype: </strong>" . $validated_filetype;
 
+			$view = "../functions/view.php?id=$i";
+
 			$link = "../functions/download.php?id=$i";
 
 			include("../templates/attachments_list.html");
