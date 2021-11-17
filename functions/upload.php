@@ -46,9 +46,9 @@
 
 	$filetype = $_FILES["userfile"]["type"];
 
-	$filetmp = fopen($_FILES['userfile']['tmp_name'], "r");
+	$filetmp = fopen($_FILES["userfile"]["tmp_name"], "r");
 
-	$fileraw = base64_encode(fread($filetmp, filesize($_FILES['userfile']['tmp_name'])));
+	$fileraw = base64_encode(fread($filetmp, filesize($_FILES["userfile"]["tmp_name"])));
 
 	fclose($filetmp);
 
