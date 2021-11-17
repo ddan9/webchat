@@ -21,6 +21,7 @@
 - Databases "encryption"
 - It have pretty good compability with old browsers
 - A detailed description will come later
+- File viewer
 
 #### Keywords:
 
@@ -31,6 +32,5 @@
 - описание концепта комнат, т.к. не всем они нужны, markdown
 - описание, markdown
 - расширить валидацию (клиентскую безопасность), js/php
-- скрипт просмотра файлов
 - сделать адаптацию для мобильных устройств, js/css
 - добавить инфу о сообщениях в окне (время, отправитель, текст, подпись и т.д.), js/css
