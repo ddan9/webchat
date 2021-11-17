@@ -12,19 +12,19 @@
 
 	$filename = base64_decode($chat_database_files[$GETFILEID][filename]);
 
-	header('Content-Description: File Transfer');
+	header("Content-Description: File Transfer");
 
-	header('Content-Type: application/octet-stream');
+	header("Content-Type: application/octet-stream");
 
-	header('Content-Disposition: attachment; filename="'.$filename.'"');
+	header("Content-Disposition: attachment; filename=$filename");
 
-	header('Expires: 0');
+	header("Expires: 0");
 
-	header('Cache-Control: must-revalidate');
+	header("Cache-Control: must-revalidate");
 
-	header('Pragma: public');
+	header("Pragma: public");
 
-	header('Content-Length: ' . $filesize);
+	header("Content-Length: $filesize");
 
 	readfile($filebody);
 
