@@ -82,6 +82,10 @@ td.list:nth-child(3)
 
 	margin-right: auto;
 
+	border: none;
+
+	outline: none;
+
 }
 
 td.list:nth-child(4)
@@ -102,6 +106,10 @@ td.list:nth-child(4)
 
 	margin-right: auto;
 
+	border: none;
+
+	outline: none;
+
 }
 
 a.list
@@ -111,6 +119,10 @@ a.list
 	text-decoration: none;
 
 	border: 25px solid transparent;
+
+	border: none;
+
+	outline: none;
 
 }
 
@@ -133,6 +145,8 @@ img.list
 	height: 42px;
 
 	border-radius: 50%;
+
+	outline: none;
 
 	border: solid transparent 5px;
 
