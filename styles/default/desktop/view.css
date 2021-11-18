@@ -289,7 +289,11 @@ embed.view
 
 {
 
+	min-height: auto;
+
 	height: calc(100% - 90px);
+
+	max-height: calc(100% - 90px);
 
 	min-width: auto;
 
@@ -328,6 +332,12 @@ video.view
 	margin: auto;
 
 	float: center;
+
+	min-height: auto;
+
+	height: auto;
+
+	max-height: calc(100% - 90px);
 
 	min-width: auto;
 
