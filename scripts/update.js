@@ -16,6 +16,10 @@ function main()
 
 	let dataRequestPath = "../databases/messages.json";
 
+	let playAudio = 1;
+
+	let audio = new Audio("../sounds/notify.mp3");
+
 	let i, myIPaddress, messageClass;
 
 	let promise, decodedPromise, data;
@@ -59,6 +63,20 @@ function main()
 		{
 
 			buttonToDown.style.display = "none";
+
+		};
+
+	};
+
+	function playNotify()
+
+	{
+
+		if (audio != "" && audio != null && playAudio == 1)
+
+		{
+
+			audio.play();
 
 		};
 
@@ -311,6 +329,8 @@ function main()
 				firstTimeScroll();
 
 			};
+
+			playNotify();
 
 			smartScroll();
 
