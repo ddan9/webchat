@@ -80,7 +80,7 @@
 
 	};
 
-	file_put_contents($databases_files_path, base64_encode(json_encode($chat_database_files, JSON_PRETTY_PRINT)));
+	file_put_contents($databases_files_path, base64_encode(json_encode($chat_database_files, JSON_PRETTY_PRINT)), LOCK_EX);
 
 	header("Location: ../attachments/");
 
