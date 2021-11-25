@@ -14,6 +14,8 @@ function main()
 
 	"use strict";
 
+	let dataRequestPath = "../databases/messages.json";
+
 	let i, myIPaddress, messageClass;
 
 	let promise, decodedPromise, data;
@@ -66,7 +68,7 @@ function main()
 
 	{
 
-		ipRequest.open('GET', '../functions/post.php?guess_who=1', false);
+		ipRequest.open("GET", "../functions/post.php?guess_who=1", false);
 
 		ipRequest.send();
 
@@ -78,7 +80,7 @@ function main()
 
 	{
 
-		dataRequest.open('GET', '../databases/messages.json', false);
+		dataRequest.open("GET", dataRequestPath, false);
 
 		dataRequest.send();
 
