@@ -14,7 +14,7 @@
 
 	include("../functions/presets.php");
 
-	$chat_database_files = json_decode(base64_decode(file_get_contents("../databases/files.json"), true), true);
+	$chat_database_files = json_decode(base64_decode(file_get_contents($databases_files_path), true), true);
 
 	$total_files = count($chat_database_files);
 

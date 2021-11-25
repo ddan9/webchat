@@ -4,8 +4,6 @@
 
 	$GUESS_WHO = $_GET["guess_who"];
 
-	$use_clear_address = 0;
-
 	if ($GUESS_WHO == "1")
 
 	{
@@ -34,7 +32,7 @@
 
 	{
 
-		$chat_database = json_decode(base64_decode(file_get_contents("../databases/messages.json"), true));
+		$chat_database = json_decode(base64_decode(file_get_contents($databases_messages_path), true));
 
 		$total_messages = count($chat_database);
 
@@ -74,7 +72,7 @@
 
 		};
 
-		file_put_contents("../databases/messages.json", base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)));
+		file_put_contents($databases_messages_path, base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)));
 
 		include("../templates/post.html");
 
