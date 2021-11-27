@@ -28,13 +28,13 @@
 
 						<a href="../main/" accesskey="b" target="main-frame">
 
-							<input class="goBack" type="button" accesskey="b" value="" />
+							<input class="goBack" type="button" accesskey="b" value="" title="Go back" />
 
 						</a>
 
 						<a href="../attachments/" accesskey="u" target="main-frame">
 
-							<input class="doUpdate" type="button" accesskey="u" value="" />
+							<input class="doUpdate" type="button" accesskey="u" value="" title="Update" />
 
 						</a>
 
@@ -42,15 +42,15 @@
 
 						<input class="chooseFileButton" id="chooseFileButton" name="userfile" type="file" accesskey="c" onchange="uploadFile(this)" hidden />
 
-						<label class="chooseFileButton" id="chooseFileButtonLabel" for="chooseFileButton" accesskey="c">
+						<label class="chooseFileButton" id="chooseFileButtonLabel" for="chooseFileButton" accesskey="c" title="Choose file">
 
 							Choose file...
 
 						</label>
 
-						<input class="sendFileButton" type="submit" accesskey="s" value="" />
+						<input class="sendFileButton" type="submit" accesskey="s" value="" title="Upload file" />
 
-						<input class="maxFileSize" type="button" value="<?php print($readable_max_file_size); ?>" />
+						<input class="maxFileSize" type="button" value="<?php print($readable_max_file_size); ?>" title="Max file size" />
 
 					</form>
 

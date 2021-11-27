@@ -14,27 +14,27 @@
 
 		<form class="container" id="formContainer" action="../functions/post.php" method="POST">
 
-			<textarea class="message" id="inputMessage" type="text" placeholder="Enter your message here..." name="message" accesskey="m" maxlenght="4096" autofocus="autofocus" autofocus focus></textarea>
+			<textarea class="message" id="inputMessage" type="text" placeholder="Enter your message here..." title="Message" name="message" accesskey="m" maxlenght="4096" autofocus="autofocus" autofocus focus></textarea>
 
-			<input class="send" type="submit" id="submitMessage" value="" accesskey="s" />
+			<input class="send" type="submit" id="submitMessage" value="" accesskey="s" title="Send message" />
 
-			<input class="nickname" type="text" placeholder="Nickname" name="nickname" maxlenght="128" accesskey="n" value="<?php print($_POST["nickname"]); ?>" />
+			<input class="nickname" type="text" placeholder="Nickname" name="nickname" maxlenght="128" accesskey="n" value="<?php print($_POST['nickname']); ?>" title="Enter your nickname here" />
 
 			<a href="../attachments/" accesskey="a" target="main-frame">
 
-				<input class="attachments" accesskey="a" type="button" value="" />
+				<input class="attachments" accesskey="a" type="button" value="" title="Attachments" />
 
 			</a>
 
 			<a href="../" accesskey="f" target="window">
 
-				<input class="fullscreen" accesskey="f" type="button" value="" />
+				<input class="fullscreen" accesskey="f" type="button" value="" title="Fullscreen" />
 
 			</a>
 
 			<a href="../help/" accesskey="h" target="main-frame">
 
-				<input class="help" accesskey="h" type="button" value="" />
+				<input class="help" accesskey="h" type="button" value="" title="Help" />
 
 			</a>
 
