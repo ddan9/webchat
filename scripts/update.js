@@ -16,7 +16,7 @@ function main()
 
 	let dataRequestPath = "../databases/messages.json";
 
-	let playAudio = 1;
+	let playAudio = 0;
 
 	let audio = new Audio("../sounds/notify.mp3");
 
