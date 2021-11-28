@@ -160,11 +160,11 @@ input.goBack:focus
 
 }
 
-input.doUpdate
+input.doRefresh
 
 {
 
-	background: url(../../../images/update.svg) no-repeat;
+	background: url(../../../images/refresh.svg) no-repeat;
 
 	background-size: 50%;
 
@@ -194,7 +194,7 @@ input.doUpdate
 
 }
 
-input.doUpdate:hover
+input.doRefresh:hover
 
 {
 
@@ -204,7 +204,7 @@ input.doUpdate:hover
 
 }
 
-input.doUpdate:focus
+input.doRefresh:focus
 
 {
 
