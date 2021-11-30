@@ -1,10 +1,10 @@
 <?php
 
-	function SendNotifyMessage()
+	function SendNotifyMessage($databases_messages_path)
 
 	{
 
-		$chat_database = json_decode(base64_decode(file_get_contents($databases_files_path), true));
+		$chat_database = json_decode(base64_decode(file_get_contents($databases_messages_path), true));
 
 		$total_messages = count($chat_database);
 
@@ -16,19 +16,13 @@
 
 		$address = "Notify";
 
-		if ($time != "" && $time != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
+		$chat_database[$total_messages][time] = base64_encode($time);
 
-		{
+		$chat_database[$total_messages][nickname] = base64_encode($nickname);
 
-			$chat_database[$total_messages][time] = base64_encode($time);
+		$chat_database[$total_messages][message] = base64_encode($message);
 
-			$chat_database[$total_messages][nickname] = base64_encode($nickname);
-
-			$chat_database[$total_messages][message] = base64_encode($message);
-
-			$chat_database[$total_messages][address] = base64_encode($address);
-
-		};
+		$chat_database[$total_messages][address] = base64_encode($address);
 
 		file_put_contents($databases_messages_path, base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)));
 
@@ -36,9 +30,21 @@
 
 	include("../functions/presets.php");
 
-	$GUESS_WHO = "1";
+	if ($use_clear_address == 1)
 
-	include("../functions/post.php");
+	{
+
+		$address = $_SERVER["REMOTE_ADDR"];
+
+	}
+
+	else
+
+	{
+
+		$address = hash("md5", $_SERVER["REMOTE_ADDR"]);
+
+	};
 
 	$chat_database_files = json_decode(base64_decode(file_get_contents($databases_files_path), true), true);
 
@@ -76,7 +82,7 @@
 
 		$chat_database_files[$total_files][address] = base64_encode($address);
 
-		SendNotifyMessage();
+		SendNotifyMessage($databases_messages_path);
 
 	};
 
