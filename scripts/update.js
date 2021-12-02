@@ -14,11 +14,15 @@ function main()
 
 	"use strict";
 
+	let intervalTime = 2000;
+
 	let dataRequestPath = "../databases/messages.json";
 
 	let playAudio = 0;
 
 	let audio = new Audio("../sounds/notify.mp3");
+
+	let heightThreshold = 2000;
 
 	let i, myIPaddress, messageClass;
 
@@ -240,7 +244,7 @@ function main()
 
 		totalHeight = document.documentElement.clientHeight;
 
-		limitHeight = totalHeight - 2000;
+		limitHeight = totalHeight - heightThreshold;
 
 		currentHeight = window.scrollY;
 
@@ -354,7 +358,7 @@ function main()
 
 	document.addEventListener("scroll", onScrollFunctions);
 
-	setInterval(() => dataShow(), 2000); 
+	setInterval(() => dataShow(), intervalTime); 
 
 };
 
