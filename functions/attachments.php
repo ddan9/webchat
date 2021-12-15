@@ -54,7 +54,7 @@
 
 			$date = "<strong> Added: </strong>" . "<br>" . $validated_date;
 
-			$name = "<strong>" . "<xmp>" . $validated_name . "</xmp>" . "</strong>";
+			$name = "<strong>" . "<xmp class='list'>" . $validated_name . "</xmp>" . "</strong>";
 
 			$info = "<strong> Filesize: </strong>" . readableBytes($validated_filesize) . " <br> " . " <strong> Filetype: </strong>" . $validated_filetype;
 
