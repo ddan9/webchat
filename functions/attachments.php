@@ -54,9 +54,9 @@
 
 			$date = "<strong> Added: </strong>" . "<br>" . $validated_date;
 
-			$header = "<strong>" . "<xmp>" . $validated_name . "</xmp>" . "</strong>";
+			$name = "<strong>" . "<xmp>" . $validated_name . "</xmp>" . "</strong>";
 
-			$theme = "<strong> Filesize: </strong>" . readableBytes($validated_filesize) . " <br> " . " <strong> Filetype: </strong>" . $validated_filetype;
+			$info = "<strong> Filesize: </strong>" . readableBytes($validated_filesize) . " <br> " . " <strong> Filetype: </strong>" . $validated_filetype;
 
 			$view = "../functions/view.php?id=$i";
 
