@@ -16,7 +16,7 @@
 
 			<tr class="list">
 
-				<td class="list">
+				<td class="list" title="<?php print($validated_date); ?>">
 
 					<?php print($date); ?>
 
@@ -24,15 +24,15 @@
 
 				<td class="list">
 				
-					<h3 class="list">
+					<h3 class="list" title="<?php print($validated_name); ?>">
 
-						<?php print($header); ?>
+						<?php print($name); ?>
 
 					</h3>
 
-					<p class="list">
+					<p class="list" title="<?php print('Filesize: ' . readableBytes($validated_filesize) . ' | Filetype: ' . $validated_filetype); ?>">
 
-						<?php print($theme); ?>
+						<?php print($info); ?>
 
 					</p>
 
