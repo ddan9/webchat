@@ -30,22 +30,6 @@
 
 	include("../functions/presets.php");
 
-	if ($use_clear_address == 1)
-
-	{
-
-		$address = $_SERVER["REMOTE_ADDR"];
-
-	}
-
-	else
-
-	{
-
-		$address = hash("md5", $_SERVER["REMOTE_ADDR"]);
-
-	};
-
 	$chat_database_files = json_decode(base64_decode(file_get_contents($databases_files_path), true), true);
 
 	$total_files = count($chat_database_files);

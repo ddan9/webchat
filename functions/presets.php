@@ -30,4 +30,20 @@
 
 	};
 
+	if ($use_clear_address == 1)
+
+	{
+
+		$address = $_SERVER["REMOTE_ADDR"];
+
+	}
+
+	else
+
+	{
+
+		$address = hash("md5", $_SERVER["REMOTE_ADDR"]);
+
+	};
+
 ?>

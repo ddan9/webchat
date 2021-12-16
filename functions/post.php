@@ -8,22 +8,6 @@
 
 	{
 
-		if ($use_clear_address == 1)
-
-		{
-
-			$address = $_SERVER["REMOTE_ADDR"];
-
-		}
-
-		else
-
-		{
-
-			$address = hash("md5", $_SERVER["REMOTE_ADDR"]);
-
-		};
-
 		echo $address;
 
 	}
@@ -41,22 +25,6 @@
 		$nickname = $_POST["nickname"];
 
 		$message = $_POST["message"];
-
-		if ($use_clear_address == 1)
-
-		{
-
-			$address = $_SERVER["REMOTE_ADDR"];
-
-		}
-
-		else
-
-		{
-
-			$address = hash("md5", $_SERVER["REMOTE_ADDR"]);
-
-		};
 
 		if ($time != "" && $time != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
 
