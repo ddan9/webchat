@@ -26,6 +26,8 @@
 
 	header("Content-Length: $filesize");
 
+	header("Content-Transfer-Encoding: binary");
+
 	readfile($filebody);
 
 	exit;
