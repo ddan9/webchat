@@ -10,6 +10,8 @@
 
 	$use_clear_address = 0;
 
+	$enable_nickname_remembering = 0;
+
 	$databases_files_path = "../databases/files.json";
 
 	$databases_messages_path = "../databases/messages.json";

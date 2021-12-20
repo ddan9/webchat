@@ -1,5 +1,57 @@
 <?php
 
+	function searchPreviousNickname($enable_nickname_remembering, $chat_database, $address, $total_messages)
+
+	{
+
+		if ($enable_nickname_remembering == 1)
+
+		{
+
+			if ($_POST["nickname"] != "" || $_POST["nickname"] != null)
+
+			{
+
+				$nickname = $_POST["nickname"];
+
+			}
+
+			else
+
+			{
+
+				for ($i = $total_messages; $i >= 0; $i--)
+
+				{
+
+					if (base64_decode($chat_database[$i][address]) == $address)
+
+					{
+
+						$nickname = base64_decode($chat_database[$i][nickname]);
+
+						break;
+
+					};
+
+				};
+
+			};
+
+		}
+
+		else
+
+		{
+
+			$nickname = $_POST["nickname"];
+
+		};
+
+		return $nickname;
+
+	};
+
 	include("../functions/presets.php");
 
 	$GUESS_WHO = $_GET["guess_who"];
@@ -16,13 +68,13 @@
 
 	{
 
-		$chat_database = json_decode(base64_decode(file_get_contents($databases_messages_path), true));
+		$chat_database = json_decode(base64_decode(file_get_contents($databases_messages_path), true), true);
 
 		$total_messages = count($chat_database);
 
 		$time = date("H:i:s");
 
-		$nickname = $_POST["nickname"];
+		$nickname = searchPreviousNickname($enable_nickname_remembering, $chat_database, $address, $total_messages);
 
 		$message = $_POST["message"];
 
