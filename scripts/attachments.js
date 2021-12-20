@@ -1,10 +1,10 @@
 "use strict";
 
-function uploadFile(target) 
+function uploadFile(input) 
 
 {
 
-	document.getElementById("chooseFileButtonLabel").innerHTML = target.files[0].name;
+	document.getElementById("chooseFileButtonLabel").innerHTML = input.files[0].name;
 
 };
 
