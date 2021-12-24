@@ -49,7 +49,5 @@
 - php rest/post api?
 - отдавать звук через php?
 - обновить пункт пресетов?
-- php injection?
-- js injection?
 - навести порядок в коде в переменных/значениях
 - json cookies?
