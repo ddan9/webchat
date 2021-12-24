@@ -1,10 +1,6 @@
 <?php
 
-	header("Cache-Control: no-cache, must-revalidate");
-
-	header("Content-type: text/html; charset=utf-8");
-
-	error_reporting(0);
+	$charset = "UTF-8";
 
 	$style = "default";
 
@@ -15,6 +11,18 @@
 	$databases_files_path = "../databases/files.json";
 
 	$databases_messages_path = "../databases/messages.json";
+
+	$cache_control = "must-revalidate";
+
+	$pragma = "public";
+
+	$content_transfer_encoding = "binary";
+
+	error_reporting(0);
+
+	header("Cache-Control: no-cache, must-revalidate");
+
+	header("Content-type: text/html; charset=utf-8");
 
 	if(preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]))
 

@@ -20,13 +20,13 @@
 
 	header("Expires: 0");
 
-	header("Cache-Control: must-revalidate");
+	header("Cache-Control: $cache_control");
 
-	header("Pragma: public");
+	header("Pragma: $pragma");
 
 	header("Content-Length: $filesize");
 
-	header("Content-Transfer-Encoding: binary");
+	header("Content-Transfer-Encoding: $content_transfer_encoding");
 
 	readfile($filebody);
 
