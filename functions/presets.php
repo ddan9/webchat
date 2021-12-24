@@ -4,6 +4,10 @@
 
 	$style = "default";
 
+	$favicon = "favicon.svg";
+
+	$favicon_type = "image/svg";
+
 	$use_clear_address = 0;
 
 	$enable_nickname_remembering = 0;
