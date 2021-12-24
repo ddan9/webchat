@@ -53,5 +53,4 @@
 - js injection?
 - навести порядок в коде в переменных/значениях
 - json cookies?
-- добавить больше настроек с header и пр
 - cte base64 vs binary
