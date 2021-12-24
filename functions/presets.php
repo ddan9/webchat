@@ -10,9 +10,9 @@
 
 	$favicon_type = "image/svg";
 
-	$use_clear_address = 0;
+	$use_clear_address = "false";
 
-	$enable_nickname_remembering = 0;
+	$enable_nickname_remembering = "false";
 
 	$databases_files_path = "../databases/files.json";
 
@@ -50,7 +50,7 @@
 
 	};
 
-	if ($use_clear_address == 1)
+	if ($use_clear_address == "true")
 
 	{
 

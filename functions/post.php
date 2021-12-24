@@ -4,7 +4,7 @@
 
 	{
 
-		if ($enable_nickname_remembering == 1)
+		if ($enable_nickname_remembering == "true")
 
 		{
 
