@@ -20,7 +20,7 @@
 
 	header("Expires: 0");
 
-	header("Cache-Control: $cache_control");
+	header("Cache-Control: $cache_control_download");
 
 	header("Pragma: $pragma");
 
