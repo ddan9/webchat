@@ -46,7 +46,6 @@
 
 - отдавать базу через php?
 - drag and drop
-- address в title в msg
 - php rest/post api?
 - отдавать звук через php?
 - обновить пункт пресетов?
