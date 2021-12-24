@@ -53,4 +53,3 @@
 - js injection?
 - навести порядок в коде в переменных/значениях
 - json cookies?
-- cte base64 vs binary
