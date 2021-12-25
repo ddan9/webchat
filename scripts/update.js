@@ -14,15 +14,27 @@ function main()
 
 	"use strict";
 
-	let intervalTime = 2000;
-
 	let dataRequestPath = "../databases/messages.json";
 
-	let playAudio = 0;
+	let addressRequestPath = "../functions/post.php?guess_who=true";
+
+	let playAudio = false;
 
 	let audio = new Audio("../sounds/notify.mp3");
 
-	let heightThreshold = 2000;
+	let intervalTime = 3000;
+
+	let heightThreshold = 1000;
+
+	let firstTimeScrollState = true;
+
+	let dataCountCurrent = 0, dataToShow = 0, dataCountWas = 0;
+
+	let buttonToDown = document.getElementById("buttonToDown");
+
+	let dataRequest = new XMLHttpRequest();
+
+	let ipRequest = new XMLHttpRequest();
 
 	let i, myIPaddress, messageClass;
 
@@ -37,16 +49,6 @@ function main()
 	let currentMessage, decodedMessage, validatedMessage;
 
 	let currentAddress, decodedAddress, validatedAddress;
-
-	let dataCountCurrent = 0, dataToShow = 0, dataCountWas = 0;
-
-	let firstTimeScrollState = 1;
-
-	let dataRequest = new XMLHttpRequest();
-
-	let ipRequest = new XMLHttpRequest();
-
-	let buttonToDown = document.getElementById("buttonToDown");
 
 	function onScrollFunctions() 
 
@@ -76,7 +78,7 @@ function main()
 
 	{
 
-		if (audio != "" && audio != null && playAudio == 1)
+		if (audio != "" && audio != null && playAudio == true)
 
 		{
 
@@ -90,7 +92,7 @@ function main()
 
 	{
 
-		ipRequest.open("GET", "../functions/post.php?guess_who=true", false);
+		ipRequest.open("GET", addressRequestPath, false);
 
 		ipRequest.send();
 
@@ -274,7 +276,7 @@ function main()
 
 		window.scrollTo(0, document.body.scrollHeight);
 
-		firstTimeScrollState = 0;
+		firstTimeScrollState = false;
 
 	};
 
@@ -326,7 +328,7 @@ function main()
 
 			smartUpdate();
 
-			if (firstTimeScrollState != 0)
+			if (firstTimeScrollState != false)
 
 			{
 
