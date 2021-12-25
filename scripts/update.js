@@ -90,7 +90,7 @@ function main()
 
 	{
 
-		ipRequest.open("GET", "../functions/post.php?guess_who=1", false);
+		ipRequest.open("GET", "../functions/post.php?guess_who=true", false);
 
 		ipRequest.send();
 
