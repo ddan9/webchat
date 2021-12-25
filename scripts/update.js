@@ -14,19 +14,19 @@ function main()
 
 	"use strict";
 
-	let dataRequestPath = "../databases/messages.json";
+	let dataRequestPath = "../functions/get.php?type=database";
 
-	let addressRequestPath = "../functions/post.php?guess_who=true";
+	let addressRequestPath = "../functions/get.php?type=address";
 
-	let playAudio = false;
+	let playAudio = "false";
 
-	let audio = new Audio("../sounds/notify.mp3");
+	let audio = new Audio("../functions/get.php?type=audio");
 
 	let intervalTime = 3000;
 
 	let heightThreshold = 1000;
 
-	let firstTimeScrollState = true;
+	let firstTimeScrollState = "true";
 
 	let dataCountCurrent = 0, dataToShow = 0, dataCountWas = 0;
 
@@ -78,7 +78,7 @@ function main()
 
 	{
 
-		if (audio != "" && audio != null && playAudio == true)
+		if (audio != "" && audio != null && playAudio == "true")
 
 		{
 
@@ -276,7 +276,7 @@ function main()
 
 		window.scrollTo(0, document.body.scrollHeight);
 
-		firstTimeScrollState = false;
+		firstTimeScrollState = "false";
 
 	};
 
@@ -328,7 +328,7 @@ function main()
 
 			smartUpdate();
 
-			if (firstTimeScrollState != false)
+			if (firstTimeScrollState != "false")
 
 			{
 
