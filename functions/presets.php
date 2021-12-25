@@ -18,6 +18,8 @@
 
 	$databases_messages_path = "../databases/messages.json";
 
+	$audio_notify_path = "../sounds/notify.mp3";
+
 	$cache_control_header = "no-cache, must-revalidate";
 
 	$cache_control_http = "no-cache";
