@@ -8,7 +8,7 @@
 
 		{
 
-			if ($_POST["nickname"] != "" || $_POST["nickname"] != null)
+			if ($_POST["nickname"] != "" && $_POST["nickname"] != null)
 
 			{
 
