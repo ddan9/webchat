@@ -14,7 +14,7 @@ function main()
 
 	"use strict";
 
-	let dataRequestPath = "../functions/get.php?type=database";
+	let dataRequestPath = "../functions/get.php?type=messages";
 
 	let addressRequestPath = "../functions/get.php?type=address";
 
