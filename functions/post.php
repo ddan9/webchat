@@ -56,7 +56,7 @@
 
 	$GUESS_WHO = $_GET["guess_who"];
 
-	if ($GUESS_WHO == "1")
+	if ($GUESS_WHO == true)
 
 	{
 
