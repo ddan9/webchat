@@ -10,9 +10,15 @@
 
 	{
 
-		case "database":
+		case "messages":
 
 			echo file_get_contents($databases_messages_path);
+
+			break;
+
+		case "files":
+
+			echo file_get_contents($databases_files_path);
 
 			break;
 
