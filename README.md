@@ -35,9 +35,6 @@
 
 <br />
 
-- php post injection? | php
-- упростить searchPreviousNickname()? | php
-- firefox 56 css hide scrollbar in files? | css
 - сделать адаптацию для мобильных устройств (в последнюю очередь) | js, css
 - темная тема (в самую последнюю очередь) | css
 - расширить валидацию (клиентскую безопасность), добавить в просмотрщик | js, php
