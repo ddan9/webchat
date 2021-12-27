@@ -38,15 +38,15 @@
 
 		$decoded_address = base64_decode($chat_database_files[$i][address]);
 
-		$validated_date = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_date);
+		$validated_date = preg_replace($validationRegexp, $validationReplacement, $decoded_date);
 
-		$validated_name = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_name);
+		$validated_name = preg_replace($validationRegexp, $validationReplacement, $decoded_name);
 
-		$validated_filesize = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_filesize);
+		$validated_filesize = preg_replace($validationRegexp, $validationReplacement, $decoded_filesize);
 
-		$validated_filetype = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_filetype);
+		$validated_filetype = preg_replace($validationRegexp, $validationReplacement, $decoded_filetype);
 
-		$validated_address = preg_replace("/<xmp>|<\/xmp>/i", "<rofl>", $decoded_address);
+		$validated_address = preg_replace($validationRegexp, $validationReplacement, $decoded_address);
 
 		if ($validated_date != "" && $validated_date != null && $validated_name != "" && $validated_name != null && $validated_filesize != "" && $validated_filesize != null && $validated_filetype != "" && $validated_filetype != null && $validated_address != "" && $validated_address != null)
 

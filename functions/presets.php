@@ -18,6 +18,10 @@
 
 	$time_files_format = "H:i:s d.m.Y";
 
+	$validationRegexp = "/<xmp>|<\/xmp>/i";
+
+	$validationReplacement = "<rofl>";
+
 	$enable_nickname_remembering = "false";
 
 	$databases_files_path = "../databases/files.json";
