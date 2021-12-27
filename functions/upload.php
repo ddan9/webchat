@@ -1,6 +1,6 @@
 <?php
 
-	function SendNotifyMessage($databases_messages_path)
+	function SendNotifyMessage($databases_messages_path, $time_messages_format)
 
 	{
 
@@ -8,7 +8,7 @@
 
 		$total_messages = count($chat_database);
 
-		$time = date("H:i:s");
+		$time = date($time_messages_format);
 
 		$nickname = "System";
 
@@ -48,7 +48,7 @@
 
 	$filebody = "data:" . $filetype . ";base64," . $fileraw;
 
-	$time =  date("H:i:s d.m.Y");
+	$time =  date($time_files_format);
 
 	if ($time != "" && $time != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
 
@@ -66,7 +66,7 @@
 
 		$chat_database_files[$total_files][address] = base64_encode($address);
 
-		SendNotifyMessage($databases_messages_path);
+		SendNotifyMessage($databases_messages_path, $time_messages_format);
 
 	};
 

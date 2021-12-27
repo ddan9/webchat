@@ -18,7 +18,7 @@
 
 	header("Content-Disposition: attachment; filename=$filename");
 
-	header("Expires: 0");
+	header("Expires: $expires");
 
 	header("Cache-Control: $cache_control_download");
 

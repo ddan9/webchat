@@ -58,7 +58,7 @@
 
 	$total_messages = count($chat_database);
 
-	$time = date("H:i:s");
+	$time = date($time_messages_format);
 
 	$nickname = searchPreviousNickname($enable_nickname_remembering, $chat_database, $address, $total_messages);
 

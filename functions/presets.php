@@ -12,6 +12,12 @@
 
 	$use_clear_address = "false";
 
+	$hashing_algorithm = "md5";
+
+	$time_messages_format = "H:i:s";
+
+	$time_files_format = "H:i:s d.m.Y";
+
 	$enable_nickname_remembering = "false";
 
 	$databases_files_path = "../databases/files.json";
@@ -25,6 +31,8 @@
 	$cache_control_http = "no-cache";
 
 	$cache_control_download = "must-revalidate";
+
+	$expires = "0";
 
 	$pragma = "public";
 
@@ -64,7 +72,7 @@
 
 	{
 
-		$address = hash("md5", $_SERVER["REMOTE_ADDR"]);
+		$address = hash($hashing_algorithm, $_SERVER["REMOTE_ADDR"]);
 
 	};
 
