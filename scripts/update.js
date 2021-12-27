@@ -28,6 +28,10 @@ function main()
 
 	let firstTimeScrollState = "true";
 
+	let validationRegexp = /<xmp>|<\/xmp>/gi;
+
+	let validationReplacement = "<rofl>";
+
 	let dataCountCurrent = 0, dataToShow = 0, dataCountWas = 0;
 
 	let buttonToDown = document.getElementById("buttonToDown");
@@ -126,7 +130,7 @@ function main()
 
 		decodedTime = decodeURIComponent(escape(window.atob(currentTime)));
 
-		validatedTime = decodedTime.replace(/<xmp>|<\/xmp>/gi, "<rofl>");
+		validatedTime = decodedTime.replace(validationRegexp, validationReplacement);
 
 	};
 
@@ -138,7 +142,7 @@ function main()
 
 		decodedNickname = decodeURIComponent(escape(window.atob(currentNickname)));
 
-		validatedNickname = decodedNickname.replace(/<xmp>|<\/xmp>/gi, "<rofl>");
+		validatedNickname = decodedNickname.replace(validationRegexp, validationReplacement);
 
 	};
 
@@ -150,7 +154,7 @@ function main()
 
 		decodedMessage = decodeURIComponent(escape(window.atob(currentMessage)));
 
-		validatedMessage = decodedMessage.replace(/<xmp>|<\/xmp>/gi, "<rofl>");
+		validatedMessage = decodedMessage.replace(validationRegexp, validationReplacement);
 
 	};
 
@@ -162,7 +166,7 @@ function main()
 
 		decodedAddress = decodeURIComponent(escape(window.atob(currentAddress)));
 
-		validatedAddress = decodedAddress.replace(/<xmp>|<\/xmp>/gi, "<rofl>");
+		validatedAddress = decodedAddress.replace(validationRegexp, validationReplacement);
 
 	};
 

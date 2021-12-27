@@ -4,7 +4,15 @@ function uploadFile(input)
 
 {
 
-	document.getElementById("chooseFileButtonLabel").innerHTML = input.files[0].name;
+	var validationRegexp = /<xmp>|<\/xmp>/gi;
+
+	var validationReplacement = "<rofl>";
+
+	var inputFileName = input.files[0].name;
+
+	var validatedFileName = inputFileName.replace(validationRegexp, validationReplacement);
+
+	document.getElementById("chooseFileButtonLabel").innerHTML = validatedFileName;
 
 };
 
