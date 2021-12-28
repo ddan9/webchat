@@ -12,6 +12,7 @@
 - Basically ready to use
 - Stack: js, html, css, php, json
 - It uses json as portable databases
+- Multiple file uploading
 - Fully manual code (no frameworks)
 - Fully open-source
 - You don't need to register to use it
@@ -35,7 +36,6 @@
 
 <br />
 
-- полоска тени внизу при прокрутке?
 - сделать адаптацию для мобильных устройств (в последнюю очередь) | js, css
 - темная тема (в самую последнюю очередь) | css
 - расширить валидацию (клиентскую безопасность), добавить в просмотрщик | js, php
@@ -49,6 +49,4 @@
 <br />
 
 - функция типо если файл больше лимита, мигать | js, css
-- множественное прикрепление файлов? | html, php, js
 - найти способ обхода ограничений по размеру файла | php
-- drag and drop? | js
