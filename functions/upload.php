@@ -34,39 +34,47 @@
 
 	$total_files = count($chat_database_files);
 
-	$filetype = $_FILES["userfile"]["type"];
+	$total_uploading_files = count($_FILES["userfile"]["name"]);
 
-	$filetmp = fopen($_FILES["userfile"]["tmp_name"], "r");
-
-	$fileraw = base64_encode(fread($filetmp, filesize($_FILES["userfile"]["tmp_name"])));
-
-	fclose($filetmp);
-
-	$filename = $_FILES["userfile"]["name"];
-
-	$filesize = $_FILES["userfile"]["size"];
-
-	$filebody = "data:" . $filetype . ";base64," . $fileraw;
-
-	$time =  date($time_files_format);
-
-	if ($time != "" && $time != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
+	for ($i = 0; $i < $total_uploading_files; $i++)
 
 	{
 
-		$chat_database_files[$total_files][time] = base64_encode($time);
+		$filetype = $_FILES["userfile"]["type"][$i];
 
-		$chat_database_files[$total_files][filename] = base64_encode($filename);
+		$filetmp = fopen($_FILES["userfile"]["tmp_name"][$i], "r");
 
-		$chat_database_files[$total_files][filetype] = base64_encode($filetype);
+		$fileraw = base64_encode(fread($filetmp, filesize($_FILES["userfile"]["tmp_name"][$i])));
 
-		$chat_database_files[$total_files][filesize] = base64_encode($filesize);
+		fclose($filetmp);
 
-		$chat_database_files[$total_files][filebody] = base64_encode($filebody);
+		$filename = $_FILES["userfile"]["name"][$i];
 
-		$chat_database_files[$total_files][address] = base64_encode($address);
+		$filesize = $_FILES["userfile"]["size"][$i];
 
-		SendNotifyMessage($databases_messages_path, $time_messages_format);
+		$filebody = "data:" . $filetype . ";base64," . $fileraw;
+
+		$time =  date($time_files_format);
+
+		if ($time != "" && $time != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
+
+		{
+
+			$chat_database_files[$total_files + $i][time] = base64_encode($time);
+
+			$chat_database_files[$total_files + $i][filename] = base64_encode($filename);
+
+			$chat_database_files[$total_files + $i][filetype] = base64_encode($filetype);
+
+			$chat_database_files[$total_files + $i][filesize] = base64_encode($filesize);
+
+			$chat_database_files[$total_files + $i][filebody] = base64_encode($filebody);
+
+			$chat_database_files[$total_files + $i][address] = base64_encode($address);
+
+			SendNotifyMessage($databases_messages_path, $time_messages_format);
+
+		};
 
 	};
 
