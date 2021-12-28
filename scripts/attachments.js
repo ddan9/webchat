@@ -8,7 +8,23 @@ function uploadFile(input)
 
 	var validationReplacement = "<rofl>";
 
-	var inputFileName = input.files[0].name;
+	var inputFilesCount = input.files.length;
+
+	if (inputFilesCount > 1)
+
+	{
+
+		var inputFileName = "Selected " + inputFilesCount + " files";
+
+	}
+
+	else
+
+	{
+
+		var inputFileName = input.files[0].name;
+
+	};
 
 	var validatedFileName = inputFileName.replace(validationRegexp, validationReplacement);
 
