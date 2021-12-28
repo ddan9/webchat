@@ -40,7 +40,7 @@
 
 						<input type="hidden" name="MAX_FILE_SIZE" value="<?php print($upload_max_filesize); ?>" />
 
-						<input class="chooseFileButton" id="chooseFileButton" name="userfile" type="file" accesskey="c" onchange="uploadFile(this)" hidden />
+						<input class="chooseFileButton" id="chooseFileButton" name="userfile[]" type="file" accesskey="c" onchange="uploadFile(this)" multiple="multiple" multiple hidden />
 
 						<label class="chooseFileButton" id="chooseFileButtonLabel" for="chooseFileButton" accesskey="c" title="Choose file">
 
@@ -50,7 +50,7 @@
 
 						<input class="sendFileButton" type="submit" accesskey="s" value="" title="Upload file" />
 
-						<input class="maxFileSize" type="button" value="<?php print($readable_max_file_size); ?>" title="Max file size" />
+						<input class="maxFileSize" type="button" value="<?php print($readable_max_file_size); ?>" title="Max per file size" />
 
 					</form>
 
