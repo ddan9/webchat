@@ -24,6 +24,8 @@
 
 	$enable_nickname_remembering = "false";
 
+	$enable_only_authorized_username = "false";
+
 	$databases_files_path = "../databases/files.json";
 
 	$databases_messages_path = "../databases/messages.json";

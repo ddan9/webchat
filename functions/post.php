@@ -1,42 +1,14 @@
 <?php
 
-	function searchPreviousNickname($enable_nickname_remembering, $chat_database, $address, $total_messages)
+	function searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages)
 
 	{
 
-		if ($enable_nickname_remembering == "true")
+		if ($_SERVER["PHP_AUTH_USER"] && $enable_only_authorized_username == "true")
 
 		{
 
-			if ($_POST["nickname"] != "" && $_POST["nickname"] != null)
-
-			{
-
-				$nickname = $_POST["nickname"];
-
-			}
-
-			else
-
-			{
-
-				for ($i = $total_messages; $i >= 0; $i--)
-
-				{
-
-					if (base64_decode($chat_database[$i][address]) == $address)
-
-					{
-
-						$nickname = base64_decode($chat_database[$i][nickname]);
-
-						break;
-
-					};
-
-				};
-
-			};
+			$nickname = $_SERVER["PHP_AUTH_USER"];
 
 		}
 
@@ -44,7 +16,49 @@
 
 		{
 
-			$nickname = $_POST["nickname"];
+			if ($enable_nickname_remembering == "true")
+
+			{
+
+				if ($_POST["nickname"] != "" && $_POST["nickname"] != null)
+
+				{
+
+					$nickname = $_POST["nickname"];
+
+				}
+
+				else
+
+				{
+
+					for ($i = $total_messages; $i >= 0; $i--)
+
+					{
+
+						if (base64_decode($chat_database[$i][address]) == $address)
+
+						{
+
+							$nickname = base64_decode($chat_database[$i][nickname]);
+
+							break;
+
+						};
+
+					};
+
+				};
+
+			}
+
+			else
+
+			{
+
+				$nickname = $_POST["nickname"];
+
+			};
 
 		};
 
@@ -60,7 +74,7 @@
 
 	$time = date($time_messages_format);
 
-	$nickname = searchPreviousNickname($enable_nickname_remembering, $chat_database, $address, $total_messages);
+	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
 
 	$message = $_POST["message"];
 
