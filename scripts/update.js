@@ -262,7 +262,7 @@ function main()
 
 		getHeightMetrics();
 
-		if (currentHeight > limitHeight)
+		if (currentHeight > limitHeight && !document.hidden)
 
 		{
 
