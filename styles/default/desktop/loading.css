@@ -132,7 +132,7 @@ div.loading-icon
 
 	left: calc(50% - 50px);
 
-	animation: loading-icon 0.4s linear infinite;
+	animation: loading-icon 0.5s linear infinite;
 
 }
 
