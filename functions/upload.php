@@ -12,7 +12,7 @@
 
 		$nickname = "System";
 
-		$message = "New file has been added!";
+		$message = "New file(s) has been added!";
 
 		$address = "Notify";
 
@@ -35,6 +35,8 @@
 	$total_files = count($chat_database_files);
 
 	$total_uploading_files = count($_FILES["userfile"]["name"]);
+
+	$total_uploaded_files = 0;
 
 	for ($i = 0; $i < $total_uploading_files; $i++)
 
@@ -72,9 +74,17 @@
 
 			$chat_database_files[$total_files + $i][address] = base64_encode($address);
 
-			SendNotifyMessage($databases_messages_path, $time_messages_format);
+			$total_uploaded_files++;
 
 		};
+
+	};
+
+	if ($total_uploaded_files > 0)
+
+	{
+
+		SendNotifyMessage($databases_messages_path, $time_messages_format);
 
 	};
 
