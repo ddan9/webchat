@@ -22,7 +22,23 @@ div.loading-container
 
 	z-index: -10000;
 
-	animation: loading-container 2s;
+	animation-name: loading-container;
+
+	-webkit-animation-name: loading-container;  
+
+	-moz-animation-name: loading-container;
+
+	animation-duration: 2s;
+
+	-webkit-animation-duration: 2s;
+
+	-moz-animation-duration: 2s;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
 
 }
 
@@ -110,6 +126,48 @@ div.loading-container
 
 }
 
+@-moz-keyframes loading-container
+
+{
+
+	0%
+
+	{
+
+		visibility: visible;
+
+		opacity: 100%;
+
+		z-index: 10000;
+
+	}
+
+	90%
+
+	{
+
+		visibility: visible;
+
+		opacity: 100%;
+
+		z-index: 10000;
+
+	}
+
+	100%
+
+	{
+
+		visibility: hidden;
+
+		opacity: 0%;
+
+		z-index: -10000;
+
+	}
+
+}
+
 div.loading-icon
 
 {
@@ -132,7 +190,29 @@ div.loading-icon
 
 	left: calc(50% - 50px);
 
-	animation: loading-icon 0.5s linear infinite;
+	animation-name: loading-icon;
+
+	-webkit-animation-name: loading-icon;  
+
+	-moz-animation-name: loading-icon;
+
+	animation-duration: 0.5s;
+
+	-webkit-animation-duration: 0.5s;
+
+	-moz-animation-duration: 0.5s;
+
+	animation-timing-function: linear;
+
+	-webkit-animation-timing-function: linear;
+
+	-moz-animation-timing-function: linear;
+
+	animation-iteration-count: infinite;
+
+	-webkit-animation-iteration-count: infinite;
+
+	-moz-animation-iteration-count: infinite;
 
 }
 
@@ -159,6 +239,20 @@ div.loading-icon
 	{
 
 		-webkit-transform: rotate(360deg);
+
+	}
+
+}
+
+@-moz-keyframes loading-icon
+
+{
+
+	100%
+
+	{
+
+		-moz-transform: rotate(360deg);
 
 	}
 

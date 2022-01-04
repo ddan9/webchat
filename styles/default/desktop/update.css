@@ -56,15 +56,21 @@ div.myMessageWhole
 
 	animation-name: show-my-added-message;
 
-	-webkit-animation-name: show-my-added-message;  
+	-webkit-animation-name: show-my-added-message;
+
+	-moz-animation-name: show-my-added-message;  
 
 	animation-duration: 0.5s;
 
 	-webkit-animation-duration: 0.5s;
 
+	-moz-animation-duration: 0.5s;
+
 	animation-timing-function: ease;
 
 	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1), 8px 0 8px -10px lightskyblue;
 
@@ -151,6 +157,40 @@ div.myMessageWhole:hover
 
 }
 
+@-moz-keyframes show-my-added-message
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+		-moz-transform: translateX(+150%);
+
+	}
+
+	70%
+
+	{
+
+		-moz-transform: translateX(+150%);
+
+	}  
+	 
+	100%
+
+	{
+
+		opacity: 100%;
+
+		-moz-transform: translateX(0%);
+
+	}
+
+}
+
 div.messageWhole
 
 {
@@ -177,15 +217,21 @@ div.messageWhole
 
 	animation-name: show-added-message;
 
-	-webkit-animation-name: show-added-message;  
+	-webkit-animation-name: show-added-message;
+
+	-moz-animation-name: show-added-message; 
 
 	animation-duration: 0.5s;
 
 	-webkit-animation-duration: 0.5s;
 
+	-moz-animation-duration: 0.5s;
+
 	animation-timing-function: ease;
 
 	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1), -8px 0 10px -10px lightskyblue;
 
@@ -271,6 +317,40 @@ div.messageWhole:hover
 
 }
 
+@-moz-keyframes show-added-message
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+		-moz-transform: translateX(-150%);
+
+	}
+
+	70%
+
+	{
+
+		-moz-transform: translateX(-150%);
+
+	}  
+
+	100%
+
+	{
+
+		opacity: 100%;
+
+		-moz-transform: translateX(0%);
+
+	}
+
+}
+
 div.messageNotify
 
 {
@@ -291,13 +371,19 @@ div.messageNotify
 
 	-webkit-animation-name: show-added-notify;  
 
+	-moz-animation-name: show-added-notify;
+
 	animation-duration: 0.5s;
 
 	-webkit-animation-duration: 0.5s;
 
+	-moz-animation-duration: 0.5s;
+
 	animation-timing-function: ease;
 
 	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
 
 }
 
@@ -332,6 +418,36 @@ div.messageNotify
 }
  
 @-webkit-keyframes show-added-notify
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+	}
+
+	70%
+
+	{
+
+		opacity: 0%;
+
+	}  
+
+	100%
+
+	{
+
+		opacity: 100%;
+
+	}
+
+}
+
+@-moz-keyframes show-added-notify
 
 {
 
@@ -509,13 +625,19 @@ button.buttonToDown
 
 	-webkit-animation-name: show-buttonToDown;  
 
+	-moz-animation-name: show-buttonToDown;
+
 	animation-duration: 0.5s;
 
 	-webkit-animation-duration: 0.5s;
 
+	-moz-animation-duration: 0.5s;
+
 	animation-timing-function: ease;
 
 	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
 
@@ -566,6 +688,28 @@ button.buttonToDown:focus
 }
  
 @-webkit-keyframes show-buttonToDown
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+	} 
+	 
+	100%
+
+	{
+
+		opacity: 100%;
+
+	}
+
+}
+
+@-moz-keyframes show-buttonToDown
 
 {
 
