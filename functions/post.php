@@ -1,5 +1,33 @@
 <?php
 
+	function sendRemotePostMessage($remote_post_url, $nickname, $message)
+
+	{
+
+		$data = array("nickname" => $nickname, "message" => $message);
+
+		$content = http_build_query($data);
+
+		$options = array(
+
+				"http" => array(
+
+						"header"  => "Content-type: application/x-www-form-urlencoded",
+
+						"method"  => "POST",
+
+						"content" => "$content",
+
+						),
+
+				);
+
+		$context  = stream_context_create($options);
+
+		file_get_contents($remote_post_url, false, $context);
+
+	};
+
 	function searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages)
 
 	{
@@ -78,21 +106,35 @@
 
 	$message = $_POST["message"];
 
-	if ($time != "" && $time != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
+	if ($enable_experimental_remote_client_post_mode == "false")
 
 	{
 
-		$chat_database[$total_messages][time] = base64_encode($time);
+		if ($time != "" && $time != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
 
-		$chat_database[$total_messages][nickname] = base64_encode($nickname);
+		{
 
-		$chat_database[$total_messages][message] = base64_encode($message);
+			$chat_database[$total_messages][time] = base64_encode($time);
 
-		$chat_database[$total_messages][address] = base64_encode($address);
+			$chat_database[$total_messages][nickname] = base64_encode($nickname);
+
+			$chat_database[$total_messages][message] = base64_encode($message);
+
+			$chat_database[$total_messages][address] = base64_encode($address);
+
+		};
+
+		file_put_contents($databases_messages_path, base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)));
+
+	}
+
+	else
+
+	{
+
+		sendRemotePostMessage($remote_post_url, $nickname, $message);
 
 	};
-
-	file_put_contents($databases_messages_path, base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)));
 
 	include("../templates/post.html");
 

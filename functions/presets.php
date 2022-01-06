@@ -32,6 +32,10 @@
 
 	$audio_notify_path = "../sounds/notify.mp3";
 
+	$enable_experimental_remote_client_post_mode = "false";
+
+	$remote_post_url = "http://127.0.0.1/webchat/functions/post.php";
+
 	$cache_control_header = "no-cache, must-revalidate";
 
 	$cache_control_http = "no-cache";
