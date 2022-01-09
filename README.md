@@ -36,6 +36,8 @@
 
 <br/>
 
+- custom limits for file size?
+- custom limits for messages count?
 - больше инфы через title (ник, время, дата, адрес)
 - new line in title
 - даты (не время) сообщений и файлов красиво
