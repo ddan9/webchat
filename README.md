@@ -36,6 +36,7 @@
 
 <br/>
 
+- поправить вид функций (кривовато)
 - custom limits for file size?
 - custom limits for messages count?
 - больше инфы через title (ник, время, дата, адрес)
