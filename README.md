@@ -6,6 +6,8 @@
 - download project archive into your web directory and unpack it
 - do: "chmod 777" or "chown www-data:www-data" to databases/files.json and databases/messages.json
 
+- On Linux systems you can just use embedded php server instead of nginx or apache2. Do "php -S 127.0.0.1:8000" in unpacked project
+
 #### Features:
 
 - This project is in active development
