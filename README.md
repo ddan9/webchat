@@ -102,6 +102,7 @@
 - сжатие смс/файлов/баз?
 - расширить валидацию (клиентскую безопасность), добавить в просмотрщик | js, php
 - php basic auth against web server
+- noSQL injection?
 
 <br/>
 
