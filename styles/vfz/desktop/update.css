@@ -38,7 +38,7 @@ div.myMessageWhole
 
 	margin-right: 4%;
 
-	background-color: #EEEEEE;
+	background-color: #82B09B;
 
 	padding: 12px 10px 1px 10px;
 
@@ -199,7 +199,7 @@ div.messageWhole
 
 	margin-right: auto;
 
-	background-color: #EEEEEE;
+	background-color: #C1B5EE;
 
 	padding: 12px 10px 1px 10px;
 
@@ -497,7 +497,11 @@ div.messageNotify > div.messageBody > xmp.messageBody
 
 	word-wrap: break-word;
 
-	color: gray;
+	/* color: gray; */
+   	background: #2d8888;
+    	border-radius: 0.3em;
+    	padding: 0.5em;
+    	color: black;
 
 }
 
