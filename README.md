@@ -35,6 +35,7 @@
 
 #### TODO:
 
+- no flex: content position in div centered fullscreened, panel on top fixed и налепить кнопку скрытия ?¿?
 - найти способ отцентрировать контент в просмотрщике, сделать красиво (юзать flex) | html, css
 - полный экран в просмотрщик | html, css, js
 - определение высоты картинки относительно именно высоты страницы? | html, css
