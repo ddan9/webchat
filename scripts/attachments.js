@@ -42,7 +42,7 @@ function uploadFile(input)
 
 			{
 
-				inputFileName += input.files[i].name + " ";
+				inputFileName += input.files[i].name + " | ";
 
 			};
 
