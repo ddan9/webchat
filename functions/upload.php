@@ -1,6 +1,6 @@
 <?php
 
-	function SendNotifyMessage($databases_messages_path, $time_messages_format)
+	function SendNotifyMessage($databases_messages_path, $time_messages_format, $total_uploaded_files)
 
 	{
 
@@ -12,7 +12,21 @@
 
 		$nickname = "System";
 
-		$message = "New file(s) has been added!";
+		if ($total_uploaded_files > 1)
+
+		{
+
+			$message = "New $total_uploaded_files files has been added!";
+
+		}
+
+		else
+
+		{
+
+			$message = "New file has been added!";
+
+		};
 
 		$address = "Notify";
 
@@ -84,7 +98,7 @@
 
 	{
 
-		SendNotifyMessage($databases_messages_path, $time_messages_format);
+		SendNotifyMessage($databases_messages_path, $time_messages_format, $total_uploaded_files);
 
 	};
 
