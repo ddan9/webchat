@@ -222,7 +222,7 @@ function main()
 
 					+ "<div class='messageInfoUser'>"
 
-						+ "<xmp class='messageInfoUser' title='Device: " + validatedDevice + " | Address: " + validatedAddress + "'>" 
+						+ "<xmp class='messageInfoUser' title='Device: " + validatedDevice + " &#010;Address: " + validatedAddress + "'>" 
 
 							+ validatedNickname 
 
