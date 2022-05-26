@@ -24,7 +24,7 @@
 
 	{
 
-		echo "<img class='view' src='$filebody'></img>";
+		echo "<a href='$filebody' class='view' target='_blank'> <img class='view' src='$filebody'></img> </a>";
 
 	};
 
