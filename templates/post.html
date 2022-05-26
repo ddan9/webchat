@@ -12,13 +12,13 @@
 
 	<body>
 
-		<form class="container" id="formContainer" action="../functions/post.php" autocomplete="off" method="POST">
+		<form class="container" id="formContainer" action="../functions/post.php" autocomplete="<?php print($html_post_autocomplete); ?>" method="POST">
 
-			<textarea class="message" id="inputMessage" type="text" placeholder="Enter your message here..." title="Message" name="message" accesskey="m" autocomplete="off" minlenght="1" maxlenght="4096" autofocus="autofocus" autofocus focus></textarea>
+			<textarea class="message" id="inputMessage" type="text" placeholder="Enter your message here..." title="Message" name="message" accesskey="m" autocomplete="<?php print($html_post_autocomplete); ?>" minlenght="1" maxlenght="4096" autofocus="autofocus" autofocus focus></textarea>
 
 			<input class="send" type="submit" id="submitMessage" value="" accesskey="s" title="Send message" />
 
-			<input class="nickname" type="text" placeholder="Nickname" name="nickname" minlenght="1" maxlenght="128" accesskey="n" autocomplete="off" value="<?php print($nickname); ?>" title="Enter your nickname here" />
+			<input class="nickname" type="text" placeholder="Nickname" name="nickname" minlenght="1" maxlenght="128" accesskey="n" autocomplete="<?php print($html_post_autocomplete); ?>" value="<?php print($nickname); ?>" title="Enter your nickname here" />
 
 			<a href="../attachments/" accesskey="a" target="main-frame">
 
