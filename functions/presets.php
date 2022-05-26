@@ -10,6 +10,8 @@
 
 	$favicon_type = "image/svg";
 
+	$html_post_autocomplete = "off";
+
 	$use_clear_address = "false";
 
 	$hashing_algorithm = "md5";
