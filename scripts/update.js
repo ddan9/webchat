@@ -48,6 +48,8 @@ function main()
 
 	let currentTime, decodedTime, validatedTime;
 
+	let currentDevice, decodedDevice, validatedDevice;
+
 	let currentNickname, decodedNickname, validatedNickname;
 
 	let currentMessage, decodedMessage, validatedMessage;
@@ -134,6 +136,18 @@ function main()
 
 	};
 
+	function validateDevice()
+
+	{
+
+		currentDevice = data[i].device;
+
+		decodedDevice = decodeURIComponent(escape(window.atob(currentDevice)));
+
+		validatedDevice = decodedDevice.replace(validationRegexp, validationReplacement);
+
+	};
+
 	function validateNickname()
 
 	{
@@ -208,7 +222,7 @@ function main()
 
 					+ "<div class='messageInfoUser'>"
 
-						+ "<xmp class='messageInfoUser' title='Address: " + validatedAddress + "'>" 
+						+ "<xmp class='messageInfoUser' title='Device: " + validatedDevice + " | Address: " + validatedAddress + "'>" 
 
 							+ validatedNickname 
 
@@ -288,7 +302,7 @@ function main()
 
 	{
 
-		if (validatedTime != null && validatedTime != "" && validatedNickname != null && validatedNickname != "" && validatedMessage != null && validatedMessage != "" && validatedAddress != null && validatedAddress != "")
+		if (validatedTime != null && validatedTime != "" && validatedDevice != null && validatedDevice != "" && validatedNickname != null && validatedNickname != "" && validatedMessage != null && validatedMessage != "" && validatedAddress != null && validatedAddress != "")
 
 		{
 
@@ -307,6 +321,8 @@ function main()
 		{
 
 			validateTime();
+
+			validateDevice();
 
 			validateNickname();
 
