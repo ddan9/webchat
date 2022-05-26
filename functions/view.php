@@ -24,7 +24,7 @@
 
 	{
 
-		echo "<a href='$filebody' class='view' target='_blank'> <img class='view' src='$filebody'></img> </a>";
+		echo "<a href='$filebody' class='view' target='_blank' title='Turn on fullscreen'> <img class='view' src='$filebody'></img> </a>";
 
 	};
 
