@@ -110,11 +110,13 @@
 
 	{
 
-		if ($time != "" && $time != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
+		if ($time != "" && $time != null && $device != "" && $device != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
 
 		{
 
 			$chat_database[$total_messages][time] = base64_encode($time);
+
+			$chat_database[$total_messages][device] = base64_encode($device);
 
 			$chat_database[$total_messages][nickname] = base64_encode($nickname);
 

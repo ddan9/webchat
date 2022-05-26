@@ -10,6 +10,8 @@
 
 		$time = date($time_messages_format);
 
+		$device = "Server";
+
 		$nickname = "System";
 
 		if ($total_uploaded_files > 1)
@@ -31,6 +33,8 @@
 		$address = "Notify";
 
 		$chat_database[$total_messages][time] = base64_encode($time);
+
+		$chat_database[$total_messages][device] = base64_encode($device);
 
 		$chat_database[$total_messages][nickname] = base64_encode($nickname);
 
@@ -72,11 +76,13 @@
 
 		$time =  date($time_files_format);
 
-		if ($time != "" && $time != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
+		if ($time != "" && $time != null && $device != "" && $device != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
 
 		{
 
 			$chat_database_files[$total_files + $i][time] = base64_encode($time);
+
+			$chat_database_files[$total_files + $i][device] = base64_encode($device);
 
 			$chat_database_files[$total_files + $i][filename] = base64_encode($filename);
 
