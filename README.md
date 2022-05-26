@@ -6,7 +6,7 @@
 
 - Dependencies: php, webserver (apache2/nginx), js-compatible browser
 - Download project archive into your web directory and unpack it
-- Do: "chmod 777" or "chown www-data:www-data" to databases/files.json and databases/messages.json
+- Do: "chmod 666" or "chown <username>:www-data" to databases/files.json and databases/messages.json
 - Change config variables in files if you need
 - On Linux systems you can just use embedded php server instead of nginx or apache2. Do "php -S 127.0.0.1:8000" in unpacked project and enjoy it!
 
@@ -62,8 +62,7 @@
 - кнопка "назад" при переходе с другого места для тесной интеграции с другими сервисами
 - поработать над условиями воспроизведения звукового уведомления (она ведь не постоянно должна отыгрывать)
 - может в целом звуков добавить?
-- анимация автопрокрутки инфы о файлы в инпуте
-- эффект нажимания отсутствует на кнопках просмотра и скачивания
+- анимация автопрокрутки инфы (подсказок) в инпутах (при недостаточной широте экрана например)
 
 <br/>
 
