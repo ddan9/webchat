@@ -100,9 +100,9 @@
 
 	$total_messages = count($chat_database);
 
-	$time = date($time_messages_format);
+	$time = date($time_messages_format, strtotime($custom_time_set));
 
-	$date = date($date_messages_format);
+	$date = date($date_messages_format, strtotime($custom_date_set));
 
 	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
 

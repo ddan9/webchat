@@ -1,6 +1,6 @@
 <?php
 
-	function SendNotifyMessage($databases_messages_path, $time_messages_format, $date_messages_format, $total_uploaded_files)
+	function SendNotifyMessage($databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $total_uploaded_files)
 
 	{
 
@@ -8,9 +8,9 @@
 
 		$total_messages = count($chat_database);
 
-		$time = date($time_messages_format);
+		$time = date($time_messages_format, strtotime($custom_time_set));
 
-		$date = date($date_messages_format);
+		$date = date($date_messages_format, strtotime($custom_date_set));
 
 		$device = "Server";
 
@@ -78,9 +78,9 @@
 
 		$filebody = "data:" . $filetype . ";base64," . $fileraw;
 
-		$time = date($time_files_format);
+		$time = date($time_files_format, strtotime($custom_time_set));
 
-		$date = date($date_files_format);
+		$date = date($date_files_format, strtotime($custom_date_set));
 
 		if ($time != "" && $time != null && $date != "" && $date != null && $device != "" && $device != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
 
@@ -112,7 +112,7 @@
 
 	{
 
-		SendNotifyMessage($databases_messages_path, $time_messages_format, $date_messages_format, $total_uploaded_files);
+		SendNotifyMessage($databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $total_uploaded_files);
 
 	};
 

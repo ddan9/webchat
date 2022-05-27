@@ -16,6 +16,10 @@
 
 	$hashing_algorithm = "md5";
 
+	$custom_time_set = "+0 hour +0 minutes +0 seconds";
+
+	$custom_date_set = "+0 year +0 months +0 days";
+
 	$time_messages_format = "H:i:s";
 
 	$date_messages_format = "d.m.Y";
