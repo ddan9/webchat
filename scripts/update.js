@@ -46,7 +46,9 @@ function main()
 
 	let totalHeight, limitHeight, currentHeight;
 
-	let currentTime, decodedTime, validatedTime;
+	let currentTime, decodedTime, validatedTime, validatedTimeShort;
+
+	let currentDate, decodedDate, validatedDate;
 
 	let currentDevice, decodedDevice, validatedDevice;
 
@@ -133,6 +135,20 @@ function main()
 		decodedTime = decodeURIComponent(escape(window.atob(currentTime)));
 
 		validatedTime = decodedTime.replace(validationRegexp, validationReplacement);
+
+		validatedTimeShort = validatedTime.substring(0,5);
+
+	};
+
+	function validateDate()
+
+	{
+
+		currentDate = data[i].date;
+
+		decodedDate = decodeURIComponent(escape(window.atob(currentDate)));
+
+		validatedDate = decodedDate.replace(validationRegexp, validationReplacement);
 
 	};
 
@@ -222,7 +238,7 @@ function main()
 
 					+ "<div class='messageInfoUser'>"
 
-						+ "<xmp class='messageInfoUser' title='Device: " + validatedDevice + " &#010;Address: " + validatedAddress + "'>" 
+						+ "<xmp class='messageInfoUser' title='Time: " + validatedTime + " &#010;Date: " + validatedDate + " &#010;Nickname: " + validatedNickname + " &#010;Device: " + validatedDevice + " &#010;Address: " + validatedAddress + "'>" 
 
 							+ validatedNickname 
 
@@ -234,7 +250,7 @@ function main()
 
 						+ "<xmp class='messageInfoTime'>" 
 
-							+ validatedTime 
+							+ validatedTimeShort
 
 						+ "</xmp>" 
 
@@ -302,7 +318,7 @@ function main()
 
 	{
 
-		if (validatedTime != null && validatedTime != "" && validatedDevice != null && validatedDevice != "" && validatedNickname != null && validatedNickname != "" && validatedMessage != null && validatedMessage != "" && validatedAddress != null && validatedAddress != "")
+		if (validatedTime != null && validatedTime != "" && validatedDate != null && validatedDate != "" && validatedDevice != null && validatedDevice != "" && validatedNickname != null && validatedNickname != "" && validatedMessage != null && validatedMessage != "" && validatedAddress != null && validatedAddress != "")
 
 		{
 
@@ -321,6 +337,8 @@ function main()
 		{
 
 			validateTime();
+
+			validateDate();
 
 			validateDevice();
 
