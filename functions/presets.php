@@ -22,7 +22,11 @@
 
 	$time_files_format = "H:i:s";
 
+	$time_files_format_short = "H:i";
+
 	$date_files_format = "d.m.Y";
+
+	$date_files_format_short = "D M";
 
 	$validationRegexp = "/<xmp>|<\/xmp>/i";
 

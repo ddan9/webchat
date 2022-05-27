@@ -60,7 +60,7 @@
 
 		{
 
-			$timedate = "<strong> Added: </strong>" . "<br>" . $validated_time . "<br>" . $validated_date;
+			$timedate = "<strong> Added: </strong>" . "<br>" . date($time_files_format_short, strtotime($validated_time)) . "<br>" . date($date_files_format_short, strtotime($validated_date));
 
 			$name = "<strong>" . "<xmp class='list'>" . $validated_name . "</xmp>" . "</strong>";
 
