@@ -102,6 +102,8 @@
 
 	$time = date($time_messages_format);
 
+	$date = date($date_messages_format);
+
 	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
 
 	$message = $_POST["message"];
@@ -110,11 +112,13 @@
 
 	{
 
-		if ($time != "" && $time != null && $device != "" && $device != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
+		if ($time != "" && $time != null && $date != "" && $date != null && $device != "" && $device != null && $nickname != "" && $nickname != null && $message != "" && $message != null && $address != "" && $address != null)
 
 		{
 
 			$chat_database[$total_messages][time] = base64_encode($time);
+
+			$chat_database[$total_messages][date] = base64_encode($date);
 
 			$chat_database[$total_messages][device] = base64_encode($device);
 

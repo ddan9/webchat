@@ -18,7 +18,11 @@
 
 	$time_messages_format = "H:i:s";
 
-	$time_files_format = "H:i:s d.m.Y";
+	$date_messages_format = "d.m.Y";
+
+	$time_files_format = "H:i:s";
+
+	$date_files_format = "d.m.Y";
 
 	$validationRegexp = "/<xmp>|<\/xmp>/i";
 

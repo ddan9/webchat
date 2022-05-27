@@ -66,7 +66,9 @@
 
 	$filebody = base64_decode($chat_database_files[$GETFILEID][filebody]);
 
-	$date = base64_decode($chat_database_files[$GETFILEID][time]);
+	$time = base64_decode($chat_database_files[$GETFILEID][time]);
+
+	$date = base64_decode($chat_database_files[$GETFILEID][date]);
 
 	$filetype_parent = explode("/", $filetype)[0];
 

@@ -1,6 +1,6 @@
 <?php
 
-	function SendNotifyMessage($databases_messages_path, $time_messages_format, $total_uploaded_files)
+	function SendNotifyMessage($databases_messages_path, $time_messages_format, $date_messages_format, $total_uploaded_files)
 
 	{
 
@@ -9,6 +9,8 @@
 		$total_messages = count($chat_database);
 
 		$time = date($time_messages_format);
+
+		$date = date($date_messages_format);
 
 		$device = "Server";
 
@@ -33,6 +35,8 @@
 		$address = "Notify";
 
 		$chat_database[$total_messages][time] = base64_encode($time);
+
+		$chat_database[$total_messages][date] = base64_encode($date);
 
 		$chat_database[$total_messages][device] = base64_encode($device);
 
@@ -74,13 +78,17 @@
 
 		$filebody = "data:" . $filetype . ";base64," . $fileraw;
 
-		$time =  date($time_files_format);
+		$time = date($time_files_format);
 
-		if ($time != "" && $time != null && $device != "" && $device != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
+		$date = date($date_files_format);
+
+		if ($time != "" && $time != null && $date != "" && $date != null && $device != "" && $device != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
 
 		{
 
 			$chat_database_files[$total_files + $i][time] = base64_encode($time);
+
+			$chat_database_files[$total_files + $i][date] = base64_encode($date);
 
 			$chat_database_files[$total_files + $i][device] = base64_encode($device);
 
@@ -104,7 +112,7 @@
 
 	{
 
-		SendNotifyMessage($databases_messages_path, $time_messages_format, $total_uploaded_files);
+		SendNotifyMessage($databases_messages_path, $time_messages_format, $date_messages_format, $total_uploaded_files);
 
 	};
 

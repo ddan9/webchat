@@ -28,7 +28,9 @@
 
 	{
 
-		$decoded_date = base64_decode($chat_database_files[$i][time]);
+		$decoded_time = base64_decode($chat_database_files[$i][time]);
+
+		$decoded_date = base64_decode($chat_database_files[$i][date]);
 
 		$decoded_device = base64_decode($chat_database_files[$i][device]);
 
@@ -39,6 +41,8 @@
 		$decoded_filetype = base64_decode($chat_database_files[$i][filetype]);
 
 		$decoded_address = base64_decode($chat_database_files[$i][address]);
+
+		$validated_time = preg_replace($validationRegexp, $validationReplacement, $decoded_time);
 
 		$validated_date = preg_replace($validationRegexp, $validationReplacement, $decoded_date);
 
@@ -52,11 +56,11 @@
 
 		$validated_address = preg_replace($validationRegexp, $validationReplacement, $decoded_address);
 
-		if ($validated_date != "" && $validated_date != null && $validated_device != "" && $validated_device != null && $validated_name != "" && $validated_name != null && $validated_filesize != "" && $validated_filesize != null && $validated_filetype != "" && $validated_filetype != null && $validated_address != "" && $validated_address != null)
+		if ($validated_time != "" && $validated_time != null && $validated_date != "" && $validated_date != null && $validated_device != "" && $validated_device != null && $validated_name != "" && $validated_name != null && $validated_filesize != "" && $validated_filesize != null && $validated_filetype != "" && $validated_filetype != null && $validated_address != "" && $validated_address != null)
 
 		{
 
-			$date = "<strong> Added: </strong>" . "<br>" . $validated_date;
+			$timedate = "<strong> Added: </strong>" . "<br>" . $validated_time . "<br>" . $validated_date;
 
 			$name = "<strong>" . "<xmp class='list'>" . $validated_name . "</xmp>" . "</strong>";
 
