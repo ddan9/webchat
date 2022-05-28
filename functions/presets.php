@@ -1,5 +1,7 @@
 <?php
 
+	$version = "20220528";
+
 	$charset_http = "UTF-8";
 
 	$charset_header = "utf-8";
@@ -15,6 +17,10 @@
 	$use_clear_address = "false";
 
 	$hashing_algorithm = "md5";
+
+	$salt_global = "default";
+
+	$salt_address = "default";
 
 	$custom_time_set = "+0 hour +0 minutes +0 seconds";
 
@@ -96,7 +102,7 @@
 
 	{
 
-		$address = hash($hashing_algorithm, $_SERVER["REMOTE_ADDR"]);
+		$address = hash($hashing_algorithm, $salt_global . $_SERVER["REMOTE_ADDR"] . $salt_address);
 
 	};
 
