@@ -40,7 +40,7 @@ div.myMessageWhole
 
 	background-color: #EEEEEE;
 
-	padding: 12px 10px 1px 10px;
+	padding: 10px 10px 10px 10px;
 
 	min-width: 200px;
 
@@ -201,7 +201,7 @@ div.messageWhole
 
 	background-color: #EEEEEE;
 
-	padding: 12px 10px 1px 10px;
+	padding: 10px 10px 10px 10px;
 
 	min-width: 200px;
 
@@ -547,6 +547,8 @@ div.messageInfo
 
 	display: block;
 
+	margin-bottom: 10px;
+
 }
 
 div.messageInfoUser
@@ -616,6 +618,8 @@ xmp.messageBody
 	word-wrap: break-word;
 
 	color: black;
+
+	margin: 0;
 
 }
 
