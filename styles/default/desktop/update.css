@@ -525,13 +525,25 @@ div.messageNotify > div.messageBody > xmp.messageBody
 
 	word-wrap: break-word;
 
-	color: white;
-
 	text-align: center;
 
 	vertical-align: middle;
 
 	line-height: 28px;
+
+	color: antiquewhite;
+
+	transition: color 0.2s linear;
+
+}
+
+div.messageNotify > div.messageBody > xmp.messageBody:hover
+
+{
+
+	color: white;
+
+	transition: color 0.2s linear;
 
 }
 
@@ -579,9 +591,21 @@ xmp.messageInfoUser
 
 	display: inline;
 
+	padding-right: 10px;
+
+	color: dodgerblue;
+
+	transition: color 0.2s linear;
+
+}
+
+xmp.messageInfoUser:hover
+
+{
+
 	color: blue;
 
-	padding-right: 10px;
+	transition: color 0.2s linear;
 
 }
 
@@ -593,7 +617,7 @@ div.messageInfoTime
 
 	float: right;
 
-	color: gray;
+	color: darkgray;
 
 }
 
@@ -605,7 +629,19 @@ xmp.messageInfoTime
 
 	display: inline;
 
+	color: darkgray;
+
+	transition: color 0.2s linear;
+
+}
+
+xmp.messageInfoTime:hover
+
+{
+
 	color: gray;
+
+	transition: color 0.2s linear;
 
 }
 
@@ -617,9 +653,21 @@ xmp.messageBody
 
 	word-wrap: break-word;
 
+	margin: 0;
+
+	color: darkslategray;
+
+	transition: color 0.2s linear;
+
+}
+
+xmp.messageBody:hover
+
+{
+
 	color: black;
 
-	margin: 0;
+	transition: color 0.2s linear;
 
 }
 
