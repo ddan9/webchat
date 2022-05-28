@@ -557,7 +557,7 @@ div.messageInfoTime
 
 	float: right;
 
-	color: LightGray;
+	color: gray;
 
 }
 
@@ -569,7 +569,7 @@ xmp.messageInfoTime
 
 	display: inline;
 
-	color: LightGray;
+	color: gray;
 
 }
 
