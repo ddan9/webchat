@@ -8,7 +8,7 @@
 - Download project archive into your web directory and unpack it
 - Do: "chmod 666" or "chown %username%:www-data" to databases/files.json and databases/messages.json
 - Change config variables in files if you need
-- On Linux systems you can just use embedded php server instead of nginx or apache2. Do "php -S 127.0.0.1:8000" in unpacked project and enjoy it!
+- On Linux systems you can just use embedded php server instead of nginx or apache2. Do "php -S 127.0.0.1:8080" in unpacked project and enjoy it!
 
 <br/>
 
@@ -110,6 +110,7 @@
 - расширить валидацию (клиентскую безопасность), добавить в просмотрщик | js, php
 - php basic auth against web server
 - noSQL injection?
+- по итогу протестить на безопасность ещё раз
 
 <br/>
 
@@ -135,6 +136,7 @@
 
 <br/>
 
+##### Темы
 - true material default theme (щас не тру)
 - сделать дефолтную тему без голубых элементов (на основе нынешней, нынешнюю переименовать)
 - разные темы понаделать
@@ -144,10 +146,7 @@
 
 <br/>
 
-- по итогу протестить на безопасность ещё раз
-
-<br/>
-
+##### Описания
 - описание концепта комнат, т.к. не всем они нужны | html, css, markdown
 - описание | markdown
 - описание basic auth | markdown, cfg
