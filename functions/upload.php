@@ -116,7 +116,7 @@
 
 	};
 
-	file_put_contents($databases_files_path, openssl_encrypt(base64_encode(json_encode($chat_database_files, JSON_PRETTY_PRINT)), $encryption_cipher, $salt_global.$databases_password.$salt_files, $encryption_options, $encryption_iv));
+	file_put_contents($databases_files_path, openssl_encrypt(base64_encode(json_encode($chat_database_files, JSON_PRETTY_PRINT)), $encryption_cipher, $salt_global.$databases_password.$salt_files, $encryption_options, $encryption_iv), LOCK_EX);
 
 	header("Location: ../attachments/");
 
