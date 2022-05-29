@@ -124,6 +124,7 @@
 - RFI, LFI, RCE, CSRF, IDOR
 - WAF
 - контроль загружаемых файлов
+- htmlspecialchars
 
 <br/>
 
