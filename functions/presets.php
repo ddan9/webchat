@@ -16,11 +16,25 @@
 
 	$use_clear_address = "false";
 
+	$encryption_cipher = "AES256";
+
+	$encryption_options = OPENSSL_RAW_DATA;
+
+	$encryption_iv = 1024102410241024;
+
 	$hashing_algorithm = "md5";
+
+	$databases_password = "default";
+
+	$recieve_client_password = "false";
 
 	$salt_global = "default";
 
 	$salt_address = "default";
+
+	$salt_messages = "default";
+
+	$salt_files = "default";
 
 	$custom_time_set = "+0 hour +0 minutes +0 seconds";
 
@@ -102,7 +116,7 @@
 
 	{
 
-		$address = hash($hashing_algorithm, $salt_global . $_SERVER["REMOTE_ADDR"] . $salt_address);
+		$address = hash($hashing_algorithm, $salt_global.$_SERVER["REMOTE_ADDR"].$salt_address);
 
 	};
 

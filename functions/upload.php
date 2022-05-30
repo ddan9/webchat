@@ -1,10 +1,10 @@
 <?php
 
-	function SendNotifyMessage($databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $total_uploaded_files)
+	function SendNotifyMessage($databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $total_uploaded_files, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
 
 	{
 
-		$chat_database = json_decode(base64_decode(file_get_contents($databases_messages_path), true));
+		$chat_database = json_decode(base64_decode(openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv), true), true);
 
 		$total_messages = count($chat_database);
 
@@ -46,13 +46,13 @@
 
 		$chat_database[$total_messages][address] = base64_encode($address);
 
-		file_put_contents($databases_messages_path, base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)));
+		file_put_contents($databases_messages_path, openssl_encrypt(base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv));
 
 	};
 
 	include("../functions/presets.php");
 
-	$chat_database_files = json_decode(base64_decode(file_get_contents($databases_files_path), true), true);
+	$chat_database_files = json_decode(base64_decode(openssl_decrypt(file_get_contents($databases_files_path), $encryption_cipher, $salt_global.$databases_password.$salt_files, $encryption_options, $encryption_iv), true), true);
 
 	$total_files = count($chat_database_files);
 
@@ -112,11 +112,11 @@
 
 	{
 
-		SendNotifyMessage($databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $total_uploaded_files);
+		SendNotifyMessage($databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $total_uploaded_files, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
 
 	};
 
-	file_put_contents($databases_files_path, base64_encode(json_encode($chat_database_files, JSON_PRETTY_PRINT)), LOCK_EX);
+	file_put_contents($databases_files_path, openssl_encrypt(base64_encode(json_encode($chat_database_files, JSON_PRETTY_PRINT)), $encryption_cipher, $salt_global.$databases_password.$salt_files, $encryption_options, $encryption_iv), LOCK_EX);
 
 	header("Location: ../attachments/");
 
