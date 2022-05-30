@@ -50,6 +50,28 @@ function uploadFile(input)
 
 	};
 
+	function checkForMaxFileSize()
+
+	{
+
+		document.getElementById("maxFileSize").style.animationName="none";
+
+		for (i = 0; i < inputFilesCount; i++)
+
+		{
+
+			if (input.files[i].size > maxFileSize)
+
+			{
+
+				document.getElementById("maxFileSize").style.animationName="maxFileSizeExceeded";
+
+			};
+
+		};
+
+	};
+
 	var useSimpleShow = "true";
 
 	var validationRegexp = /<xmp>|<\/xmp>/gi;
@@ -59,6 +81,10 @@ function uploadFile(input)
 	var inputFilesCount = input.files.length;
 
 	var i, inputFileName;
+
+	var maxFileSize = document.getElementById("maxFileSizeValue").value;
+
+	checkForMaxFileSize();
 
 	showSelectedFiles();
 
