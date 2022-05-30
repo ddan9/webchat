@@ -388,9 +388,15 @@ function main()
 
 	{
 
-		dataGet();
+		if (!document.hidden)
 
-		smartShow();
+		{
+
+			dataGet();
+
+			smartShow();
+
+		};
 
 	};
 

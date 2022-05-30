@@ -62,11 +62,43 @@ function main()
 
 	};
 
+	function nullNicknameWarning()
+
+	{
+
+		if (document.getElementById("inputNickname").value == "" || document.getElementById("inputNickname").value == null)
+
+		{
+
+			document.getElementById("inputNickname").style.animationName="nullNicknameWarning";
+
+		};
+
+	};
+
+	function nullNicknameWarningStop()
+
+	{
+
+		if (document.getElementById("inputNickname").value != "" || document.getElementById("inputNickname").value != null)
+
+		{
+
+			document.getElementById("inputNickname").style.animationName="none";
+
+		};
+
+	};
+
 	document.getElementById("inputMessage").focus();
 
 	document.getElementById("inputMessage").addEventListener("keydown", insertHook);
 
 	document.getElementById("inputMessage").addEventListener("keypress", submitOnEnter);
+
+	document.getElementById("inputMessage").addEventListener("keypress", nullNicknameWarning);
+
+	document.getElementById("inputNickname").addEventListener("keypress", nullNicknameWarningStop);
 
 };
 
