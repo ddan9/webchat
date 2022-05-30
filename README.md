@@ -121,7 +121,7 @@
 - RFI, LFI, RCE, CSRF, IDOR
 - WAF
 - контроль загружаемых файлов
-- htmlspecialchars
+- htmlspecialchars (или экранирование символов)
 - php вывод инфы через уже обработанные переменные
 
 <br/>
