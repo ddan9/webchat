@@ -26,8 +26,6 @@
 
 	$databases_password = "default";
 
-	$recieve_client_password = "false";
-
 	$salt_global = "default";
 
 	$salt_address = "default";
@@ -35,6 +33,10 @@
 	$salt_messages = "default";
 
 	$salt_files = "default";
+
+	$recieve_client_password = "false";
+
+	$client_password_to_send_database = "default";
 
 	$custom_time_set = "+0 hour +0 minutes +0 seconds";
 

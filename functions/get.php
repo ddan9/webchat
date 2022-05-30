@@ -1,6 +1,6 @@
 <?php
 
-	function send_messages_database($recieve_client_password, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
+	function send_messages_database($recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
 
 	{
 
@@ -8,7 +8,21 @@
 
 		{
 
-			$chat_database = openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$PASSWORD.$salt_messages, $encryption_options, $encryption_iv);
+			if ($PASSWORD == $client_password_to_send_database)
+
+			{
+
+				$chat_database = openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv);
+
+			}
+
+			else
+
+			{
+
+				$chat_database = null;
+
+			};
 
 		}
 
@@ -38,7 +52,7 @@
 
 		case "messages":
 
-			echo send_messages_database($recieve_client_password, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
+			echo send_messages_database($recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
 
 			break;
 
