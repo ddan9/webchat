@@ -404,6 +404,8 @@ function main()
 
 	document.addEventListener("scroll", onScrollFunctions);
 
+	dataShow();
+
 	setInterval(() => dataShow(), intervalTime); 
 
 };
