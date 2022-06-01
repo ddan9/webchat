@@ -1,6 +1,6 @@
 <?php
 
-	$version = "20220530";
+	$version = "20220601";
 
 	$charset_http = "UTF-8";
 
