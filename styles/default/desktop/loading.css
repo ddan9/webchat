@@ -28,11 +28,11 @@ div.loading-container
 
 	-moz-animation-name: loading-container;
 
-	animation-duration: 3s;
+	animation-duration: 2s;
 
-	-webkit-animation-duration: 3s;
+	-webkit-animation-duration: 2s;
 
-	-moz-animation-duration: 3s;
+	-moz-animation-duration: 2s;
 
 	animation-timing-function: ease;
 
