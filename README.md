@@ -25,7 +25,7 @@
 - You can share files with it
 - Pretty good style
 - Very good client security
-- Databases encryption with openssl
+- Databases encryption with openssl (optional)
 - It have pretty good compability with old browsers
 - A detailed description will come later
 - File viewer
