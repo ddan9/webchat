@@ -122,7 +122,13 @@ function main()
 
 		data = JSON.parse(decodedPromise);
 
-		dataCountCurrent = Object.keys(data).length;
+		if (data != "" && data != null)
+
+		{
+
+			dataCountCurrent = Object.keys(data).length;
+
+		};
 
 	};
 
