@@ -122,7 +122,7 @@ function main()
 
 		data = JSON.parse(decodedPromise);
 
-		if (data != "" && data != null)
+		if (data != null && data != "")
 
 		{
 
