@@ -20,6 +20,8 @@
 
 	$use_clear_address = "false";
 
+	$use_databases_encryption = "false";
+
 	$encryption_cipher = "AES256";
 
 	$encryption_options = OPENSSL_RAW_DATA;

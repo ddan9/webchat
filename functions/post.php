@@ -96,7 +96,21 @@
 
 	include("../functions/presets.php");
 
-	$chat_database = json_decode(base64_decode(openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv), true), true);
+	if ($use_databases_encryption != "true")
+
+	{
+
+		$chat_database = json_decode(base64_decode(file_get_contents($databases_messages_path), true), true);
+
+	}
+
+	else
+
+	{
+
+		$chat_database = json_decode(base64_decode(openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv), true), true);
+
+	};
 
 	$total_messages = count($chat_database);
 
@@ -130,7 +144,21 @@
 
 		};
 
-		file_put_contents($databases_messages_path, openssl_encrypt(base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv));
+		if ($use_databases_encryption != "true")
+
+		{
+
+			file_put_contents($databases_messages_path, base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)));
+
+		}
+
+		else
+
+		{
+
+			file_put_contents($databases_messages_path, openssl_encrypt(base64_encode(json_encode($chat_database, JSON_PRETTY_PRINT)), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv));
+
+		};
 
 	}
 

@@ -1,6 +1,6 @@
 <?php
 
-	function send_messages_database($recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
+	function send_messages_database($use_databases_encryption, $recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
 
 	{
 
@@ -12,7 +12,21 @@
 
 			{
 
-				$chat_database = openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv);
+				if ($use_databases_encryption != "true")
+
+				{
+
+					$chat_database = file_get_contents($databases_messages_path);
+
+				}
+
+				else
+
+				{
+
+					$chat_database = openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv);
+
+				};
 
 			}
 
@@ -30,7 +44,21 @@
 
 		{
 
-			$chat_database = openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv);
+			if ($use_databases_encryption != "true")
+
+			{
+
+				$chat_database = file_get_contents($databases_messages_path);
+
+			}
+
+			else
+
+			{
+
+				$chat_database = openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv);
+
+			};
 
 		};
 
@@ -52,7 +80,7 @@
 
 		case "messages":
 
-			echo send_messages_database($recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
+			echo send_messages_database($use_databases_encryption, $recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
 
 			break;
 
