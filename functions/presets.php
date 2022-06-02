@@ -1,10 +1,14 @@
 <?php
 
-	$version = "20220601";
+	$version = "20220602";
 
 	$charset_http = "UTF-8";
 
 	$charset_header = "utf-8";
+
+	$language_http = "en-US";
+
+	$language_header = "en-US";
 
 	$style = "default";
 
@@ -89,6 +93,8 @@
 	header("Cache-Control: $cache_control_header");
 
 	header("Content-type: text/html; charset=$charset_header");
+
+	header("Content-Language: $language_header");
 
 	if(preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]))
 
