@@ -120,7 +120,13 @@ function main()
 
 		decodedPromise = decodeURIComponent(escape(window.atob(promise)));
 
-		data = JSON.parse(decodedPromise);
+		if (decodedPromise != null && decodedPromise != "")
+
+		{
+
+			data = JSON.parse(decodedPromise);
+
+		}
 
 		if (data != null && data != "")
 
@@ -366,23 +372,37 @@ function main()
 
 		dataToShow = dataCountCurrent - dataCountWas;
 
-		if (dataToShow > 0)
+		if (dataToShow < 0)
 
 		{
 
-			smartUpdate();
+			location.reload();
 
-			if (firstTimeScrollState != "false")
+		}
+
+		else
+
+		{
+
+			if (dataToShow > 0)
 
 			{
 
-				firstTimeScroll();
+				smartUpdate();
+
+				if (firstTimeScrollState != "false")
+
+				{
+
+					firstTimeScroll();
+
+				};
+
+				playNotify();
+
+				smartScroll();
 
 			};
-
-			playNotify();
-
-			smartScroll();
 
 		};
 
