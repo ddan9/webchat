@@ -66,7 +66,7 @@
 
 	};
 
-	function connectionCooldown($use_user_connection_message_sending, $use_user_connection_cooldown, $user_connection_cooldown, $custom_time_set, $time_messages_format, $chat_database, $total_messages, $nickname)
+	function connectionCooldown($use_user_connection_message_sending, $use_user_connection_cooldown, $user_connection_cooldown, $custom_time_set, $time_messages_format, $chat_database, $total_messages, $nickname, $address)
 
 	{
 
@@ -80,7 +80,7 @@
 
 			{
 
-				if (base64_decode($chat_database[$i][nickname]) == $nickname)
+				if (base64_decode($chat_database[$i][nickname]) == $nickname || base64_decode($chat_database[$i][address]) == $address)
 
 				{
 
@@ -210,7 +210,7 @@
 
 	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
 
-	$connectionCooldown = connectionCooldown($use_user_connection_message_sending, $use_user_connection_cooldown, $user_connection_cooldown, $custom_time_set, $time_messages_format, $chat_database, $total_messages, $nickname);
+	$connectionCooldown = connectionCooldown($use_user_connection_message_sending, $use_user_connection_cooldown, $user_connection_cooldown, $custom_time_set, $time_messages_format, $chat_database, $total_messages, $nickname, $address);
 
 	SendNotifyMessage($use_user_connection_message_sending, $connectionCooldown, $use_databases_encryption, $nickname, $databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
 
