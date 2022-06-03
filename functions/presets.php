@@ -1,6 +1,6 @@
 <?php
 
-	$version = "20220602";
+	$version = "20220603";
 
 	$charset_http = "UTF-8";
 
@@ -63,6 +63,12 @@
 	$validationRegexp = "/<xmp>|<\/xmp>/i";
 
 	$validationReplacement = "<rofl>";
+
+	$use_user_connection_message_sending = "false";
+
+	$use_user_connection_cooldown = "true";
+
+	$user_connection_cooldown = "+0 hour +10 minutes +0 seconds";
 
 	$enable_nickname_remembering = "false";
 
