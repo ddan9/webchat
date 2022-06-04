@@ -17,6 +17,8 @@
 - This project is in active development. Nope
 - Basically ready to use
 - Stack: js, html, css, php, json, noSQL
+- Fully RESTful. No sockets
+- Semi-realtime work
 - It uses json as portable databases
 - Multiple file uploading
 - Fully manual code (no frameworks)
