@@ -1,5 +1,89 @@
 <?php
 
+	function searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $address, $use_databases_encryption, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
+
+	{
+
+		if ($use_databases_encryption != "true")
+
+		{
+
+			$chat_database = json_decode(base64_decode(file_get_contents($databases_messages_path), true), true);
+
+		}
+
+		else
+
+		{
+
+			$chat_database = json_decode(base64_decode(openssl_decrypt(file_get_contents($databases_messages_path), $encryption_cipher, $salt_global.$databases_password.$salt_messages, $encryption_options, $encryption_iv), true), true);
+
+		};
+
+		$total_messages = count($chat_database);
+
+		if ($_SERVER["PHP_AUTH_USER"] && $enable_only_authorized_username == "true")
+
+		{
+
+			$nickname = $_SERVER["PHP_AUTH_USER"];
+
+		}
+
+		else
+
+		{
+
+			if ($enable_nickname_remembering == "true")
+
+			{
+
+				if ($_POST["nickname"] != "" && $_POST["nickname"] != null)
+
+				{
+
+					$nickname = "Anonymous";
+
+				}
+
+				else
+
+				{
+
+					for ($i = $total_messages; $i >= 0; $i--)
+
+					{
+
+						if (base64_decode($chat_database[$i][address]) == $address)
+
+						{
+
+							$nickname = base64_decode($chat_database[$i][nickname]);
+
+							break;
+
+						};
+
+					};
+
+				};
+
+			}
+
+			else
+
+			{
+
+				$nickname = "Anonymous";
+
+			};
+
+		};
+
+		return $nickname;
+
+	};
+
 	function SendNotifyMessage($use_databases_encryption, $databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $total_uploaded_files, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
 
 	{
@@ -98,6 +182,10 @@
 
 	$total_files = count($chat_database_files);
 
+	$date = date($date_files_format, strtotime($custom_date_set));
+
+	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $address, $use_databases_encryption, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
+
 	$total_uploading_files = count($_FILES["userfile"]["name"]);
 
 	$total_uploaded_files = 0;
@@ -122,15 +210,15 @@
 
 		$time = date($time_files_format, strtotime($custom_time_set));
 
-		$date = date($date_files_format, strtotime($custom_date_set));
-
-		if ($time != "" && $time != null && $date != "" && $date != null && $device != "" && $device != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
+		if ($time != "" && $time != null && $date != "" && $date != null && $nickname != "" && $nickname != null && $device != "" && $device != null && $filename != "" && $filename != null && $filetype != "" && $filetype != null && $filesize != "" && $filesize != null && $filebody != "" && $filebody != null && $address != "" && $address != null)
 
 		{
 
 			$chat_database_files[$total_files + $i][time] = base64_encode($time);
 
 			$chat_database_files[$total_files + $i][date] = base64_encode($date);
+
+			$chat_database_files[$total_files + $i][nickname] = base64_encode($nickname);
 
 			$chat_database_files[$total_files + $i][device] = base64_encode($device);
 
