@@ -10,7 +10,7 @@ function changeFullscreen()
 
 		document.getElementById("infoPanel").style.display = "none";
 
-		document.getElementById("fullscreenButton").style.backgroundImage = "url(../../../images/fullscreenExit.svg)";
+		document.getElementById("fullscreenButton").style.backgroundImage = "url(../../../images/fullscreen-exit.svg)";
 
 		document.getElementById("fullscreenButton").style.opacity = "10%";	
 
