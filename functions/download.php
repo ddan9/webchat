@@ -22,13 +22,15 @@
 
 	$filebody = base64_decode($chat_database_files[$GETFILEID][filebody]);
 
+	$filetype = base64_decode($chat_database_files[$GETFILEID][filetype]);
+
 	$filesize = base64_decode($chat_database_files[$GETFILEID][filesize]);
 
 	$filename = base64_decode($chat_database_files[$GETFILEID][filename]);
 
 	header("Content-Description: File Transfer");
 
-	header("Content-Type: application/octet-stream");
+	header("Content-Type: $filetype");
 
 	header("Content-Disposition: attachment; filename=$filename");
 

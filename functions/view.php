@@ -24,7 +24,7 @@
 
 	{
 
-		echo "<a href='$filebody' class='view' target='_blank' title='Turn on fullscreen'> <img class='view' src='$filebody'></img> </a>";
+		echo "<a href='$filebody' class='view' target='_blank' title='Turn on fullscreen'> <div class='view' id='contentContainer'> <img class='view' src='$filebody'></img> </div> </a>";
 
 	};
 
@@ -32,7 +32,7 @@
 
 	{
 
-		echo "<audio class='view' controls preload src='$filebody'></audio>";
+		echo "<div class='view' id='contentContainer'> <audio class='view' controls preload src='$filebody'></audio> </div>";
 
 	};
 
@@ -40,7 +40,7 @@
 
 	{
 
-		echo "<video class='view' controls preload src='$filebody'></video>";
+		echo "<div class='view' id='contentContainer'> <video class='view' controls preload src='$filebody'></video> </div>";
 
 	};
 
@@ -48,7 +48,7 @@
 
 	{
 
-		echo "<embed class='view' type='$filetype' src='$filebody'></embed>";
+		echo "<div class='view' id='contentContainer'> <embed class='view' type='$filetype' src='$filebody'></embed> </div>";
 
 	};
 
