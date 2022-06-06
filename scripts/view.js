@@ -12,7 +12,9 @@ function changeFullscreen()
 
 		document.getElementById("fullscreenButton").style.backgroundImage = "url(../../../images/fullscreen-exit.svg)";
 
-		document.getElementById("fullscreenButton").style.opacity = "10%";	
+		document.getElementById("fullscreenButton").style.opacity = "10%";
+
+		document.getElementById("contentContainer").style.height = "92%";		
 
 	}
 
@@ -25,6 +27,8 @@ function changeFullscreen()
 		document.getElementById("fullscreenButton").style.backgroundImage = "url(../../../images/fullscreen.svg)";
 
 		document.getElementById("fullscreenButton").style.opacity = "80%";
+
+		document.getElementById("contentContainer").style.height = "80%";
 
 	};
 
