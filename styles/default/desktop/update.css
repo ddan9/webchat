@@ -50,7 +50,7 @@ div.myMessageWhole
 
 	max-width: 45%;
 
-	border-radius: 10px;
+	border-radius: 10px 0px 10px 10px;
 
 	opacity: 100%;
 
@@ -211,7 +211,7 @@ div.messageWhole
 
 	max-width: 45%;
 
-	border-radius: 10px;
+	border-radius: 0px 10px 10px 10px;
 
 	opacity: 100%;
 
