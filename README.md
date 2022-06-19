@@ -8,7 +8,7 @@
 - Download project archive into your web directory and unpack it
 - Do: "chmod 666" or "chown %username%:www-data" to databases/files.json and databases/messages.json
 - Change config variables in files if you need
-- [!]: On Linux systems you can just use embedded php server instead of nginx or apache2. Do "php -S 127.0.0.1:8080" in unpacked project and enjoy it! Also you don't need to make databases writeable
+- [ ! ]: On Linux systems you can just use embedded php server instead of nginx or apache2. Do "php -S 127.0.0.1:8080" in unpacked project and enjoy it! Also you don't need to make databases writeable
 
 <br/>
 
