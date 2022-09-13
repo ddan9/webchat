@@ -15,6 +15,7 @@
 #### Features:
 
 - This project is in active development. Nope
+- You can use it as primary engine to build your own app
 - Basically ready to use
 - Stack: js, html, css, php, json, noSQL
 - Fully RESTful. No sockets
