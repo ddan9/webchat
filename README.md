@@ -14,7 +14,8 @@
 
 #### Features:
 
-- This project is in active development. Nope
+- This project is in active development (no)
+- Fully standalone
 - You can use it as primary engine to build your own app
 - Basically ready to use
 - Stack: js, html, css, php, json, noSQL
