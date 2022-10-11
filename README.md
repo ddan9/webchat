@@ -4,7 +4,7 @@
 
 #### Demo:
 
-Property | Data
+Main | Attachments
 --- | --- 
 ![Demo 1](demo/demo1.png) | ![Demo 2](demo/demo2.png)
 
