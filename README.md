@@ -2,6 +2,12 @@
 
 <br/>
 
+#### Demo:
+
+![Demo 1](demo/demo1.png)
+
+<br/>
+
 #### Install:
 
 - Dependencies: php, webserver (apache2/nginx), js-compatible browser
