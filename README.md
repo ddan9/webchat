@@ -6,7 +6,7 @@
 
 Property | Data
 --- | --- 
-![Demo 1](demo/demo1.png) ![Demo 2](demo/demo2.png)
+![Demo 1](demo/demo1.png) | ![Demo 2](demo/demo2.png)
 
 <br/>
 
