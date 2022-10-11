@@ -4,7 +4,9 @@
 
 #### Demo:
 
-![Demo 1](demo/demo1.png)
+Property | Data
+--- | --- 
+![Demo 1](demo/demo1.png) ![Demo 2](demo/demo2.png)
 
 <br/>
 
