@@ -94,7 +94,7 @@
 
 	};
 
-	function nicknameFormStatement($enable_only_authorized_username, $enable_nickname_remembering)
+	function nicknameFormStatement($enable_only_authorized_username)
 
 	{
 
@@ -110,21 +110,7 @@
 
 		{
 
-			if ($enable_nickname_remembering == "true")
-
-			{
-
-				$nicknameFormState = "disabled";
-
-			}
-
-			else
-
-			{
-
-				$nicknameFormState = "enabled";
-
-			};
+			$nicknameFormState = "enabled";
 
 		};
 
@@ -158,7 +144,7 @@
 
 	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
 
-	$nicknameFormState = nicknameFormStatement($enable_only_authorized_username, $enable_nickname_remembering);
+	$nicknameFormState = nicknameFormStatement($enable_only_authorized_username);
 
 	$message = $_POST["message"];
 
