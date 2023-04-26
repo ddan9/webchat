@@ -94,6 +94,44 @@
 
 	};
 
+	function nicknameFormStatement($enable_only_authorized_username, $enable_nickname_remembering)
+
+	{
+
+		if ($_SERVER["PHP_AUTH_USER"] && $enable_only_authorized_username == "true")
+
+		{
+
+			$nicknameFormState = "disabled";
+
+		}
+
+		else
+
+		{
+
+			if ($enable_nickname_remembering == "true")
+
+			{
+
+				$nicknameFormState = "disabled";
+
+			}
+
+			else
+
+			{
+
+				$nicknameFormState = "enabled";
+
+			};
+
+		};
+
+		return $nicknameFormState;
+
+	};
+
 	include("../functions/presets.php");
 
 	if ($use_databases_encryption != "true")
@@ -119,6 +157,8 @@
 	$date = date($date_messages_format, strtotime($custom_date_set));
 
 	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
+
+	$nicknameFormState = nicknameFormStatement($enable_only_authorized_username, $enable_nickname_remembering);
 
 	$message = $_POST["message"];
 

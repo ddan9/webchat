@@ -132,7 +132,7 @@
 
 	{
 
-		$address = hash($hashing_algorithm, $salt_global.$_SERVER["REMOTE_ADDR"].$salt_address);
+		$address = hash($hashing_algorithm, $salt_global.$_SERVER["REMOTE_ADDR"].$salt_address.$device);
 
 	};
 

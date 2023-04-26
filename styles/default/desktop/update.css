@@ -2,6 +2,10 @@ html
 
 {
 
+	min-width: 100%;
+
+	width: 100%;
+
 	max-width: 100%;
 
 	overflow-x: hidden;
@@ -12,9 +16,23 @@ body
 
 {
 
+	min-width: 100%;
+
+	width: 100%;
+
 	max-width: 100%;
 
 	overflow-x: hidden;
+
+	display: flex;
+
+	align-items: center;
+
+	align-content: center;
+
+	align-self: center;
+
+	justify-content: center;
 
 }
 
@@ -22,11 +40,19 @@ output.chatOutput
 
 {
 
-	min-width: 100%;
+	min-width: 320px;
 
-	width: 100%;
+	width: 1024px;
 
-	max-width: 100%;
+	max-width: 1024px;
+
+	overflow-x: hidden;
+
+	display: block;
+
+	margin-left: auto;
+
+	margin-right: auto;
 
 }
 
@@ -58,7 +84,7 @@ div.myMessageWhole
 
 	-webkit-animation-name: show-my-added-message;
 
-	-moz-animation-name: show-my-added-message;  
+	-moz-animation-name: show-my-added-message;
 
 	animation-duration: 0.5s;
 
@@ -88,7 +114,7 @@ div.myMessageWhole:hover
 
 }
 
-@keyframes show-my-added-message 
+@keyframes show-my-added-message
 
 {
 
@@ -102,16 +128,16 @@ div.myMessageWhole:hover
 
 	}
 
-	70% 
+	70%
 
 	{
 
 		transform: translateX(+150%);
 
-	} 
-	  
+	}
 
-	100% 
+
+	100%
 
 	{
 
@@ -119,10 +145,10 @@ div.myMessageWhole:hover
 
 		transform: translateX(0%);
 
-	}       
+	}
 
 }
- 
+
 @-webkit-keyframes show-my-added-message
 
 {
@@ -143,8 +169,8 @@ div.myMessageWhole:hover
 
 		-webkit-transform: translateX(+150%);
 
-	}  
-	 
+	}
+
 	100%
 
 	{
@@ -177,8 +203,8 @@ div.myMessageWhole:hover
 
 		-moz-transform: translateX(+150%);
 
-	}  
-	 
+	}
+
 	100%
 
 	{
@@ -219,7 +245,7 @@ div.messageWhole
 
 	-webkit-animation-name: show-added-message;
 
-	-moz-animation-name: show-added-message; 
+	-moz-animation-name: show-added-message;
 
 	animation-duration: 0.5s;
 
@@ -249,7 +275,7 @@ div.messageWhole:hover
 
 }
 
-@keyframes show-added-message 
+@keyframes show-added-message
 
 {
 
@@ -271,7 +297,7 @@ div.messageWhole:hover
 
 	}
 
-	100% 
+	100%
 
 	{
 
@@ -279,10 +305,10 @@ div.messageWhole:hover
 
 		transform: translateX(0%);
 
-	}       
+	}
 
 }
- 
+
 @-webkit-keyframes show-added-message
 
 {
@@ -303,7 +329,7 @@ div.messageWhole:hover
 
 		-webkit-transform: translateX(-150%);
 
-	}  
+	}
 
 	100%
 
@@ -337,7 +363,7 @@ div.messageWhole:hover
 
 		-moz-transform: translateX(-150%);
 
-	}  
+	}
 
 	100%
 
@@ -383,7 +409,7 @@ div.messageNotify
 
 	animation-name: show-added-notify;
 
-	-webkit-animation-name: show-added-notify;  
+	-webkit-animation-name: show-added-notify;
 
 	-moz-animation-name: show-added-notify;
 
@@ -433,16 +459,16 @@ div.messageNotify:hover
 
 	}
 
-	100% 
+	100%
 
 	{
 
 		opacity: 100%;
 
-	}       
+	}
 
 }
- 
+
 @-webkit-keyframes show-added-notify
 
 {
@@ -461,7 +487,7 @@ div.messageNotify:hover
 
 		opacity: 0%;
 
-	}  
+	}
 
 	100%
 
@@ -491,7 +517,7 @@ div.messageNotify:hover
 
 		opacity: 0%;
 
-	}  
+	}
 
 	100%
 
@@ -709,7 +735,7 @@ button.buttonToDown
 
 	animation-name: show-buttonToDown;
 
-	-webkit-animation-name: show-buttonToDown;  
+	-webkit-animation-name: show-buttonToDown;
 
 	-moz-animation-name: show-buttonToDown;
 
@@ -751,7 +777,7 @@ button.buttonToDown:focus
 
 }
 
-@keyframes show-buttonToDown 
+@keyframes show-buttonToDown
 
 {
 
@@ -763,16 +789,16 @@ button.buttonToDown:focus
 
     	}
 
-	100% 
+	100%
 
 	{
 
 		opacity: 100%;
 
-	}       
+	}
 
 }
- 
+
 @-webkit-keyframes show-buttonToDown
 
 {
@@ -783,8 +809,8 @@ button.buttonToDown:focus
 
 		opacity: 0%;
 
-	} 
-	 
+	}
+
 	100%
 
 	{
@@ -805,8 +831,8 @@ button.buttonToDown:focus
 
 		opacity: 0%;
 
-	} 
-	 
+	}
+
 	100%
 
 	{
