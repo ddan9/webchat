@@ -118,7 +118,81 @@
 
 	};
 
-	include("../functions/presets.php");
+	function fullscreenButtonStatement($enable_fullscreen_button)
+
+	{
+
+		if ($enable_fullscreen_button != "true")
+
+		{
+
+			$fullscreenButtonState = "hidden";
+
+		}
+
+		else
+
+		{
+
+			$fullscreenButtonState = "enabled";
+
+		};
+
+		return $fullscreenButtonState;
+
+	};
+
+	function helpButtonStatement($enable_help_button)
+
+	{
+
+		if ($enable_help_button != "true")
+
+		{
+
+			$helpButtonState = "hidden";
+
+		}
+
+		else
+
+		{
+
+			$helpButtonState = "enabled";
+
+		};
+
+		return $helpButtonState;
+
+	};
+
+	function logoutButtonStatement($use_php_basic_authentication, $enable_only_authorized_username)
+
+	{
+
+		if (isset($_SERVER["PHP_AUTH_USER"]) && ($use_php_basic_authentication == "true" || $enable_only_authorized_username == "true"))
+
+		{
+
+			$logoutButtonState = "enabled";
+
+		}
+
+		else
+
+		{
+
+			$logoutButtonState = "hidden";
+
+		};
+
+		return $logoutButtonState;
+
+	};
+
+	require_once("../functions/presets.php");
+
+	require_once("../functions/authentication.php");
 
 	if ($use_databases_encryption != "true")
 
@@ -145,6 +219,12 @@
 	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
 
 	$nicknameFormState = nicknameFormStatement($enable_only_authorized_username);
+
+	$fullscreenButtonState = fullscreenButtonStatement($enable_fullscreen_button);
+
+	$helpButtonState = helpButtonStatement($enable_help_button);
+
+	$logoutButtonState = logoutButtonStatement($use_php_basic_authentication, $enable_only_authorized_username);
 
 	$message = $_POST["message"];
 
@@ -196,6 +276,6 @@
 
 	};
 
-	include("../templates/post.html");
+	require_once("../templates/post.html");
 
 ?>

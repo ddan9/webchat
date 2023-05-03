@@ -116,11 +116,11 @@
 
 	};
 
-	function SendNotifyMessage($use_user_connection_message_sending, $connectionCooldown, $use_databases_encryption, $userNickname, $databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
+	function SendNotifyMessage($use_user_connection_message_sending, $connectionCooldown, $use_user_connection_login_message_sending, $use_databases_encryption, $userNickname, $databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
 
 	{
 
-		if ($use_user_connection_message_sending == "true" && $connectionCooldown != "true")
+		if ($use_user_connection_message_sending == "true" && ($connectionCooldown != "true" || $use_user_connection_login_message_sending == "true"))
 
 		{
 
@@ -150,7 +150,7 @@
 
 			$nickname = $userNickname;
 
-			$message = "$userNickname connected!";
+			$message = "User $userNickname connected!";
 
 			$address = "Notify";
 
@@ -186,9 +186,11 @@
 
 	};
 
-	include("../functions/presets.php");
+	require_once("../functions/presets.php");
 
-	include("../templates/update.html");
+	require_once("../functions/authentication.php");
+
+	require_once("../templates/update.html");
 
 	if ($use_databases_encryption != "true")
 
@@ -212,6 +214,6 @@
 
 	$connectionCooldown = connectionCooldown($use_user_connection_message_sending, $use_user_connection_cooldown, $user_connection_cooldown, $custom_time_set, $time_messages_format, $chat_database, $total_messages, $nickname, $address);
 
-	SendNotifyMessage($use_user_connection_message_sending, $connectionCooldown, $use_databases_encryption, $nickname, $databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
+	SendNotifyMessage($use_user_connection_message_sending, $connectionCooldown, $use_user_connection_login_message_sending, $use_databases_encryption, $nickname, $databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
 
 ?>

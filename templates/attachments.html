@@ -8,6 +8,14 @@
 
 		<meta http-equiv="Cache-control" content="<?php print($cache_control_http); ?>">
 
+		<link rel="icon" href="../images/<?php print($favicon); ?>" type="<?php print($favicon_type); ?>">
+
+		<meta name="author" content="Dan Rednine">
+
+		<meta name="description" content="Webchat">
+
+		<base target="_top">
+
 		<title>
 
 			Webchat | Attachments
@@ -24,33 +32,33 @@
 
 				<td class="sendFileSection">
 
-					<form class="sendFileSection" enctype="multipart/form-data" action="../functions/upload.php" method="POST">
+					<form target="_top" id="uploadFileForm" class="sendFileSection" enctype="multipart/form-data" action="../functions/upload.php" method="POST" onsubmit="event.preventDefault(); send();">
 
-						<a href="../main/" accesskey="b" target="main-frame">
+						<a href="../main/" accesskey="b" target="_top">
 
-							<input class="goBack" type="button" accesskey="b" value="" title="Go back" />
-
-						</a>
-
-						<a href="../attachments/" accesskey="u" target="main-frame">
-
-							<input class="doUpdate" type="button" accesskey="u" value="" title="Update files list" />
+							<input target="_top" class="goBack" type="button" accesskey="b" value="" title="Go back" />
 
 						</a>
 
-						<input id="maxFileSizeValue" type="hidden" name="MAX_FILE_SIZE" value="<?php print($upload_max_filesize); ?>" />
+						<a href="../attachments/" accesskey="u" target="_top">
 
-						<input class="chooseFileButton" id="chooseFileButton" name="userfile[]" type="file" accesskey="c" onchange="uploadFile(this)" multiple="multiple" multiple hidden />
+							<input target="_top" class="doUpdate" type="button" accesskey="u" value="" title="Update files list" />
 
-						<label class="chooseFileButton" id="chooseFileButtonLabel" for="chooseFileButton" accesskey="c" title="Choose files for upload">
+						</a>
+
+						<input target="_top" id="maxFileSizeValue" type="hidden" name="MAX_FILE_SIZE" value="<?php print($upload_max_filesize); ?>" />
+
+						<input target="_top" class="chooseFileButton" id="chooseFileButton" name="userfile[]" type="file" accesskey="c" onchange="uploadFile(this)" multiple="multiple" multiple hidden />
+
+						<label target="_top" class="chooseFileButton" id="chooseFileButtonLabel" for="chooseFileButton" accesskey="c" title="Choose files for upload">
 
 							Choose files...
 
 						</label>
 
-						<input class="sendFileButton" type="submit" accesskey="s" value="" title="Upload selected files" />
+						<input target="_top" class="sendFileButton" type="submit" accesskey="s" value="" title="Upload selected files" />
 
-						<input class="maxFileSize" id="maxFileSize" type="button" value="<?php print($readable_max_file_size); ?>" title="Maximum size per file" />
+						<input target="_top" class="maxFileSize" id="maxFileSize" type="button" value="<?php print($readable_max_file_size); ?>" title="Maximum size per file" />
 
 					</form>
 
@@ -62,7 +70,7 @@
 
 		<br>
 
-		<button onclick="scrollTopPermanent()" class="buttonToTop" id="buttonToTop" accesskey="t" title="Scroll top">
+		<button target="_top" onclick="scrollTopPermanent()" class="buttonToTop" id="buttonToTop" accesskey="t" title="Scroll top">
 
 			↑
 

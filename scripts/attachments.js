@@ -1,6 +1,78 @@
 "use strict";
 
-function uploadFile(input) 
+function send()
+
+{
+
+	"use strict";
+
+	function checkForMaxFileSize()
+
+	{
+
+		for (i = 0; i < inputFilesCount; i++)
+
+		{
+
+			filename = input.files[i].name;
+
+			if (input.files[i].size > maxFileSize)
+
+			{
+
+				rejectedFilesCount++;
+
+				alert(`File ${filename} is too big!`);
+
+			};
+
+		};
+
+	};
+
+	var i, filename;
+
+	var uploadFileForm = document.forms.uploadFileForm;
+
+	var chooseFileButton = document.getElementById("chooseFileButton");
+
+	var uploadFilesCount = chooseFileButton.files.length;
+
+	var maxFileSize = document.getElementById("maxFileSizeValue").value;
+
+	var input = chooseFileButton;
+
+	var inputFilesCount = uploadFilesCount;
+
+	var rejectedFilesCount = 0;
+
+	if (inputFilesCount > 0)
+
+	{
+
+		checkForMaxFileSize();
+
+		if (rejectedFilesCount < 1)
+
+		{
+
+			uploadFileForm.submit();
+
+		};
+
+	}
+
+	else
+
+	{
+
+		alert("There is nothing to upload!");
+
+	};
+
+};
+
+function uploadFile(input)
 
 {
 
@@ -126,13 +198,13 @@ function main()
 
 	};
 
-	function onScrollFunctions() 
+	function onScrollFunctions()
 
 	{
 
 		getHeightMetrics();
 
-		if (currentHeight > limitHeight) 
+		if (currentHeight > limitHeight)
 
 		{
 

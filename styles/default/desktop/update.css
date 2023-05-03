@@ -26,12 +26,6 @@ body
 
 	display: flex;
 
-	align-items: center;
-
-	align-content: center;
-
-	align-self: center;
-
 	justify-content: center;
 
 }

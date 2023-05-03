@@ -12,7 +12,9 @@
 
 	};
 
-	include("../functions/presets.php");
+	require_once("../functions/presets.php");
+
+	require_once("../functions/authentication.php");
 
 	if ($use_databases_encryption != "true")
 
@@ -36,7 +38,7 @@
 
 	$readable_max_file_size = ini_get("upload_max_filesize");
 
-	include("../templates/attachments.html");
+	require_once("../templates/attachments.html");
 
 	for ($i = $total_files-1; $i >= 0; $i--)
 
@@ -88,7 +90,7 @@
 
 			$link = "../functions/download.php?id=$i";
 
-			include("../templates/attachments_list.html");
+			require("../templates/attachments_list.html");
 
 		};
 

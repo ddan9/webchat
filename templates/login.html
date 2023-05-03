@@ -1,0 +1,107 @@
+<html lang="<?php print($language_http); ?>">
+
+	<head>
+
+		<link rel="stylesheet" content="text/css" href="../styles/<?php print($style . '/' . $device); ?>/login.css">
+
+		<meta http-equiv="Content-Type" content="text/html" charset="<?php print($charset_http); ?>">
+
+		<meta http-equiv="Cache-control" content="<?php print($cache_control_http); ?>">
+
+		<link rel="icon" href="../images/<?php print($favicon); ?>" type="<?php print($favicon_type); ?>">
+
+		<meta name="author" content="Dan Rednine">
+
+		<meta name="description" content="Webchat">
+
+		<base target="_top">
+
+		<title>
+
+			Webchat | Login
+
+		</title>
+
+	</head>
+
+	<body>
+
+		<table id="mainContainer" class="mainContainer">
+
+			<tr id="mainContainer" class="mainContainer">
+
+				<td id="mainContainer" class="mainContainer">
+
+					<table id="loginFormContainer" class="loginFormContainer">
+
+						<tr id="loginFormContainer" class="loginFormContainer">
+
+							<td id="loginFormContainer" class="loginFormContainer">
+
+								<form target="_top" id="loginForm" class="loginForm" action="../lobby/" method="POST" autocomplete="<?php print($html_post_autocomplete); ?>" onsubmit="event.preventDefault(); send();">
+
+									<p id="signInTitle" class="signInTitle">
+
+										Log In to Webchat
+
+									</p>
+
+									<p>
+
+										<input target="_top" type="login" id="login" class="login" placeholder="Login" name="login" minlenght="1" maxlenght="128" accesskey="n" autocomplete="<?php print($html_post_autocomplete); ?>" title="Enter your nickname here" />
+
+									</p>
+
+									<p>
+
+										<input target="_top" type="password" id="password" class="password" placeholder="Password" name="password" minlenght="1" maxlenght="128" accesskey="p" autocomplete="<?php print($html_post_autocomplete); ?>" title="Enter your password here" />
+
+									</p>
+
+									<p>
+
+										<input target="_top" type="submit" id="signInButton" class="signInButton" value="Sign In" accesskey="s" title="Filled all forms? Sign In!" />
+
+									</p>
+
+									<p>
+
+										<a id="loginFormButtonLink" class="loginFormButtonLink" href="../registration/" target="_top" accesskey="c" title="You don't have an account? Create it now!">
+
+											Create an account
+
+										</a>
+
+									</p>
+
+									<p>
+
+										<a id="loginFormButtonLink" class="loginFormButtonLink" href="../logout/" target="_top" accesskey="a" title="Catching errors or want to force logout? Try to clean authentication cache!">
+
+											Clean authentication cache
+
+										</a>
+
+									</p>
+
+								</form>
+
+							</td>
+
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<script type="text/javascript" src="../scripts/login.js">
+
+		</script>
+
+	</body>
+
+</html>

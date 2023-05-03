@@ -8,6 +8,14 @@
 
 		<meta http-equiv="Cache-control" content="<?php print($cache_control_http); ?>">
 
+		<link rel="icon" href="../images/<?php print($favicon); ?>" type="<?php print($favicon_type); ?>">
+
+		<meta name="author" content="Dan Rednine">
+
+		<meta name="description" content="Webchat">
+
+		<base target="_top">
+
 		<title>
 
 			Webchat | View
@@ -24,31 +32,31 @@
 
 				<td class="viewFileSection">
 
-					<form class="viewFileSection">
+					<form class="viewFileSection" target="_top">
 
-						<a href="../attachments/" accesskey="b" target="main-frame">
+						<a href="../attachments/" accesskey="b" target="_top">
 
-							<input class="goBack" type="button" accesskey="b" value="" title="Go back" />
-
-						</a>
-
-						<a href="../functions/view.php?id=<?php print($GETFILEID); ?>" accesskey="r" target="main-frame">
-
-							<input class="doRefresh" type="button" accesskey="r" value="" title="Refresh" />
+							<input target="_top" class="goBack" type="button" accesskey="b" value="" title="Go back" />
 
 						</a>
 
-						<input class="fileStatsField" type="button" value="<?php print($filename); ?>" title="File name" />
+						<a href="../functions/view.php?id=<?php print($GETFILEID); ?>" accesskey="r" target="_top">
 
-						<input class="fileStatsField" type="button" value="<?php print($filetype); ?>" title="File type" />
+							<input target="_top" class="doRefresh" type="button" accesskey="r" value="" title="Refresh" />
 
-						<input class="fileStatsField" type="button" value="<?php print($filesize_readable); ?>" title="File size" />
+						</a>
 
-						<input class="fileStatsField" type="button" value="<?php print($time . ' ' . $date); ?>" title="Upload date" />
+						<input target="_top" class="fileStatsField" type="button" value="<?php print($filename); ?>" title="File name" />
 
-						<a href="../functions/download.php?id=<?php print($GETFILEID); ?>" accesskey="g" target="main-frame">
+						<input target="_top" class="fileStatsField" type="button" value="<?php print($filetype); ?>" title="File type" />
 
-							<input class="downloadFileButton" type="button" accesskey="g" value="" title="Download file" />
+						<input target="_top" class="fileStatsField" type="button" value="<?php print($filesize_readable); ?>" title="File size" />
+
+						<input target="_top" class="fileStatsField" type="button" value="<?php print($time . ' ' . $date); ?>" title="Upload date" />
+
+						<a href="../functions/download.php?id=<?php print($GETFILEID); ?>" accesskey="g" target="_top">
+
+							<input target="_top" class="downloadFileButton" type="button" accesskey="g" value="" title="Download file" />
 
 						</a>
 
@@ -62,7 +70,7 @@
 
 		<br>
 
-		<button onclick="changeFullscreen()" class="fullscreenButton" id="fullscreenButton" type="button" accesskey="f" title="Change fullscreen mode">
+		<button target="_top" onclick="changeFullscreen()" class="fullscreenButton" id="fullscreenButton" type="button" accesskey="f" title="Change fullscreen mode">
 
 		</button>
 

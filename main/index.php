@@ -1,7 +1,9 @@
 <?php
 
-	include("../functions/presets.php");
+	require_once("../functions/presets.php");
 
-	include("../templates/main.html");
+	require_once("../functions/authentication.php");
+
+	require_once("../templates/main.html");
 
 ?>

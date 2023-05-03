@@ -1,6 +1,6 @@
 <?php
 
-	$version = "20220606";
+	$version = "20230503";
 
 	$charset_http = "UTF-8";
 
@@ -20,7 +20,7 @@
 
 	$use_clear_address = "false";
 
-	$use_databases_encryption = "false";
+	$use_databases_encryption = "true";
 
 	$encryption_cipher = "AES256";
 
@@ -29,6 +29,8 @@
 	$encryption_iv = 1024102410241024;
 
 	$hashing_algorithm = "md5";
+
+	$user_password_hashing_algorithm = "sha512";
 
 	$databases_password = "default";
 
@@ -40,7 +42,15 @@
 
 	$salt_files = "default";
 
-	$recieve_client_password = "false";
+	$salt_users = "default";
+
+	$salt_password = "default";
+
+	$enable_fullscreen_button = "true";
+
+	$enable_help_button = "true";
+
+	$recieve_client_password = "true";
 
 	$client_password_to_send_database = "default";
 
@@ -64,19 +74,31 @@
 
 	$validationReplacement = "<rofl>";
 
-	$use_user_connection_message_sending = "false";
+	$use_user_connection_message_sending = "true";
 
 	$use_user_connection_cooldown = "true";
 
 	$user_connection_cooldown = "+0 hour +10 minutes +0 seconds";
 
-	$enable_nickname_remembering = "false";
+	$use_user_connection_login_message_sending = "true";
 
-	$enable_only_authorized_username = "false";
+	$enable_nickname_remembering = "true";
+
+	$enable_only_authorized_username = "true";
+
+	$use_php_basic_authentication = "true";
+
+	$use_login_permanent_redirection = "true";
+
+	$allow_new_users = "true";
+
+	$allowed_new_users_count_limit = 2;
 
 	$databases_files_path = "../databases/files.json";
 
 	$databases_messages_path = "../databases/messages.json";
+
+	$databases_users_path = "../databases/users.json";
 
 	$audio_notify_path = "../sounds/notify.mp3";
 
@@ -104,6 +126,8 @@
 
 	header("Content-Language: $language_header");
 
+	header('Window-target: _top');
+
 	if(preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]))
 
 	{
@@ -120,11 +144,25 @@
 
 	};
 
-	if ($use_clear_address == "true")
+	if ($use_clear_address != "true")
 
 	{
 
-		$address = $_SERVER["REMOTE_ADDR"];
+		if (isset($_SERVER["PHP_AUTH_USER"]) && ($use_php_basic_authentication == "true" || $enable_only_authorized_username == "true"))
+
+		{
+
+			$address = hash($hashing_algorithm, $salt_global.$_SERVER["PHP_AUTH_USER"].$salt_address);
+
+		}
+
+		else
+
+		{
+
+			$address = hash($hashing_algorithm, $salt_global.$_SERVER["REMOTE_ADDR"].$salt_address.$device.$_SERVER['HTTP_USER_AGENT']);
+
+		};
 
 	}
 
@@ -132,7 +170,7 @@
 
 	{
 
-		$address = hash($hashing_algorithm, $salt_global.$_SERVER["REMOTE_ADDR"].$salt_address.$device.$_SERVER['HTTP_USER_AGENT']);
+		$address = $_SERVER["REMOTE_ADDR"];
 
 	};
 

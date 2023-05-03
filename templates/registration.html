@@ -1,0 +1,97 @@
+<html lang="<?php print($language_http); ?>">
+
+	<head>
+
+		<link rel="stylesheet" content="text/css" href="../styles/<?php print($style . '/' . $device); ?>/registration.css">
+
+		<meta http-equiv="Content-Type" content="text/html" charset="<?php print($charset_http); ?>">
+
+		<meta http-equiv="Cache-control" content="<?php print($cache_control_http); ?>">
+
+		<link rel="icon" href="../images/<?php print($favicon); ?>" type="<?php print($favicon_type); ?>">
+
+		<meta name="author" content="Dan Rednine">
+
+		<meta name="description" content="Webchat">
+
+		<base target="_top">
+
+		<title>
+
+			Webchat | Registration
+
+		</title>
+
+	</head>
+
+	<body>
+
+		<table id="mainContainer" class="mainContainer">
+
+			<tr id="mainContainer" class="mainContainer">
+
+				<td id="mainContainer" class="mainContainer">
+
+					<table id="registrationFormContainer" class="registrationFormContainer">
+
+						<tr id="registrationFormContainer" class="registrationFormContainer">
+
+							<td id="registrationFormContainer" class="registrationFormContainer">
+
+								<form target="_top" id="registrationForm" class="registrationForm" action="../functions/registration.php" method="POST" onsubmit="event.preventDefault(); send();">
+
+									<p id="signUpTitle" class="signUpTitle">
+
+										Sign Up to Webchat
+
+									</p>
+
+									<p>
+
+										<input target="_top" type="login" placeholder="Login" id="login" class="login" name="login" minlenght="1" maxlenght="128" accesskey="n" autocomplete="<?php print($html_post_autocomplete); ?>" title="Enter your nickname here" />
+
+									</p>
+
+									<p>
+
+										<input target="_top" type="password" placeholder="Password" id="password" class="password" name="password" minlenght="1" maxlenght="128" accesskey="p" autocomplete="<?php print($html_post_autocomplete); ?>" title="Enter your password here" />
+
+									</p>
+
+									<p>
+
+										<input target="_top" type="password" placeholder="Proove your password" id="passwordProove" class="passwordProove" name="password_proove" minlenght="1" maxlenght="128" accesskey="c" autocomplete="<?php print($html_post_autocomplete); ?>" title="Proove your password you entered above" />
+
+									<p>
+
+										<input target="_top" type="submit" id="signUpButton" class="signUpButton" value="Sign Up" accesskey="s" title="Filled all forms? Sign Up!" />
+
+									</p>
+
+									<a id="registrationFormButtonLink" class="registrationFormButtonLink" href="../login/" target="_top" accesskey="i" title="Already have an account? Sign In!">
+
+										Already have account?
+
+									</a>
+
+								</form>
+
+							</td>
+
+						</tr>
+
+					</table>
+
+				</td>
+
+			</tr>
+
+		</table>
+
+		<script type="text/javascript" src="../scripts/registration.js">
+
+		</script>
+
+	</body>
+
+</html>

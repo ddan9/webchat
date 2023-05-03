@@ -3,7 +3,7 @@ div.loading-container
 {
 
 	position: fixed;
-	
+
 	left: 0;
 
 	top: 0;
@@ -24,7 +24,7 @@ div.loading-container
 
 	animation-name: loading-container;
 
-	-webkit-animation-name: loading-container;  
+	-webkit-animation-name: loading-container;
 
 	-moz-animation-name: loading-container;
 
@@ -58,7 +58,7 @@ div.loading-container
 
 	}
 
-	90%
+	80%
 
 	{
 
@@ -100,7 +100,7 @@ div.loading-container
 
 	}
 
-	90%
+	80%
 
 	{
 
@@ -142,7 +142,7 @@ div.loading-container
 
 	}
 
-	90%
+	80%
 
 	{
 
@@ -192,7 +192,7 @@ div.loading-icon
 
 	animation-name: loading-icon;
 
-	-webkit-animation-name: loading-icon;  
+	-webkit-animation-name: loading-icon;
 
 	-moz-animation-name: loading-icon;
 

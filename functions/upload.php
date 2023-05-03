@@ -1,5 +1,33 @@
 <?php
 
+	function readableBytes($bytes)
+
+	{
+
+		$i = floor(log($bytes) / log(1024));
+
+		$sizes = array("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB");
+
+		return sprintf("%.02F", $bytes / pow(1024, $i)) * 1 . " " . $sizes[$i];
+
+	};
+
+	function throwMessageFiles($throw_message)
+
+	{
+
+		require("../functions/presets.php");
+
+		require_once("../templates/throw.html");
+
+		header('Window-target: main-frame');
+
+		header("refresh:3; url=../attachments/");
+
+		exit();
+
+	};
+
 	function searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $address, $use_databases_encryption, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv)
 
 	{
@@ -162,7 +190,9 @@
 
 	};
 
-	include("../functions/presets.php");
+	require_once("../functions/presets.php");
+
+	require_once("../functions/authentication.php");
 
 	if ($use_databases_encryption != "true")
 
@@ -187,6 +217,28 @@
 	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $address, $use_databases_encryption, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
 
 	$total_uploading_files = count($_FILES["userfile"]["name"]);
+
+	$upload_max_filesize = ini_get("upload_max_filesize")*1048576;
+
+	for ($i = 0; $i < $total_uploading_files; $i++)
+
+	{
+
+		$filename = $_FILES["userfile"]["name"][$i];
+
+		$filesize = $_FILES["userfile"]["size"][$i];
+
+		if (($filesize < 1) || ($filesize > $upload_max_filesize))
+
+		{
+
+			$throw_message_files = "File $filename is too big!";
+
+			throwMessageFiles($throw_message_files);
+
+		};
+
+	};
 
 	$total_uploaded_files = 0;
 

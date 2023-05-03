@@ -8,33 +8,53 @@
 
 		<meta http-equiv="Cache-control" content="<?php print($cache_control_http); ?>">
 
+		<link rel="icon" href="../images/<?php print($favicon); ?>" type="<?php print($favicon_type); ?>">
+
+		<meta name="author" content="Dan Rednine">
+
+		<meta name="description" content="Webchat">
+
+		<base target="_self">
+
+		<title>
+
+			Webchat | Post
+
+		</title>
+
 	</head>
 
 	<body>
 
-		<form class="container" id="formContainer" action="../functions/post.php" autocomplete="<?php print($html_post_autocomplete); ?>" method="POST">
+		<form class="container" id="formContainer" action="../functions/post.php" autocomplete="<?php print($html_post_autocomplete); ?>" method="POST" target="_self">
 
-			<textarea class="message" id="inputMessage" type="text" placeholder="Enter your message here..." title="Message" name="message" accesskey="m" autocomplete="<?php print($html_post_autocomplete); ?>" minlenght="1" maxlenght="4096" autofocus="autofocus" autofocus focus></textarea>
+			<textarea target="_self" class="message" id="inputMessage" type="text" placeholder="Enter your message here..." title="Message" name="message" accesskey="m" autocomplete="<?php print($html_post_autocomplete); ?>" minlenght="1" maxlenght="4096" autofocus="autofocus" autofocus focus></textarea>
 
-			<input class="send" type="submit" id="submitMessage" value="" accesskey="s" title="Send message" />
+			<input target="_self" class="send" type="submit" id="submitMessage" value="" accesskey="s" title="Send message" />
 
-			<input class="nickname" id="inputNickname" type="text" placeholder="Nickname" name="nickname" minlenght="1" maxlenght="128" accesskey="n" autocomplete="<?php print($html_post_autocomplete); ?>" value="<?php print($nickname); ?>" title="Enter your nickname here" <?php print($nicknameFormState); ?> />
+			<input target="_self" class="nickname" id="inputNickname" type="text" placeholder="Nickname" name="nickname" minlenght="1" maxlenght="128" accesskey="n" autocomplete="<?php print($html_post_autocomplete); ?>" value="<?php print($nickname); ?>" title="Enter your nickname here" <?php print($nicknameFormState); ?> />
 
-			<a href="../attachments/" accesskey="a" target="main-frame">
+			<a href="../attachments/" accesskey="a" target="_top">
 
-				<input class="attachments" accesskey="a" type="button" value="" title="Attachments" />
-
-			</a>
-
-			<a href="../" accesskey="f" target="_blank">
-
-				<input class="fullscreen" accesskey="f" type="button" value="" title="Fullscreen" hidden />
+				<input target="_top" class="attachments" accesskey="a" type="button" value="" title="Attachments" />
 
 			</a>
 
-			<a href="../help/" accesskey="h" target="main-frame">
+			<a href="../main/" accesskey="f" target="_blank">
 
-				<input class="help" accesskey="h" type="button" value="" title="Help" hidden />
+				<input target="_blank" class="fullscreen" accesskey="f" type="button" value="" title="Fullscreen" <?php print($fullscreenButtonState); ?> />
+
+			</a>
+
+			<a href="../help/" accesskey="h" target="_top">
+
+				<input target="_top" class="help" accesskey="h" type="button" value="" title="Help" <?php print($helpButtonState); ?> />
+
+			</a>
+
+			<a href="../logout/" accesskey="o" target="_top">
+
+				<input target="_top" class="logout" accesskey="o" type="button" value="" title="Logout" <?php print($logoutButtonState); ?> />
 
 			</a>
 

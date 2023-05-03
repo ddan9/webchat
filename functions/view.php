@@ -52,7 +52,9 @@
 
 	};
 
-	include("../functions/presets.php");
+	require_once("../functions/presets.php");
+
+	require_once("../functions/authentication.php");
 
 	$GETFILEID = $_GET["id"];
 
@@ -88,7 +90,7 @@
 
 	$filesize_readable = readableBytes($filesize);
 
-	include("../templates/view.html");
+	require_once("../templates/view.html");
 
 	switch ($filetype_parent)
 

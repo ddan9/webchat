@@ -82,7 +82,103 @@
 
 	};
 
-	include("../functions/presets.php");
+	function send_users_database($use_databases_encryption, $recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_users_path, $encryption_cipher, $salt_global, $databases_password, $salt_users, $encryption_options, $encryption_iv)
+
+	{
+
+		if ($recieve_client_password == "true")
+
+		{
+
+			if ($PASSWORD == $client_password_to_send_database)
+
+			{
+
+				if ($use_databases_encryption != "true")
+
+				{
+
+					$users_database = file_get_contents($databases_users_path);
+
+				}
+
+				else
+
+				{
+
+					$users_database = openssl_decrypt(file_get_contents($databases_users_path), $encryption_cipher, $salt_global.$databases_password.$salt_users, $encryption_options, $encryption_iv);
+
+				};
+
+			}
+
+			else
+
+			{
+
+				echo "DENIED";
+
+			};
+
+		}
+
+		else
+
+		{
+
+			if ($use_databases_encryption != "true")
+
+			{
+
+				$users_database = file_get_contents($databases_users_path);
+
+			}
+
+			else
+
+			{
+
+				$users_database = openssl_decrypt(file_get_contents($databases_users_path), $encryption_cipher, $salt_global.$databases_password.$salt_users, $encryption_options, $encryption_iv);
+
+			};
+
+		};
+
+		if (!isset($users_database))
+
+		{
+
+			echo "DENIED";
+
+		}
+
+		else
+
+		{
+
+			$decoded = json_decode(base64_decode($users_database), true);
+
+			$decoded_count = count($decoded);
+
+			echo "<br> TOTAL : ".$decoded_count."<br>";
+
+			for ($i = 0; $i < $decoded_count; $i++)
+
+			{
+
+				$reencoded_users[$i][login] = base64_decode($decoded[$i][login]);
+
+				echo "<br>".$i." : ".$reencoded_users[$i][login];
+
+			};
+
+		};
+
+	};
+
+	require_once("../functions/presets.php");
+
+	require_once("../functions/authentication.php");
 
 	header("Cache-Control: no-store, no-cache, must-revalidate");
 
@@ -97,6 +193,12 @@
 		case "messages":
 
 			echo send_messages_database($use_databases_encryption, $time_messages_format, $custom_time_set, $date_messages_format, $custom_date_set, $recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_messages_path, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
+
+			break;
+
+		case "users":
+
+			echo send_users_database($use_databases_encryption, $recieve_client_password, $client_password_to_send_database, $PASSWORD, $databases_users_path, $encryption_cipher, $salt_global, $databases_password, $salt_users, $encryption_options, $encryption_iv);
 
 			break;
 
