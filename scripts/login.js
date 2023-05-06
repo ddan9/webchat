@@ -64,6 +64,108 @@ function send()
 
 	};
 
-	loginRequest.send();
+	if (username != null && username != "" && password != null && password != "")
+
+	{
+
+		if (username != "logout")
+
+		{
+
+			loginRequest.send();
+
+		}
+
+		else
+
+		{
+
+			document.getElementById("login").style.animationName="warning";
+
+			alert("If you want to force logout, clean authentication cache below!");
+
+		};
+
+	}
+
+	else
+
+	{
+
+		if (username != "" && username != null)
+
+		{
+
+			document.getElementById("login").style.animationName="none"
+
+		}
+
+		else
+
+		{
+
+			document.getElementById("login").style.animationName="warning";
+
+		};
+
+		if (password != "" && password != null)
+
+		{
+
+			document.getElementById("password").style.animationName="none";
+
+		}
+
+		else
+
+		{
+
+			document.getElementById("password").style.animationName="warning";
+
+		};
+
+		alert("Fill all forms!");
+
+	};
 
 };
+
+function main()
+
+{
+
+	function emptyLoginWarningStop()
+
+	{
+
+		if (document.getElementById("login").value != "" || document.getElementById("login").value != null)
+
+		{
+
+			document.getElementById("login").style.animationName="none";
+
+		};
+
+	};
+
+	function emptyPasswordWarningStop()
+
+	{
+
+		if (document.getElementById("password").value != "" || document.getElementById("password").value != null)
+
+		{
+
+			document.getElementById("password").style.animationName="none";
+
+		};
+
+	};
+
+	document.getElementById("login").addEventListener("keydown", emptyLoginWarningStop);
+
+	document.getElementById("password").addEventListener("keypress", emptyPasswordWarningStop);
+
+};
+
+main();

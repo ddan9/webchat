@@ -26,7 +26,7 @@
 
 	<body>
 
-		<form class="container" id="formContainer" action="../functions/post.php" autocomplete="<?php print($html_post_autocomplete); ?>" method="POST" target="_self">
+		<form class="container" id="formContainer" action="../functions/post.php" autocomplete="<?php print($html_post_autocomplete); ?>" method="POST" target="_self" onsubmit="event.preventDefault(); send();">
 
 			<textarea target="_self" class="message" id="inputMessage" type="text" placeholder="Enter your message here..." title="Message" name="message" accesskey="m" autocomplete="<?php print($html_post_autocomplete); ?>" minlenght="1" maxlenght="4096" autofocus="autofocus" autofocus focus></textarea>
 

@@ -1,6 +1,6 @@
 <?php
 
-	function searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages)
+	function updateSearchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages)
 
 	{
 
@@ -210,7 +210,7 @@
 
 	$total_messages = count($chat_database);
 
-	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
+	$nickname = updateSearchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
 
 	$connectionCooldown = connectionCooldown($use_user_connection_message_sending, $use_user_connection_cooldown, $user_connection_cooldown, $custom_time_set, $time_messages_format, $chat_database, $total_messages, $nickname, $address);
 

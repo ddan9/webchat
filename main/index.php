@@ -6,4 +6,8 @@
 
 	require_once("../templates/main.html");
 
+	require_once("../functions/update.php");
+
+	require_once("../functions/post.php");
+
 ?>

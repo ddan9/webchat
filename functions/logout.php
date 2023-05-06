@@ -66,21 +66,27 @@
 
 	require_once("../functions/presets.php");
 
-//	if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']))
-//
-//	{
-//
-//		$login = $_SERVER['PHP_AUTH_USER'];
-//
-//		if ($login != "logout")
-//
-//		{
-//
-//			SendNotifyMessage($use_databases_encryption, $databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $login, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
-//
-//		};
-//
-//	};
+	if ($use_user_disconnection_message_sending == "true")
+
+	{
+
+		if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']))
+
+		{
+
+			$login = $_SERVER['PHP_AUTH_USER'];
+
+			if ($login != "logout")
+
+			{
+
+				SendNotifyMessage($use_databases_encryption, $databases_messages_path, $custom_time_set, $time_messages_format, $custom_date_set, $date_messages_format, $login, $encryption_cipher, $salt_global, $databases_password, $salt_messages, $encryption_options, $encryption_iv);
+
+			};
+
+		};
+
+	};
 
 	require_once("../templates/logout.html");
 

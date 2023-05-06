@@ -4,11 +4,11 @@ table.list
 
 	border-radius: 20px;
 
-	min-width: 90%;
+	min-width: auto;
 
-	width: 90%;
+	width: 80%;
 
-	max-width: 90%;
+	max-width: 80%;
 
 	margin-left: auto;
 
@@ -36,25 +36,51 @@ xmp.list
 
 {
 
-	position: relative;
-
 	display: inline;
 
-	word-break: break-all;
-
-	white-space: normal;
-
-	overflow-wrap: anywhere;
+	position: relative;
 
 	overflow: hidden;
 
+	overflow-wrap: anywhere;
+
+	min-width: 200px;
+
+	width: auto;
+
+	max-width: auto;
+
 	text-overflow: ellipsis;
+
+	white-space: nowrap;
+
+	word-break: break-all;
 
 }
 
 h3.list
 
 {
+
+	display: block;
+
+	position: relative;
+
+	overflow: hidden;
+
+	overflow-wrap: anywhere;
+
+	min-width: 200px;
+
+	width: auto;
+
+	max-width: auto;
+
+	text-overflow: ellipsis;
+
+	white-space: nowrap;
+
+	word-break: break-all;
 
 	color: darkslategray;
 
@@ -78,17 +104,23 @@ p.list
 
 	position: relative;
 
-	display: inline;
+	display: block;
 
 	word-break: break-all;
 
-	white-space: normal;
+	white-space: nowrap;
 
 	overflow-wrap: anywhere;
 
 	overflow: hidden;
 
 	text-overflow: ellipsis;
+
+	min-width: 200px;
+
+	width: auto;
+
+	max-width: 100%;
 
 	color: darkslategray;
 
@@ -153,6 +185,16 @@ td.list:nth-child(2)
 	padding-top: 20px;
 
 	padding-bottom: 20px;
+
+	overflow: hidden;
+
+	overflow-wrap: anywhere;
+
+	min-width: auto;
+
+	width: auto;
+
+	max-width: 200px;
 
 }
 
@@ -221,7 +263,7 @@ a.list
 img.list
 
 {
-	
+
 	display: block;
 
 	text-align: center;

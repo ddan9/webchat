@@ -170,6 +170,30 @@ input.login
 
 	transition: box-shadow 0.2s linear;
 
+	animation-name: none;
+
+	-webkit-animation-name: none;
+
+	-moz-animation-name: none;
+
+	animation-duration: 1s;
+
+	-webkit-animation-duration: 1s;
+
+	-moz-animation-duration: 1s;
+
+	animation-iteration-count: infinite;
+
+	-webkit-animation-count: infinite;
+
+	-moz-animation-count: infinite;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
+
 }
 
 input.login:hover
@@ -220,6 +244,30 @@ input.password
 
 	transition: box-shadow 0.2s linear;
 
+	animation-name: none;
+
+	-webkit-animation-name: none;
+
+	-moz-animation-name: none;
+
+	animation-duration: 1s;
+
+	-webkit-animation-duration: 1s;
+
+	-moz-animation-duration: 1s;
+
+	animation-iteration-count: infinite;
+
+	-webkit-animation-count: infinite;
+
+	-moz-animation-count: infinite;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
+
 }
 
 input.password:hover
@@ -239,6 +287,96 @@ input.password:focus
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
 	transition: box-shadow 0.2s linear;
+
+}
+
+@keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+}
+
+@-webkit-keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+}
+
+@-moz-keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
 
 }
 

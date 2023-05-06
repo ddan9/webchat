@@ -46,6 +46,12 @@ function send()
 
 	var rejectedFilesCount = 0;
 
+	var formData = new FormData(document.forms.uploadFileForm);
+
+	var uploadFileRequest = new XMLHttpRequest();
+
+	uploadFileRequest.open("POST", "../functions/upload.php", false);
+
 	if (inputFilesCount > 0)
 
 	{
@@ -56,7 +62,12 @@ function send()
 
 		{
 
-			uploadFileForm.submit();
+
+			uploadFileRequest.send(formData);
+
+			alert("Done!")
+
+			location.reload();
 
 		};
 
@@ -136,7 +147,7 @@ function uploadFile(input)
 
 			{
 
-				document.getElementById("maxFileSize").style.animationName="maxFileSizeExceeded";
+				document.getElementById("maxFileSize").style.animationName="warning";
 
 			};
 

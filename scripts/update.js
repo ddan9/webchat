@@ -4,7 +4,11 @@ function scrollDownPermanent()
 
 {
 
-	window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+	var chatOutput = document.getElementById("chatOutput");
+
+	var totalHeight = chatOutput.scrollHeight;
+
+	chatOutput.scrollTo({top: totalHeight, behavior: "smooth"});
 
 };
 
@@ -24,7 +28,7 @@ function main()
 
 	let intervalTime = 3000;
 
-	let heightThreshold = 1000;
+	let heightThreshold = 1500;
 
 	let firstTimeScrollState = "true";
 
@@ -33,6 +37,8 @@ function main()
 	let validationReplacement = "<rofl>";
 
 	let dataCountCurrent = 0, dataToShow = 0, dataCountWas = 0;
+
+	let chatOutput = document.getElementById("chatOutput");
 
 	let buttonToDown = document.getElementById("buttonToDown");
 
@@ -58,13 +64,13 @@ function main()
 
 	let currentAddress, decodedAddress, validatedAddress;
 
-	function onScrollFunctions() 
+	function onScrollFunctions()
 
 	{
 
 		getHeightMetrics();
 
-		if (currentHeight < limitHeight) 
+		if (currentHeight < limitHeight)
 
 		{
 
@@ -242,17 +248,17 @@ function main()
 
 		checkForMessageSender();
 
-		chatOutput.insertAdjacentHTML("beforeend", 
+		chatOutput.insertAdjacentHTML("beforeend",
 
-			"<div class='" + messageClass + "'>" 
+			"<div class='" + messageClass + "'>"
 
-				+ "<div class='messageInfo'>" 
+				+ "<div class='messageInfo'>"
 
 					+ "<div class='messageInfoUser'>"
 
-						+ "<xmp class='messageInfoUser' title='Time: " + validatedTime + " &#010;Date: " + validatedDate + " &#010;Nickname: " + validatedNickname + " &#010;Device: " + validatedDevice + " &#010;Address: " + validatedAddress + "'>" 
+						+ "<xmp class='messageInfoUser' title='Time: " + validatedTime + " &#010;Date: " + validatedDate + " &#010;Nickname: " + validatedNickname + " &#010;Device: " + validatedDevice + " &#010;Address: " + validatedAddress + "'>"
 
-							+ validatedNickname 
+							+ validatedNickname
 
 						+ "</xmp>"
 
@@ -260,27 +266,27 @@ function main()
 
 					+ "<div class='messageInfoTime'>"
 
-						+ "<xmp class='messageInfoTime'>" 
+						+ "<xmp class='messageInfoTime'>"
 
 							+ validatedTimeShort
 
-						+ "</xmp>" 
+						+ "</xmp>"
 
 					+ "</div>"
 
-				+ "</div>" 
+				+ "</div>"
 
-				+ "<div class='messageBody'>" 
+				+ "<div class='messageBody'>"
 
-					+ "<xmp class='messageBody'>" 
+					+ "<xmp class='messageBody'>"
 
-						+ validatedMessage 
+						+ validatedMessage
 
-					+ "</xmp>" 
+					+ "</xmp>"
 
-				+ "</div>" 
+				+ "</div>"
 
-			+ "</div>" 
+			+ "</div>"
 
 			+ "<br>");
 
@@ -290,11 +296,11 @@ function main()
 
 	{
 
-		totalHeight = document.documentElement.clientHeight;
+		totalHeight = chatOutput.scrollHeight;
 
 		limitHeight = totalHeight - heightThreshold;
 
-		currentHeight = window.scrollY;
+		currentHeight = chatOutput.scrollTop;
 
 	};
 
@@ -308,7 +314,7 @@ function main()
 
 		{
 
-			window.scrollTo({top: document.body.scrollHeight, behavior: "smooth"});
+			chatOutput.scrollTo({top: totalHeight, behavior: "smooth"});
 
 		};
 
@@ -320,7 +326,7 @@ function main()
 
 		getHeightMetrics();
 
-		window.scrollTo(0, document.body.scrollHeight);
+		chatOutput.scrollTop = totalHeight;
 
 		firstTimeScrollState = "false";
 
@@ -428,11 +434,11 @@ function main()
 
 	getIP();
 
-	document.addEventListener("scroll", onScrollFunctions);
+	chatOutput.addEventListener("scroll", onScrollFunctions);
 
 	dataShow();
 
-	setInterval(() => dataShow(), intervalTime); 
+	setInterval(() => dataShow(), intervalTime);
 
 };
 

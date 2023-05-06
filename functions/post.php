@@ -28,7 +28,7 @@
 
 	};
 
-	function searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages)
+	function postSearchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages)
 
 	{
 
@@ -48,11 +48,11 @@
 
 			{
 
-				if ($_POST["nickname"] != "" && $_POST["nickname"] != null)
+				if (base64_decode($_POST["nickname"]) != "" && base64_decode($_POST["nickname"]) != null)
 
 				{
 
-					$nickname = $_POST["nickname"];
+					$nickname = base64_decode($_POST["nickname"]);
 
 				}
 
@@ -84,7 +84,7 @@
 
 			{
 
-				$nickname = $_POST["nickname"];
+				$nickname = base64_decode($_POST["nickname"]);
 
 			};
 
@@ -216,7 +216,7 @@
 
 	$date = date($date_messages_format, strtotime($custom_date_set));
 
-	$nickname = searchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
+	$nickname = postSearchPreviousNickname($enable_only_authorized_username, $enable_nickname_remembering, $chat_database, $address, $total_messages);
 
 	$nicknameFormState = nicknameFormStatement($enable_only_authorized_username);
 
@@ -226,7 +226,7 @@
 
 	$logoutButtonState = logoutButtonStatement($use_php_basic_authentication, $enable_only_authorized_username);
 
-	$message = $_POST["message"];
+	$message = base64_decode($_POST["message"]);
 
 	if ($enable_experimental_remote_client_post_mode == "false")
 

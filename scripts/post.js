@@ -1,5 +1,81 @@
 "use strict";
 
+function send()
+
+{
+
+	"use strict";
+
+	var nickname = document.getElementById("inputNickname").value;
+
+	var message = document.getElementById("inputMessage").value;
+
+	var nicknameEncoded = window.btoa(unescape(encodeURIComponent(nickname)));
+
+	var messageEncoded = window.btoa(unescape(encodeURIComponent(message)));
+
+	var postMessageRequest = new XMLHttpRequest();
+
+	postMessageRequest.open('POST', '../functions/post.php', false);
+
+	postMessageRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+	if (nickname != "" && nickname != null && message != "" && message != null)
+
+	{
+
+		postMessageRequest.send(`nickname=${nicknameEncoded}&message=${messageEncoded}`);
+
+		document.getElementById("inputMessage").value = "";
+
+		document.getElementById("inputMessage").focus();
+
+	}
+
+	else
+
+	{
+
+		if (message != "" && message != null)
+
+		{
+
+			document.getElementById("inputMessage").style.animationName="none"
+
+		}
+
+		else
+
+		{
+
+			document.getElementById("inputMessage").focus();
+
+			document.getElementById("inputMessage").style.animationName="warning";
+
+		};
+
+		if (nickname != "" && nickname != null)
+
+		{
+
+			document.getElementById("inputNickname").style.animationName="none";
+
+		}
+
+		else
+
+		{
+
+			document.getElementById("inputNickname").style.animationName="warning";
+
+		};
+
+		alert("You need to fill all forms firstly!");
+
+	};
+
+};
+
 function main()
 
 {
@@ -10,7 +86,7 @@ function main()
 
 	{
 
-		if (insert.key == "Tab") 
+		if (insert.key == "Tab")
 
 		{
 
@@ -56,7 +132,19 @@ function main()
 
 			document.getElementById("submitMessage").click();
 
-			document.getElementById("formContainer").submit();
+		};
+
+	};
+
+	function nullMessageWarningStop()
+
+	{
+
+		if (document.getElementById("inputMessage").value != "" || document.getElementById("inputMessage").value != null)
+
+		{
+
+			document.getElementById("inputMessage").style.animationName="none";
 
 		};
 
@@ -70,7 +158,7 @@ function main()
 
 		{
 
-			document.getElementById("inputNickname").style.animationName="nullNicknameWarning";
+			document.getElementById("inputNickname").style.animationName="warning";
 
 		};
 
@@ -95,6 +183,8 @@ function main()
 	document.getElementById("inputMessage").addEventListener("keydown", insertHook);
 
 	document.getElementById("inputMessage").addEventListener("keypress", submitOnEnter);
+
+	document.getElementById("inputMessage").addEventListener("keypress", nullMessageWarningStop);
 
 	document.getElementById("inputMessage").addEventListener("keypress", nullNicknameWarning);
 

@@ -34,9 +34,25 @@ output.chatOutput
 
 {
 
-	min-width: 320px;
+	overflow-y: scroll;
 
-	width: 1024px;
+	background-color: white;
+
+	position: fixed;
+
+	top: 0;
+
+	right: 0;
+
+	left: 0;
+
+	bottom: 0;
+
+	float: center;
+
+	min-width: 200px;
+
+	width: auto;
 
 	max-width: 1024px;
 
@@ -44,9 +60,15 @@ output.chatOutput
 
 	display: block;
 
+	margin-top: 0px;
+
+	margin-bottom: 100px;
+
 	margin-left: auto;
 
 	margin-right: auto;
+
+	height: calc(100% - 110px);
 
 }
 
@@ -715,7 +737,7 @@ button.buttonToDown
 
 	position: fixed;
 
-	bottom: 25px;
+	bottom: 125px;
 
 	right: 25px;
 

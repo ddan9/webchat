@@ -392,7 +392,7 @@ input.maxFileSize:focus
 
 }
 
-@keyframes maxFileSizeExceeded
+@keyframes warning
 
 {
 
@@ -422,7 +422,7 @@ input.maxFileSize:focus
 
 }
 
-@-webkit-keyframes maxFileSizeExceeded
+@-webkit-keyframes warning
 
 {
 
@@ -452,7 +452,7 @@ input.maxFileSize:focus
 
 }
 
-@-moz-keyframes maxFileSizeExceeded
+@-moz-keyframes warning
 
 {
 
@@ -520,7 +520,7 @@ button.buttonToTop
 
 	animation-name: show-buttonToTop;
 
-	-webkit-animation-name: show-buttonToTop;  
+	-webkit-animation-name: show-buttonToTop;
 
 	-moz-animation-name: show-buttonToTop;
 
@@ -562,7 +562,7 @@ button.buttonToTop:focus
 
 }
 
-@keyframes show-buttonToTop 
+@keyframes show-buttonToTop
 
 {
 
@@ -574,16 +574,16 @@ button.buttonToTop:focus
 
     	}
 
-	100% 
+	100%
 
 	{
 
 		opacity: 100%;
 
-	}       
+	}
 
 }
- 
+
 @-webkit-keyframes show-buttonToTop
 
 {
@@ -594,8 +594,8 @@ button.buttonToTop:focus
 
 		opacity: 0%;
 
-	} 
-	 
+	}
+
 	100%
 
 	{
@@ -616,8 +616,8 @@ button.buttonToTop:focus
 
 		opacity: 0%;
 
-	} 
-	 
+	}
+
 	100%
 
 	{

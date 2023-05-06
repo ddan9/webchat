@@ -1,6 +1,6 @@
 <?php
 
-	$version = "20230503";
+	$version = "20230506";
 
 	$charset_http = "UTF-8";
 
@@ -20,7 +20,7 @@
 
 	$use_clear_address = "false";
 
-	$use_databases_encryption = "true";
+	$use_databases_encryption = "false";
 
 	$encryption_cipher = "AES256";
 
@@ -46,11 +46,11 @@
 
 	$salt_password = "default";
 
-	$enable_fullscreen_button = "true";
+	$enable_fullscreen_button = "false";
 
-	$enable_help_button = "true";
+	$enable_help_button = "false";
 
-	$recieve_client_password = "true";
+	$recieve_client_password = "false";
 
 	$client_password_to_send_database = "default";
 
@@ -74,25 +74,27 @@
 
 	$validationReplacement = "<rofl>";
 
-	$use_user_connection_message_sending = "true";
+	$use_user_connection_message_sending = "false";
 
-	$use_user_connection_cooldown = "true";
+	$use_user_connection_cooldown = "false";
 
 	$user_connection_cooldown = "+0 hour +10 minutes +0 seconds";
 
-	$use_user_connection_login_message_sending = "true";
+	$use_user_connection_login_message_sending = "false";
 
-	$enable_nickname_remembering = "true";
+	$use_user_disconnection_message_sending = "false";
 
-	$enable_only_authorized_username = "true";
+	$enable_nickname_remembering = "false";
 
-	$use_php_basic_authentication = "true";
+	$enable_only_authorized_username = "false";
 
-	$use_login_permanent_redirection = "true";
+	$use_php_basic_authentication = "false";
 
-	$allow_new_users = "true";
+	$use_login_permanent_redirection = "false";
 
-	$allowed_new_users_count_limit = 2;
+	$allow_new_users = "false";
+
+	$allowed_new_users_count_limit = "null";
 
 	$databases_files_path = "../databases/files.json";
 
