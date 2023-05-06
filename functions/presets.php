@@ -108,9 +108,9 @@
 
 	$remote_post_url = "http://127.0.0.1/webchat/functions/post.php";
 
-	$cache_control_header = "no-cache, must-revalidate";
+	$cache_control_header = "no-store, no-cache, must-revalidate";
 
-	$cache_control_http = "no-cache";
+	$cache_control_http = "no-store, no-cache, must-revalidate";
 
 	$cache_control_download = "must-revalidate";
 
