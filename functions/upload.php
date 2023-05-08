@@ -20,7 +20,7 @@
 
 		require_once("../templates/throw.html");
 
-		header('Window-target: main-frame');
+		header("Window-target: main-frame");
 
 		header("refresh:3; url=../attachments/");
 

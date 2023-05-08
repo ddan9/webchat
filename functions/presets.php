@@ -128,7 +128,7 @@
 
 	header("Content-Language: $language_header");
 
-	header('Window-target: _top');
+	header("Window-target: _top");
 
 	if(preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]))
 
@@ -162,7 +162,7 @@
 
 		{
 
-			$address = hash($hashing_algorithm, $salt_global.$_SERVER["REMOTE_ADDR"].$salt_address.$device.$_SERVER['HTTP_USER_AGENT']);
+			$address = hash($hashing_algorithm, $salt_global.$_SERVER["REMOTE_ADDR"].$salt_address.$device.$_SERVER["HTTP_USER_AGENT"]);
 
 		};
 
@@ -173,6 +173,26 @@
 	{
 
 		$address = $_SERVER["REMOTE_ADDR"];
+
+	};
+
+	if (isset($_SERVER["HTTPS"]) && ($_SERVER["HTTPS"] == "on" || $_SERVER["HTTPS"] == 1) || isset($_SERVER["HTTP_X_FORWARDED_PROTO"]) && $_SERVER["HTTP_X_FORWARDED_PROTO"] == "https")
+
+	{
+
+		$protocol_uri = "https://";
+
+		$protocol_http = "HTTP/2.0";
+
+	}
+
+	else
+
+	{
+
+		$protocol_uri = "http://";
+
+		$protocol_http = "HTTP/1.1";
 
 	};
 

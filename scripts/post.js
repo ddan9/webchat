@@ -16,7 +16,7 @@ function send()
 
 	var postMessageRequest = new XMLHttpRequest();
 
-	postMessageRequest.open('POST', '../functions/post.php', false);
+	postMessageRequest.open("POST", "../functions/post.php", false);
 
 	postMessageRequest.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 

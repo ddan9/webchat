@@ -48,7 +48,7 @@
 
 	readfile($filebody);
 
-	exit;
+	exit();
 
 	header("Location: ../attachments/");
 

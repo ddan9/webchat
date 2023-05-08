@@ -70,11 +70,11 @@
 
 	{
 
-		if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']))
+		if (isset($_SERVER["PHP_AUTH_USER"]) && isset($_SERVER["PHP_AUTH_PW"]))
 
 		{
 
-			$login = $_SERVER['PHP_AUTH_USER'];
+			$login = $_SERVER["PHP_AUTH_USER"];
 
 			if ($login != "logout")
 
@@ -90,26 +90,10 @@
 
 	require_once("../templates/logout.html");
 
-	if (isset($_SERVER['HTTPS']) && ($_SERVER['HTTPS'] == 'on' || $_SERVER['HTTPS'] == 1) || isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] == 'https')
+	$host = $_SERVER["HTTP_HOST"];
 
-	{
+	$URI = $_SERVER["REQUEST_URI"];
 
-		$protocol = 'https://';
-
-	}
-
-	else
-
-	{
-
-		$protocol = 'http://';
-
-	};
-
-	$host = $_SERVER['HTTP_HOST'];
-
-	$URL = $_SERVER['REQUEST_URI'];
-
-//	header("Location: ${protocol}logout:logout@${host}${URL}/../lobby");
+//	header("Location: ${protocol_uri}logout:logout@${host}${URI}/../lobby");
 
 ?>

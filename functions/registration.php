@@ -202,11 +202,11 @@
 
 		$total_users = count($users_database);
 
-		$json_output = $_GET['json_output'];
+		$json_output = $_GET["json_output"];
 
-		$check_output = $_GET['check_output'];
+		$check_output = $_GET["check_output"];
 
-		$dry_run = $_GET['dry_run'];
+		$dry_run = $_GET["dry_run"];
 
 		$login = $_POST["login"];
 

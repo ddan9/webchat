@@ -84,13 +84,13 @@
 
 		$total_users = count($users_database);
 
-		if (!isset($_SERVER['PHP_AUTH_USER']) || !isset($_SERVER['PHP_AUTH_PW']))
+		if (!isset($_SERVER["PHP_AUTH_USER"]) || !isset($_SERVER["PHP_AUTH_PW"]))
 
 		{
 
-			header('WWW-Authenticate: Basic realm="Webchat Restricted Area"');
+			header("WWW-Authenticate: Basic realm='Webchat Restricted Area'");
 
-			header('${protocol} 401 Unauthorized');
+			header("$protocol_http 401 Unauthorized");
 
 			$throw_code = 401;
 
@@ -104,13 +104,13 @@
 
 		{
 
-			$login = $_SERVER['PHP_AUTH_USER'];
+			$login = $_SERVER["PHP_AUTH_USER"];
 
-			$password = $_SERVER['PHP_AUTH_PW'];
+			$password = $_SERVER["PHP_AUTH_PW"];
 
-			$json_output = $_GET['json_output'];
+			$json_output = $_GET["json_output"];
 
-			$check_output = $_GET['check_output'];
+			$check_output = $_GET["check_output"];
 
 			$founded_users_count = 0;
 

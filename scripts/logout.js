@@ -12,9 +12,9 @@ var replacedURL = currentURL.replace("/logout", "/main");
 
 var logoutRequest = new XMLHttpRequest();
 
-logoutRequest.open('GET', '../main/', false);
+logoutRequest.open("GET", "../main/", false);
 
-logoutRequest.setRequestHeader('Authorization', 'Basic ' + btoa(username + ':' + password));
+logoutRequest.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
 
 logoutRequest.onload = function()
 
@@ -24,7 +24,7 @@ logoutRequest.onload = function()
 
 	{
 
-		window.open(`${protocol}//${username}:${password}@${replacedURL}`, '_top');
+		window.open(`${protocol}//${username}:${password}@${replacedURL}`, "_top");
 
 	}
 

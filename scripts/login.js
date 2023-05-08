@@ -20,9 +20,9 @@ function send()
 
 	var loginRequest = new XMLHttpRequest();
 
-	loginRequest.open('GET', '../functions/authentication.php?json_output=true&check_output=true', false);
+	loginRequest.open("GET", "../functions/authentication.php?json_output=true&check_output=true", false);
 
-	loginRequest.setRequestHeader('Authorization', 'Basic ' + btoa(username + ':' + password));
+	loginRequest.setRequestHeader("Authorization", "Basic " + btoa(username + ":" + password));
 
 	loginRequest.onload = function()
 
@@ -40,7 +40,7 @@ function send()
 
 			{
 
-				window.open(`${protocol}//${username}:${password}@${replacedURL}`, '_top');
+				window.open(`${protocol}//${username}:${password}@${replacedURL}`, "_top");
 
 			}
 
