@@ -1,0 +1,105 @@
+div.textField
+
+{
+
+	word-wrap: break-word;
+
+	margin-top: 40px;
+
+	margin-bottom: 40px;
+
+	margin-left: auto;
+
+	margin-right: auto;
+
+	min-width: 200px;
+
+	width: 600px;
+
+	max-width: 80%;
+
+	background-color: #EEEEEE;
+
+	padding: 20px;
+
+	border-radius: 10px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+div.textField:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.goBack
+
+{
+
+	background: url(../../../images/back.svg) no-repeat;
+
+	background-size: 50%;
+
+	background-position: center;
+
+	border: none;
+
+	outline: none;
+
+	width: 45px;
+
+	height: 45px;
+
+	border-radius: 50%;
+
+	background-color: LightGray;
+
+	position: fixed;
+
+	bottom: 0px;
+
+	right: 0px;
+
+	z-index: 100;
+
+	cursor: pointer;
+
+	margin-right: 25px;
+
+	margin-bottom: 25px;
+
+	float: right;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.goBack:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.goBack:focus
+
+{
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}

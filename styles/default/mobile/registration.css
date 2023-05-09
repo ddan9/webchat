@@ -1,0 +1,587 @@
+table.mainContainer
+
+{
+
+	margin: auto;
+
+	min-height: auto;
+
+	height: 100%;
+
+	max-height: 100%;
+
+	min-width: auto;
+
+	width: 100%;
+
+	max-width: 100%;
+
+}
+
+tr.mainContainer
+
+{
+
+	margin: auto;
+
+	min-height: auto;
+
+	height: 100%;
+
+	max-height: 100%;
+
+	min-width: auto;
+
+	width: 100%;
+
+	max-width: 100%;
+
+}
+
+td.mainContainer
+
+{
+
+	margin: auto;
+
+	min-height: auto;
+
+	height: 100%;
+
+	max-height: 100%;
+
+	min-width: auto;
+
+	width: 100%;
+
+	max-width: 100%;
+
+}
+
+table.registrationFormContainer
+
+{
+
+	width: auto;
+
+	height: auto;
+
+	margin: auto;
+
+}
+
+tr.registrationFormContainer
+
+{
+
+	width: auto;
+
+	height: auto;
+
+	margin: auto;
+
+}
+
+td.registrationFormContainer
+
+{
+
+	width: auto;
+
+	height: auto;
+
+	margin: auto;
+
+}
+
+form.registrationForm
+
+{
+
+	text-align: center;
+
+	vertical-align: middle;
+
+	float: center;
+
+	width: auto;
+
+	max-width: 320px;
+
+	height: auto;
+
+	max-height: 320px;
+
+	padding-top: 20px;
+
+	padding-bottom: 20px;
+
+	padding-left: 50px;
+
+	padding-right: 50px;
+
+	border-radius: 20px;
+
+	background-color: #EEEEEE;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+form.registrationForm:hover
+
+{
+
+	box-shadow: 0px 0px 4px 2px rgba(50, 150, 200, 0.6);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.login
+
+{
+
+	background-color: white;
+
+	border: none;
+
+	border-radius: 20px;
+
+	min-width: 50px;
+
+	width: auto;
+
+	max-width: 90%;
+
+	height: 35px;
+
+	outline: none;
+
+	text-align: left;
+
+	padding-left: 20px;
+
+	padding-right: 20px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
+	animation-name: none;
+
+	-webkit-animation-name: none;
+
+	-moz-animation-name: none;
+
+	animation-duration: 1s;
+
+	-webkit-animation-duration: 1s;
+
+	-moz-animation-duration: 1s;
+
+	animation-iteration-count: infinite;
+
+	-webkit-animation-count: infinite;
+
+	-moz-animation-count: infinite;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
+
+}
+
+input.login:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.login:focus
+
+{
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.password
+
+{
+
+	border: none;
+
+	border-radius: 20px;
+
+	min-width: 50px;
+
+	width: auto;
+
+	max-width: 90%;
+
+	height: 35px;
+
+	outline: none;
+
+	text-align: left;
+
+	padding-left: 20px;
+
+	padding-right: 20px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
+	animation-name: none;
+
+	-webkit-animation-name: none;
+
+	-moz-animation-name: none;
+
+	animation-duration: 1s;
+
+	-webkit-animation-duration: 1s;
+
+	-moz-animation-duration: 1s;
+
+	animation-iteration-count: infinite;
+
+	-webkit-animation-count: infinite;
+
+	-moz-animation-count: infinite;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
+
+}
+
+input.password:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.password:focus
+
+{
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.passwordProove
+
+{
+
+	border: none;
+
+	border-radius: 20px;
+
+	min-width: 50px;
+
+	width: auto;
+
+	max-width: 90%;
+
+	height: 35px;
+
+	outline: none;
+
+	text-align: left;
+
+	padding-left: 20px;
+
+	padding-right: 20px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
+	animation-name: none;
+
+	-webkit-animation-name: none;
+
+	-moz-animation-name: none;
+
+	animation-duration: 1s;
+
+	-webkit-animation-duration: 1s;
+
+	-moz-animation-duration: 1s;
+
+	animation-iteration-count: infinite;
+
+	-webkit-animation-count: infinite;
+
+	-moz-animation-count: infinite;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
+
+}
+
+input.passwordProove:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.passwordProove:focus
+
+{
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+@keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+}
+
+@-webkit-keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+}
+
+@-moz-keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+}
+
+input.signUpButton
+
+{
+
+	border: none;
+
+	border-radius: 20px;
+
+	min-width: 50px;
+
+	width: 60%;
+
+	max-width: 100%;
+
+	height: 30px;
+
+	outline: none;
+
+	float: center;
+
+	border-radius: 20px;
+
+	cursor: pointer;
+
+	margin-top: 10px;
+
+	margin-bottom: 20px;
+
+	color: black;
+
+	background-color: white;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear, background-color 0.2s linear, color 0.2s linear;
+
+}
+
+input.signUpButton:hover
+
+{
+
+	color: white;
+
+	background-color: rgba(50,150,200,0.5);
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear, background-color 0.2s linear, color 0.2s linear;
+
+}
+
+input.signUpButton:focus
+
+{
+
+	color: white;
+
+	background-color: rgba(50,150,200,0.5);
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear, background-color 0.2s linear, color 0.2s linear;
+
+}
+
+a.registrationFormButtonLink
+
+{
+
+	font-size: 80%;
+
+	text-decoration: none;
+
+	border: none;
+
+	outline: none;
+
+	color: darkgray;
+
+	border-bottom: 1px solid #EEEEEE;
+
+	transition: color 0.2s linear, border-bottom 0.2s linear;
+
+}
+
+a.registrationFormButtonLink:hover
+
+{
+
+	color: gray;
+
+	border-bottom: 1px solid gray;
+
+	transition: color 0.2s linear, border-bottom 0.2s linear;
+
+}
+
+a.registrationFormButtonLink:focus
+
+{
+
+	color: gray;
+
+	border-bottom: 1px solid gray;
+
+	transition: color 0.2s linear, border-bottom 0.2s linear;
+
+}
+
+p.signUpTitle
+
+{
+
+	padding-bottom: 20px;
+
+	color: darkslategray;
+
+	transition: color 0.2s linear;
+
+}
+
+p.signUpTitle:hover
+
+{
+
+	color: black;
+
+	transition: color 0.2s linear;
+
+}

@@ -14,6 +14,18 @@ table.sendFileSection
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
 
+	transition: box-shadow 0.2s linear;
+
+}
+
+table.sendFileSection:hover
+
+{
+
+	box-shadow: 0px 0px 4px 2px rgba(50, 150, 200, 0.6);
+
+	transition: box-shadow 0.2s linear;
+
 }
 
 td.sendFileSection
@@ -42,6 +54,42 @@ input.chooseFileButton
 
 {
 
+	display: none;
+
+	opacity: 0;
+
+	visibility: hidden;
+
+}
+
+label.chooseFileButton::-webkit-scrollbar
+
+{
+
+	display: none;
+
+}
+
+label.chooseFileButton
+
+{
+
+	overflow: hidden;
+
+	overflow: -moz-scrollbars-none;
+
+	overflow-x: auto;
+
+	scrollbar-width: none;
+
+	-ms-overflow-style: none;
+
+	white-space: nowrap;
+
+	word-wrap: normal;
+
+	display: inline-block;
+
 	position: relative;
 
 	background-color: white;
@@ -50,19 +98,25 @@ input.chooseFileButton
 
 	height: 40px;
 
+	line-height: 40px;
+
 	margin-left: auto;
 
 	margin-right: auto;
 
-	overflow: hidden;
-
 	vertical-align: middle;
 
-	min-width: 50%;
+	min-width: 100px;
 
-	width: 50%;
+	width: 40%;
 
-	max-width: 50%;
+	max-width: 400px;
+
+	text-align: left;
+
+	padding-left: 10px;
+
+	padding-right: 10px;
 
 	border: none;
 
@@ -74,25 +128,27 @@ input.chooseFileButton
 
 	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
 
+	transition: box-shadow 0.2s linear;
+
 }
 
-input.chooseFileButton:hover
+label.chooseFileButton:hover
 
 {
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
-input.choosedFileButton:focus
+label.chooseFileButton:focus
 
 {
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -122,11 +178,13 @@ input.sendFileButton
 
 	height: 40px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	vertical-align: middle;
 
 	margin-right: 15px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -136,7 +194,7 @@ input.sendFileButton:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -146,7 +204,7 @@ input.sendFileButton:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -174,11 +232,13 @@ input.goBack
 
 	height: 35px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -188,7 +248,7 @@ input.goBack:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -198,7 +258,7 @@ input.goBack:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -226,11 +286,13 @@ input.doUpdate
 
 	height: 35px;
 
-	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
-
 	outline: none;
 
 	cursor: pointer;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -240,7 +302,7 @@ input.doUpdate:hover
 
 	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
 
 }
 
@@ -250,6 +312,318 @@ input.doUpdate:focus
 
 	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
 
-	transition: box-shadow 0.3s linear;
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.maxFileSize
+
+{
+
+	color: red;
+
+	cursor: pointer;
+
+	border: none;
+
+	outline: none;
+
+	float: right;
+
+	background-color: white;
+
+	border-radius: 50%;
+
+	width: 40px;
+
+	height: 40px;
+
+	vertical-align: middle;
+
+	margin-right: 15px;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
+	animation-name: none;
+
+	-webkit-animation-name: none;
+
+	-moz-animation-name: none;
+
+	animation-duration: 1s;
+
+	-webkit-animation-duration: 1s;
+
+	-moz-animation-duration: 1s;
+
+	animation-iteration-count: infinite;
+
+	-webkit-animation-count: infinite;
+
+	-moz-animation-count: infinite;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
+
+}
+
+input.maxFileSize:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+input.maxFileSize:focus
+
+{
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+@keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+}
+
+@-webkit-keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+}
+
+@-moz-keyframes warning
+
+{
+
+	0%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+	50%
+
+	{
+
+		box-shadow: 0px 0px 4px 5px rgba(200,0,0,0.5);
+
+	}
+
+	100%
+
+	{
+
+		box-shadow: 0px 0px 6px 3px rgba(200,0,0,0.5);
+
+	}
+
+}
+
+button.buttonToTop
+
+{
+
+	background: url(../../../images/scroll-top.svg) no-repeat;
+
+	background-size: 50%;
+
+	background-position: center;
+
+	border: none;
+
+	outline: none;
+
+	width: 45px;
+
+	height: 45px;
+
+	border-radius: 50%;
+
+	background-color: LightGray;
+
+	position: fixed;
+
+	bottom: 25px;
+
+	right: 25px;
+
+	z-index: 100;
+
+	cursor: pointer;
+
+	display: none;
+
+	opacity: 100%;
+
+	animation-name: show-buttonToTop;
+
+	-webkit-animation-name: show-buttonToTop;
+
+	-moz-animation-name: show-buttonToTop;
+
+	animation-duration: 0.5s;
+
+	-webkit-animation-duration: 0.5s;
+
+	-moz-animation-duration: 0.5s;
+
+	animation-timing-function: ease;
+
+	-webkit-animation-timing-function: ease;
+
+	-moz-animation-timing-function: ease;
+
+	box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.1);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+button.buttonToTop:hover
+
+{
+
+	box-shadow: 0px 0px 6px 3px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+button.buttonToTop:focus
+
+{
+
+	box-shadow: 0px 0px 4px 5px rgba(50,150,200,0.5);
+
+	transition: box-shadow 0.2s linear;
+
+}
+
+@keyframes show-buttonToTop
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+    	}
+
+	100%
+
+	{
+
+		opacity: 100%;
+
+	}
+
+}
+
+@-webkit-keyframes show-buttonToTop
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+	}
+
+	100%
+
+	{
+
+		opacity: 100%;
+
+	}
+
+}
+
+@-moz-keyframes show-buttonToTop
+
+{
+
+	0%
+
+	{
+
+		opacity: 0%;
+
+	}
+
+	100%
+
+	{
+
+		opacity: 100%;
+
+	}
 
 }

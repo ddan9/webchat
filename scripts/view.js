@@ -4,17 +4,29 @@ function changeFullscreen()
 
 {
 
-	if (document.getElementById("infoPanel").style.display != "none")
+	var infoPanel = document.getElementById("infoPanel");
+
+	var fullscreenButton = document.getElementById("fullscreenButton");
+
+	var contentContainer = document.getElementById("contentContainer");
+
+	if (infoPanel.style.display != "none")
 
 	{
 
-		document.getElementById("infoPanel").style.display = "none";
+		infoPanel.style.display = "none";
 
-		document.getElementById("fullscreenButton").style.backgroundImage = "url(../../../images/fullscreen-exit.svg)";
+		fullscreenButton.style.backgroundImage = "url(../../../images/fullscreen-exit.svg)";
 
-		document.getElementById("fullscreenButton").style.opacity = "10%";
+		fullscreenButton.style.opacity = "10%";
 
-		document.getElementById("contentContainer").style.height = "92%";		
+		if (contentContainer)
+
+		{
+
+			contentContainer.style.height = "92%";
+
+		};
 
 	}
 
@@ -22,13 +34,19 @@ function changeFullscreen()
 
 	{
 
-		document.getElementById("infoPanel").style.display = "table";
+		infoPanel.style.display = "table";
 
-		document.getElementById("fullscreenButton").style.backgroundImage = "url(../../../images/fullscreen.svg)";
+		fullscreenButton.style.backgroundImage = "url(../../../images/fullscreen.svg)";
 
-		document.getElementById("fullscreenButton").style.opacity = "80%";
+		fullscreenButton.style.opacity = "80%";
 
-		document.getElementById("contentContainer").style.height = "80%";
+		if (contentContainer)
+
+		{
+
+			contentContainer.style.height = "80%";
+
+		};
 
 	};
 
