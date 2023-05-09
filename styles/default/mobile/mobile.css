@@ -3,3 +3,89 @@ html
 {
 
 }
+
+output.chatOutput
+
+{
+
+	min-width: 200px !important;
+
+	width: 100% !important;
+
+	max-width: 100% !important;
+
+}
+
+input.doUpdate
+
+{
+
+	display: none !important;
+
+}
+
+input.maxFileSize
+
+{
+
+	display: none !important;
+
+}
+
+td.list:nth-child(3)
+
+{
+
+	padding-right: 10px !important;
+
+}
+
+td.list:nth-child(4)
+
+{
+
+	display: none !important;
+
+}
+
+input.doRefresh
+
+{
+
+	display: none !important;
+
+}
+
+input.fileStatsField
+
+{
+
+	display: none !important;
+
+}
+
+input.fileStatsField:nth-child(3)
+
+{
+
+	display: inline-block !important;
+
+	min-width: auto !important;
+
+	width: 55% !important;
+
+	max-width: 55% !important;
+
+}
+
+label.chooseFileButton
+
+{
+
+	min-width: auto !important;
+
+	width: 50% !important;
+
+	max-width: 50% !important;
+
+}

@@ -240,7 +240,7 @@ input.fileStatsField
 
 	word-wrap: normal;
 
-	display: none;
+	display: inline-block;
 
 	position: relative;
 

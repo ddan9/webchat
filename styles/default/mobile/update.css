@@ -50,9 +50,9 @@ output.chatOutput
 
 	min-width: 200px;
 
-	width: 100%;
+	width: auto;
 
-	max-width: 100%;
+	max-width: 1024px;
 
 	overflow-x: hidden;
 
